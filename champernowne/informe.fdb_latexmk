@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1566336077 "/Users/lucas/Repositories/supernorm/champernowne/informe.tex" "/Users/lucas/Repositories/supernorm/champernowne/informe.pdf" "informe" 1566336078
-  "/Users/lucas/Repositories/supernorm/champernowne/informe.aux" 1566336078 1374 1d2471a4f92f8abb7bcafbc608d4bd15 ""
-  "/Users/lucas/Repositories/supernorm/champernowne/informe.tex" 1566336077 16560 f23dd8cf18260ef9ee4c91ccba33c647 ""
+["pdflatex"] 1566338841 "/Users/lucas/Repositories/supernorm/champernowne/informe.tex" "/Users/lucas/Repositories/supernorm/champernowne/informe.pdf" "informe" 1566339054
+  "/Users/lucas/Repositories/supernorm/champernowne/informe.aux" 1566338842 1498 3a4fd737f7e09b54971dbc6217046bf0 ""
+  "/Users/lucas/Repositories/supernorm/champernowne/informe.tex" 1566339054 18139 abcfcad5eeab2d7c5dd876cc2ddeab74 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1480098698 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -84,13 +84,13 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "informe.aux" 1566336078 1374 1d2471a4f92f8abb7bcafbc608d4bd15 ""
-  "informe.out" 1566336078 400 7edb6f0867738e91d475d0984adfe401 ""
-  "informe.tex" 1566336077 16560 f23dd8cf18260ef9ee4c91ccba33c647 ""
+  "informe.aux" 1566338842 1498 3a4fd737f7e09b54971dbc6217046bf0 ""
+  "informe.out" 1566338842 490 a6132963e9d811d0a1816b6ec321b32a ""
+  "informe.tex" 1566339054 18139 abcfcad5eeab2d7c5dd876cc2ddeab74 ""
   (generated)
-  "/Users/lucas/Repositories/supernorm/champernowne/informe.pdf"
+  "/Users/lucas/Repositories/supernorm/champernowne/informe.log"
+  "informe.aux"
   "informe.out"
+  "/Users/lucas/Repositories/supernorm/champernowne/informe.pdf"
   "informe.pdf"
   "informe.log"
-  "informe.aux"
-  "/Users/lucas/Repositories/supernorm/champernowne/informe.log"

@@ -340,11 +340,40 @@ $$\underbrace{\quad 11\dots10 \quad }_{n} \qquad \underbrace{\quad B \quad }_{lo
 
 For the first scheme we have:
 
-$$\sum_{n=1}^{log(k)}(2^n - 1)(2^{log(k) + 1 - n})(2^{k - log(k) + 1})$$
+$$\sum_{n=1}^{log(k)}(2^n - 1) (2^{log(k) + 1 - n}) (2^{k - log(k) - 1})$$
+$$\sum_{n=1}^{log(k)}(2^n - 1) (\frac{2k}{2^n})     (\frac{2^k}{2k})$$
+$$ 2^k \sum_{n=1}^{log(k)} \frac{2^n - 1}{2^n} $$
 
+Here we would need to substract the cases for when $v$ is the last word of $X(k)$, however as we are giving an upper bound for the words that appear in Champernowne, the result still holds taking this number.
 
+For the second scheme we have:
 
+$$ \sum_{n=1}^{log(k)} 2^{log(k) + 1 - n}$$
+$$ \sum_{n=1}^{log(k)} 2k2^{- n}$$
+$$ 2k\sum_{n=1}^{log(k)} 2^{- n}$$
 
+When putting them both together we get:
+
+$$  2^k \sum_{n=1}^{log(k)} \frac{2^n - 1}{2^n}  + 2k\sum_{n=1}^{log(k)} 2^{- n} < log(k)2^k + 2k$$
+
+\subsection{Bounding words that appear in Champernown}
+
+The only remaining thing to do is to consider all the cases together and bound the total amount of words that appear in the first $2^{k + log(k) + 1}$ symbols of Champernowne
+So the amount of different words of length $k + log(k) + 1$ that appear in $X(k)$ is less than:
+
+$$2^k + 2^k + log(k)2^k + 2k$$
+
+As it was stated before, $X(k)$ accounts for half of the total symbols that need to be analyzed. Let's consider that the other $k2^k$ are all different words. That gives us:
+
+$$ k2^k + 2^k + 2^k + log(k)2^k + 2k$$
+
+Now, if Champernowne is supernormal, then the expected amount of words that appear in the first $2^{k + log(k) + 1}$ would be $2k2^k(1-e^{-1})$
+Let's see that 
+$$ k2^k + 2^{k+1} +  log(k)2^k + 2k < 2k2^k(1-e^{-1}) $$
+$$ \frac{k + 2 +  log(k)}{2k} + \frac{2k}{2^k} < 1-e^{-1} $$
+$$ \frac{1}{2} + \frac{1}{k} + \frac{log(k)}{2k} < 1-e^{-1} $$
+
+which holds taking $k$ sufficiently large.
 
 % \pagebreak
 
