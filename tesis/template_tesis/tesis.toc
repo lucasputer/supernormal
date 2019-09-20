@@ -1,0 +1,13 @@
+\babel@toc {spanish}{}
+\contentsline {chapter}{\numberline {1.}Introduction}{1}
+\contentsline {chapter}{\numberline {2.}Supernormality is stronger than normality}{3}
+\contentsline {section}{\numberline {2.1}Normality does not imply supernormality}{3}
+\contentsline {subsection}{\numberline {2.1.1}Case Analysis}{4}
+\contentsline {subsubsection}{Case 1}{5}
+\contentsline {subsubsection}{Case 2}{6}
+\contentsline {subsubsection}{Case 3}{7}
+\contentsline {subsubsection}{Case 4}{8}
+\contentsline {subsubsection}{Special Cases}{10}
+\contentsline {subsection}{\numberline {2.1.2}Bounding words that appear in Champernowne}{10}
+\contentsline {chapter}{\numberline {3.}Conclusions and Further Work}{11}
+\contentsline {chapter}{\numberline {4.}Bibliography}{13}
