@@ -1,30 +1,18 @@
-\begin{thebibliography}{3}
-\newcommand{\enquote}[1]{``#1''}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{\texttt{#1}}
-\providecommand{\urlprefix}{URL }
-\providecommand{\bibAnnoteFile}[1]{%
-  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
-  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
-\providecommand{\bibAnnote}[2]{%
-  \begin{quotation}\noindent\textsc{Key:} #1\\
-  \textsc{Annotation:}\ #2\end{quotation}}
+\begin{thebibliography}{BCC19}
 
-\bibitem[{Becher et~al.(2019)Becher, Carton, and Cunningham}]{BCC2019}
-Becher, Veronica, Olivier Carton, and Ignacio Cunningham (2019), \enquote{Low
-  discrepancy sequences failing poissonian pair correlations.} \emph{Archiv der
-  Mathematik}, 113.
-\bibAnnoteFile{BCC2019}
+\bibitem[BC18]{BC2018}
+Verónica Becher and Olivier Carton.
+\newblock {\em Normal Numbers and Computer Science}, pages 233--269.
+\newblock Springer International Publishing, Cham, 2018.
 
-\bibitem[{Becher and Carton(2018)}]{BC2018}
-Becher, Verónica and Olivier Carton (2018), \emph{Normal Numbers and Computer
-  Science}, 233--269. Springer International Publishing, Cham.
-\bibAnnoteFile{BC2018}
+\bibitem[BCC19]{BCC2019}
+Veronica Becher, Olivier Carton, and Ignacio Cunningham.
+\newblock Low discrepancy sequences failing poissonian pair correlations.
+\newblock {\em Archiv der Mathematik}, 113, 04 2019.
 
-\bibitem[{Pirsic and Stockinger(2019)}]{PS2019}
-Pirsic, Ísabel and Wolfgang Stockinger (2019), \enquote{The champernowne
-  constant is not poissonian.} \emph{Funct. Approx. Comment. Math.}, 60,
-  253--262, \urlprefix\url{https://doi.org/10.7169/facm/1749}.
-\bibAnnoteFile{PS2019}
+\bibitem[PS19]{PS2019}
+Ísabel Pirsic and Wolfgang Stockinger.
+\newblock The champernowne constant is not poissonian.
+\newblock {\em Funct. Approx. Comment. Math.}, 60(2):253--262, 03 2019.
 
 \end{thebibliography}
