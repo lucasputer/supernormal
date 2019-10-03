@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  24 SEP 2019 17:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  24 SEP 2019 17:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -320,17 +320,27 @@ Overfull \hbox (4.90765pt too wide) in paragraph at lines 21--47
 
 ] [4
 
-] (/Users/lucas/Repositories/supernorm/tesis/tesis.toc)
+]
+No file tesis.toc.
 \tf@toc=\write3
 \openout3 = `tesis.toc'.
 
- [5
+[5
 
 ] [6
 
 ]
 Chapter 1.
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 85.
+/Users/lucas/Repositories/supernorm/tesis/tesis.tex:70: Undefined control sequence.
+l.70 ...ambda > 0$ be a real number. Let $k \in \Z
+                                                  _{\ge 0}$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 84.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 ) [1
@@ -339,38 +349,62 @@ File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 
 ]
 Chapter 2.
-[3] [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 258--261
+[3]
+
+Package natbib Warning: Citation `BC2018' on page 4 undefined on input line 145.
+
+
+Package natbib Warning: Citation `BCC2019' on page 4 undefined on input line 146.
+
+
+Package natbib Warning: Citation `PS2019' on page 4 undefined on input line 146.
+
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 257--260
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 294--297
+Underfull \hbox (badness 10000) in paragraph at lines 293--296
 
  []
 
-[7] [8] [9] [10] [11] [12]
+[7] [8] [9] [10]
+
+LaTeX Warning: Reference `p2' on page 11 undefined on input line 421.
+
+[11] [12]
 Chapter 3.
 [13
 
 ] [14
 
-] (/Users/lucas/Repositories/supernorm/tesis/tesis.bbl) [15
+]
+No file tesis.bbl.
 
-] (/Users/lucas/Repositories/supernorm/tesis/tesis.aux) ) 
+Package natbib Warning: There were undefined citations.
+
+(/Users/lucas/Repositories/supernorm/tesis/tesis.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4307 strings out of 492649
- 61111 string characters out of 6129622
- 152013 words of memory out of 5000000
- 8100 multiletter control sequences out of 15000+600000
+ 4293 strings out of 492649
+ 60770 string characters out of 6129622
+ 151947 words of memory out of 5000000
+ 8090 multiletter control sequences out of 15000+600000
  10859 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,10n,25p,459b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
-Output written on /Users/lucas/Repositories/supernorm/tesis/tesis.pdf (23 pages, 261785 bytes).
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
+Output written on /Users/lucas/Repositories/supernorm/tesis/tesis.pdf (22 pages, 249955 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
+ 144 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

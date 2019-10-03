@@ -66,14 +66,13 @@
 \section{Normality}
 \section{Supernormality}
 
-Let $\lambda > 0$ be a real number.
-
-Let $a_k(\lambda) = \frac{e^{-\lambda}\lambda^k}{k!}$ for $k \geq 0$.
+\begin{definition}
+    Let $\lambda > 0$ be a real number. Let $k \in \Z_{\ge 0}$.
+    $$a_k(\lambda) = \frac{e^{-\lambda}\lambda^k}{k!}$$
+\end{definition}
 
 Let $x$ be a sequence over a binary alphabet.
-
 For $u,w$ words, $|w|_u$ is the number of occurrences of $u$ in $w$.
-
 Let $A_{k,n}$ be the frequency of occurrence of words of length $n$ that occur exactly $k$ times in the first $\floor{\lambda(2^n+n-1)}$ symbols of $x$, or what is to say:
 $$A_{k,n}(\lambda) = \frac{\#\{w: |w| = n  , |x[1...\lfloor\lambda(2^n+n-1)\rfloor]|_w = k\}}{2^n}$$
 
