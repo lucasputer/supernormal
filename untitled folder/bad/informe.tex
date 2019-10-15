@@ -1,0 +1,217 @@
+\documentclass[10pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} 
+\usepackage[margin = 1in]{geometry} 
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage[Algoritmo]{algorithm}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{url}
+\usepackage[colorlinks = true, linkcolor = blue]{hyperref}
+\usepackage{comment}
+\usepackage{hyperref}
+\usepackage{ dsfont }
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{listingsutf8}
+\usepackage{color}
+\usepackage{amsmath, amsthm, amssymb}
+% \newtheorem{theorem}{Theorem}[section]
+% \newtheorem{corollary}{Corolary}[theorem]
+% \newtheorem{lemma}[theorem]{Lemma}
+\usepackage{amsfonts}
+\usepackage{wrapfig}
+\usepackage{nccmath}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theroem}
+\newtheorem{remark}{Remark}
+\newtheorem{fact}{Fact}
+
+
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstset{inputencoding=utf8/latin1,
+  language=C++,
+  basicstyle=\ttfamily,
+  keywordstyle=\bfseries\color{blue},
+  stringstyle=\color{red}\ttfamily,
+  commentstyle=\color{mygreen}\ttfamily,
+  morecomment=[l][\color{magenta}]{\#},
+  % numbers=left,
+  numberstyle=\color{gray},
+  backgroundcolor=\color{backcolour},   
+  keywordstyle=\color{magenta},
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  numbersep=5pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=3,
+  inputencoding=utf8/latin1
+}
+
+% Para que tenga acentos el environment lstlisting
+\lstset{
+     literate=%
+         {á}{{\'a}}1
+         {í}{{\'i}}1
+         {é}{{\'e}}1
+         {ý}{{\'y}}1
+         {ú}{{\'u}}1
+         {ó}{{\'o}}1
+         {ě}{{\v{e}}}1
+         {š}{{\v{s}}}1
+         {č}{{\v{c}}}1
+         {ř}{{\v{r}}}1
+         {ž}{{\v{z}}}1
+         {ď}{{\v{d}}}1
+         {ť}{{\v{t}}}1
+         {ň}{{\v{n}}}1                
+         {ů}{{\r{u}}}1
+         {Á}{{\'A}}1
+         {Í}{{\'I}}1
+         {É}{{\'E}}1
+         {Ý}{{\'Y}}1
+         {Ú}{{\'U}}1
+         {Ó}{{\'O}}1
+         {Ě}{{\v{E}}}1
+         {Š}{{\v{S}}}1
+         {Č}{{\v{C}}}1
+         {Ř}{{\v{R}}}1
+         {Ž}{{\v{Z}}}1
+         {Ď}{{\v{D}}}1
+         {Ť}{{\v{T}}}1
+         {Ň}{{\v{N}}}1                
+         {Ů}{{\r{U}}}1    
+}
+
+\hypersetup{urlcolor=blue}
+
+\makeatletter
+\newenvironment{breakablealgorithm}
+  {% \begin{breakablealgorithm}
+   \begin{center}
+     \refstepcounter{algorithm}% New algorithm
+     \hrule height.8pt depth0pt \kern2pt% \@fs@pre for \@fs@ruled
+     \renewcommand{\caption}[2][\relax]{% Make a new \caption
+       {\raggedright\textbf{\ALG@name~\thealgorithm} ##2\par}%
+       \ifx\relax##1\relax % #1 is \relax
+         \addcontentsline{loa}{algorithm}{\protect\numberline{\thealgorithm}##2}%
+       \else % #1 is not \relax
+         \addcontentsline{loa}{algorithm}{\protect\numberline{\thealgorithm}##1}%
+       \fi
+       \kern2pt\hrule\kern2pt
+     }
+  }{% \end{breakablealgorithm}
+     \kern2pt\hrule\relax% \@fs@post for \@fs@ruled
+   \end{center}
+  }
+\makeatother
+
+\newcommand{\bigo}[1]{\ensuremath{\mathcal{O}(#1)}}
+
+\begin{document}
+
+\section{Almost every word is Supernormal}
+
+
+\begin{definition}
+  Let $Bad^+(A,N,k,\epsilon)$ be the set of words of length $N$ such that the number of digits occurring $k$ times is more than the expected amount, or what is to say:
+  $$Bad^+(A,N,k,\epsilon) = \{w \in A^{N}: |\{d \in A: |w|_d = k\}|> e^{-\lambda}\frac{\lambda^{k}}{k!}|A| + \epsilon|A|\}$$
+\end{definition}
+
+\begin{definition}
+  Let $Bad^-(A,N,k,\epsilon)$ be the set of words of length $N$ such that the number of digits occurring $k$ times is less than the expected amount, or what is to say:
+  $$Bad^+(A,N,k,\epsilon) = \{w \in A^{N}: |\{d \in A: |w|_d = k\}|< e^{-\lambda}\frac{\lambda^{k}}{k!}|A| - \epsilon|A|\}$$
+\end{definition}
+
+\begin{definition}
+  Let $Bad(A,N,k,\epsilon)$ be the set of words of length $N$ such that the number of digits occurring $k$ times is different from the expected amount. Or what is to say:
+  $$Bad(A,N,k,\epsilon) = Bad^-(A,N,k,\epsilon) \cup Bad^+(A,N,k,\epsilon)$$
+\end{definition}
+
+
+\subsection{Bounding $Bad^+$}
+Let $Q^+ = e^{-\lambda}\frac{\lambda^{k}}{k!}|A| + \epsilon|A|$.
+First it is important to notice that:
+$$|Bad^+(A,N,k,\epsilon)| \leq  \underbrace{\prod_{i=0}^{Q^+ -1} \binom{N-ki}{k}}_{1} \cdot \underbrace{\vphantom{ \prod_{i=0}^{j-1 }} |A|(|A| - 1)(|A| - 2)\cdots(|A| - Q^+ + 1)}_{2}    \cdot \underbrace{ \vphantom{ \prod_{i=0}^{j-1 }} (A-Q^+)^{N-Q^+k}}_{3} $$
+
+Where:
+\begin{itemize}
+  \item $1)$ is for choosing the places to put the symbols from $Q^+$
+  \item $2)$ is for picking the $Q^+$ symbols that appear too much
+  \item $3)$ is for placing the symbols that do not appear $k$ times in unoccupied possitions.
+\end{itemize}
+
+Now, this term is bigger or equal than $Bad^+$ because this accounts for $Q^+$ but it could also be $Q^+ + 1$,$Q^+ + 2$, etc.
+
+$$|Bad^+(A,N,k,\epsilon)| \leq  \prod_{i=0}^{Q^+ -1} \binom{N-ki}{k} \cdot |A|(|A| - 1)(|A| - 2)\cdots(|A| - Q^+ + 1) \cdot (|A|-Q^+)^{N-Qk} = $$
+$$\binom{N}{k}\binom{N-k}{k}\binom{N-2k}{k}\cdots \binom{N-Q^+k-k}{k} \cdot \frac{|A|!}{(|A| - Q^+)!} \cdot (|A|-Q^+)^{N-Qk} =$$
+$$\frac{N!}{k!(N-k)!}\frac{(N-k)!}{k!(N-2k)!}\frac{(N-k2)!}{k!(N-3k)!} \cdots \frac{(N-Q^+k-k)!}{k!(N-Q^+k-2k)!} \cdot \frac{|A|!}{(|A| - Q^+)!} \cdot (|A|-Q^+)^{N-Qk} = $$
+$$\frac{N!}{k!^{Q^+-1} (N-Q^+k-2k)!} \cdot \frac{|A|!}{(|A| - Q^+)!} \cdot (|A|-Q^+)^{N-Qk}$$
+
+\subsection{Bounding $Bad^-$}
+
+In the case of $Bad^-$, we define $Q^- = e^{-\lambda}\frac{\lambda^{k}}{k!}|A| - \epsilon|A|$ We will see that in this case it is not the same if $k = 0$ than if it is different.
+
+$$|Bad^-(A,N,k,\epsilon)| = \sum_{j=0}^{Q^-} \left[ \underbrace{ \vphantom{ \prod_{i=0}^{j-1 }} \binom{|A|}{j}}_1 \cdot \underbrace{\prod_{i=0}^{j-1} \binom{N - ki}{k}}_2 \underbrace{\vphantom{ \prod_{i=0}^{j-1 }} C^w_{|A|-j}(N-jk,\overset{\wedge}k)}_3 \cdot \underbrace{\vphantom{ \prod_{i=0}^{j-1 }} (N - kj)!}_4\right] $$
+
+
+
+Where:
+\begin{itemize}
+  \item 1) is for picking the $j$ symbols that occur exactly $k$ times
+  \item 2) is for choosing the places to put these $j$ symbols
+  \item 3) is the amount of weak compositions of $N-jk$ in $|A|-j$ parts with the restriction of having no parts equal to $k$
+  \item 4) is for putting each of the compositions in postions.
+\end{itemize}
+
+\begin{remark}
+  In the case where $k = 0$ the restriction for the number of weak compositions yields exactly the number of strong compositions of $N$ in $A-j$ parts and it needs to be treated differently.
+\end{remark}
+
+\begin{fact}
+  The number of weak compoitions of $m$ into exactly $p$ parts is $\binom{m+p-1}{m} = \binom{m+p-1}{p-1}$
+\end{fact}
+
+
+\subsubsection{$K \neq 0$}
+$$|Bad^-A,N,k,\epsilon)| = \sum_{j=0}^{Q^-} \left[ \binom{|A|}{j} \cdot \prod_{i=0}^{j-1} \binom{N - ki}{k} C^w_{a-j}(N-jk,\overset{\wedge}k) \cdot (N - kj)!\right] \leq$$
+$$\sum_{j=0}^{Q^-} \left[ \binom{|A|}{j} \cdot \prod_{i=0}^{j-1} \binom{N - ki}{k} \binom{N-jk+|A| - j -1}{N-jk} \cdot (N - kj)!\right] =$$
+$$\sum_{j=0}^{Q^-} \left[ \binom{|A|}{j} \cdot \prod_{i=0}^{j-1} \binom{N - ki}{k} \frac{(N-jk+|A| - j -1)!}{(N-jk)!(|A|-j-1)!} \cdot (N - kj)!\right] =$$
+$$\sum_{j=0}^{Q^-} \left[ \binom{|A|}{j} \cdot \prod_{i=0}^{j-1} \binom{N - ki}{k} \frac{(N-jk+|A| - j -1)!}{(|A|-j-1)!}\right] =$$
+$$\sum_{j=0}^{Q^-} \left[ \binom{|A|}{j} \cdot \frac{N!}{k!(N-k)!}\frac{(N-k)!}{k!(N-2k)!}\cdots\frac{(N-kj-k)!}{k!(N-kj-2k)!}  \frac{(N-jk+|A| - j -1)!}{(|A|-j-1)!}\right] =$$
+$$\sum_{j=0}^{Q^-} \left[ \binom{|A|}{j} \cdot \frac{N!}{k!^{j-1}(N-kj-2k)!}  \frac{(N-jk+|A| - j -1)!}{(|A|-j-1)!}\right] =$$
+
+\subsubsection{$K = 0$}
+$$\sum_{j=0}^{Q^-} \binom{N-1}{A-j-1} \cdot \binom{A}{j} \cdot N! = $$
+$$Q^-N!\sum_{j=0}^{Q^-} \binom{N-1}{A-j-1} \cdot \binom{A}{j} = $$
+$$Q^-N!\sum_{j=0}^{Q^-} \binom{N-1}{N-j-1} \cdot \binom{N}{j} = $$
+$$Q^-N!\sum_{j=0}^{Q^-} \binom{N-1}{j} \cdot \binom{N}{j} \leq $$
+$$Q^-N!\sum_{j=0}^{Q^-} \binom{N}{j}^2 = $$
+$$Q^-N! \left(\frac{N!}{(N!0!)} + \frac{N!}{(N-1!1!)} + \cdots + \frac{N!}{(N-Q^-)!Q^-!}\right)^2 = $$
+$$Q^-N! \left(\frac{N!Q^-}{\sum_{j=0}^{Q^-} (N-j)!j!} \right)^2 \leq $$
+
+
+
+
+
+
+
+\end{document}

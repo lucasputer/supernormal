@@ -1,6 +1,6 @@
-% \documentclass[11pt,a4paper,twoside]{tesis}
+\documentclass[11pt,a4paper,twoside]{tesis}
 % SI NO PENSAS IMPRIMIRLO EN FORMATO LIBRO PODES USAR
-\documentclass[11pt,a4paper]{tesis}
+% \documentclass[11pt,a4paper]{tesis}
 
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
@@ -10,8 +10,6 @@
 \usepackage{mathtools}
 \usepackage{ dsfont }
 \usepackage{amsthm}
-\usepackage[parfill]{parskip}
-
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{corollary}{Corollary}[theorem]
@@ -37,7 +35,7 @@
 \def\tituloTesis{Números Muy Normales}
 \def\runtitulo{Números Muy Normales}
 \def\runtitle{Very Normal Numbers}
-\def\director{Dra. Verónica Becher}
+\def\director{Verónica Becher}
 \def\codirector{Olivier Carton}
 \def\lugar{Buenos Aires, 2019}
 \input{caratula}
@@ -53,8 +51,8 @@
 % \cleardoublepage
 % \input{agradecimientos.tex} % OPCIONAL: comentar si no se quiere
 
-\cleardoublepage
-\input{dedicatoria.tex}  % OPCIONAL: comentar si no se quiere
+% \cleardoublepage
+% \input{dedicatoria.tex}  % OPCIONAL: comentar si no se quiere
 
 \cleardoublepage
 \tableofcontents
@@ -65,60 +63,11 @@
 %%%% ACA VA EL CONTENIDO DE LA TESIS
 
 \chapter{Introduction}
-
-
 \section{Normality}
-
-Flipping a coin is probably the most basic form of randomness that one can think of. Flip a coin a large number of times and roughly half of them will come up heads and half of them will come up tails.
-As sucessive flips are independent, when flipping a coin repeatedly, after observing heads on one given flip, we can equiprobably observe heads or tails in the next one. This means that, if we keep flipping our coin, all combinations of heads and tails have the same chances of happening.
-
-This is the idea captured by Émile Borel  ~\cite{Borel} when he gave the definition of \textit{normality}, a concept that formalizes  the most basic form of randomness for real numbers. Precisely, we say that an infinite sequence of symbols of a given alphabet, for example zeros and ones, is \textit{normal} if all the different blocks of symbols of a given length occur with the same frequency.
-Of course that as the sequence is infinite, when we talk about the frequency of occurence of a given block of symbols we are refering to the asymptotic frequency of the block in the sequence.
-
-Let $b$ be an integer greater or equal to 2 that we call a \textit{base}. If we represent a real numebr in a given base, we have the integer part followed by a fractionary expansion, which is a possibly infinite sequence of digits in base $b$.
-
-Fixed a base $b$, the \textit{expansion} of a real number $\alpha$ en base $b$ is a sequence of digits $d_1d_2d_3\dots$ with every $d_i$ between 0 and $b-1$, such that
-$$\alpha = \floor{\alpha} + 0,d_1d_2d_3\dots$$
-
-where $\floor{alpha}$ is the integer part of $\alpha$.
-
-\textbf{Notation}
-Let $A$ be a finite set of symbols that we refer as the alphabet. We write $A^k$ to denote the set of words of length $k$ formed with symbols form $A$. The length of a finite word $w$ is denoted by $|w|$.
-The positions of finite and infinite words are numbered starting at 1. To denote the symbol at position $i$ of a word $w$, we write $w[i]$, and to denote the substring of $w$ from position $i$ to $j$, we use the notation $w[i \dots j]$.  
-Given two words $w$ and $u$, we denote $|w|_u$ as the number of occurrences of $u$ in $w$ and $||w||_u$ as the number of alligned occurrences of $u$ in $w$, or what is to say:
-    $$|w|_u = |\{i: w[i \dots i + |u| + 1] = u\}|$$
-    $$||w||_u = |\{i: w[i \dots i + |u| + 1] = u \wedge i \equiv 1 \; mod \; |u| \}|$$
-
-For example, $|aaaaa|_{aa} = 4$ and $||aaaaa||_{aa} = 2$.
-\\
-
-\begin{definition}
-    We say that an ininite sequence $w$ formed of symbols of an alphabet $A$ where $|A| = b$ is \textit{simply normal} when for every $d \in A$ it happens that:
-    $$\lim_{N\to\infty} \frac{|w[1 \dots N]|_d}{N} = \frac{1}{b}$$
-\end{definition}
-
-\begin{definition}
-    We say that an ininite sequence $w$ formed of symbols of an alphabet $A$ where $|A| = b$ is \textit{normal} when for every block $u$ it happens that:
-    $$\lim_{N\to\infty} \frac{|w[1 \dots N]|_u}{N} = \frac{1}{b^{|u|}}$$
-\end{definition}
-
-\begin{definition}
-    We say that a real number is normal in base $b$ if its expansion in base $b$ is a normal sequence. 
-    
-    Finally, we say that a real number is \textit{absolutely normal} if its expansion is normal for every base.
-\end{definition}
-
-
-\begin{theorem} ~\cite{Borel}
-    Almost all real numbers (with respect to Lebesgue measure) are absolutely normal.
-\end{theorem}
-
-The same publication where normality is defined, contains the proof that almost all real numbers are absolutely normal 
-
 \section{Supernormality}
 
 \begin{definition}
-    Let $\lambda > 0$ be a real number. Let $k \in \mathds{Z}_{\ge 0}$.
+    Let $\lambda > 0$ be a real number. Let $k \in \Z_{\ge 0}$.
     $$a_k(\lambda) = \frac{e^{-\lambda}\lambda^k}{k!}$$
 \end{definition}
 

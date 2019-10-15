@@ -61,8 +61,6 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/doublestroke/dsfont.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/doublestroke/dsfont.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/parskip/parskip.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/parskip/parskip.sty
 INPUT /Users/lucas/Repositories/supernorm/tesis/tesis.aux
 INPUT /Users/lucas/Repositories/supernorm/tesis/tesis.aux
 OUTPUT /Users/lucas/Repositories/supernorm/tesis/tesis.aux
@@ -119,11 +117,6 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /Users/lucas/Repositories/supernorm/tesis/abs_en.tex
 INPUT /Users/lucas/Repositories/supernorm/tesis/abs_en.tex
-INPUT /Users/lucas/Repositories/supernorm/tesis/dedicatoria.tex
-INPUT /Users/lucas/Repositories/supernorm/tesis/dedicatoria.tex
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
-INPUT /Users/lucas/Repositories/supernorm/tesis/tesis.toc
-INPUT /Users/lucas/Repositories/supernorm/tesis/tesis.toc
 OUTPUT /Users/lucas/Repositories/supernorm/tesis/tesis.toc
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/doublestroke/Udsrom.fd
@@ -131,10 +124,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/doublestroke/dsrom10.t
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/doublestroke/dsrom8.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/doublestroke/dsrom8.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsl10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
-INPUT /Users/lucas/Repositories/supernorm/tesis/tesis.bbl
-INPUT /Users/lucas/Repositories/supernorm/tesis/tesis.bbl
 INPUT /Users/lucas/Repositories/supernorm/tesis/tesis.aux
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
