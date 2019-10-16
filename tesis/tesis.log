@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  15 OCT 2019 19:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  15 OCT 2019 21:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -343,49 +343,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--94
 
 
 ]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 121.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+Underfull \hbox (badness 10000) in paragraph at lines 125--128
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 144.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [2]
+) [2] [3]
 Chapter 2.
-[3
+[4
 
-] [4] [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 308--311
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 344--347
+] [5] [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 331--334
 
  []
 
-[8] [9] [10] [11] [12]
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 367--370
+
+ []
+
+[9] [10] [11] [12] [13]
 Chapter 3.
-[13
+[14
 
 ] (/Users/lucas/Repositories/supernorm/tesis/tesis.bbl
-Underfull \hbox (badness 2698) in paragraph at lines 14--19
+Underfull \hbox (badness 2698) in paragraph at lines 20--25
 []\OT1/cmr/m/n/10.95 M. []Emile Borel.  Les prob-a-bilit^^Ses d^^Senombrables et leurs ap-pli-ca-tions
  []
 
-) [14
+) [15
 
 
 ] (/Users/lucas/Repositories/supernorm/tesis/tesis.aux) ) 
 Here is how much of TeX's memory you used:
- 4320 strings out of 492649
- 61513 string characters out of 6129622
- 150937 words of memory out of 5000000
- 8108 multiletter control sequences out of 15000+600000
+ 4327 strings out of 492649
+ 61623 string characters out of 6129622
+ 150975 words of memory out of 5000000
+ 8115 multiletter control sequences out of 15000+600000
  10859 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,10n,25p,470b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
-Output written on /Users/lucas/Repositories/supernorm/tesis/tesis.pdf (19 pages, 264142 bytes).
+Output written on /Users/lucas/Repositories/supernorm/tesis/tesis.pdf (20 pages, 267680 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
+ 137 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

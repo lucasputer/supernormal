@@ -80,7 +80,7 @@ Let $b$ be an integer greater or equal to 2 that we call a \textit{base}. If we 
 Fixed a base $b$, the \textit{expansion} of a real number $\alpha$ en base $b$ is a sequence of digits $d_1d_2d_3\dots$ with every $d_i$ between 0 and $b-1$, such that
 $$\alpha = \floor{\alpha} + 0,d_1d_2d_3\dots$$
 
-where $\floor{alpha}$ is the integer part of $\alpha$.
+where $\floor{\alpha}$ is the integer part of $\alpha$.
 
 \textbf{Notation}
 Let $A$ be a finite set of symbols that we refer as the alphabet. We write $A^k$ to denote the set of words of length $k$ formed with symbols form $A$. The length of a finite word $w$ is denoted by $|w|$.
@@ -113,7 +113,30 @@ For example, $|aaaaa|_{aa} = 4$ and $||aaaaa||_{aa} = 2$.
     Almost all real numbers (with respect to Lebesgue measure) are absolutely normal.
 \end{theorem}
 
-The same publication where normality is defined, contains the proof that almost all real numbers are absolutely normal 
+When Borel proved that almost all real numbers are absolutely normal, he conjectured that irrational algebraic numbers are absolutly normal. However, this problem remains open.
+Even though absolutly normal numbers have been found ~\cite{Sierpinski}, the solutions are not fully satisfactory if we take into account that it is not possible to prove any other properties on this numbers other that their absolute normality.
+It is still an open problem to prove that any of the mathematical constants such as $\pi$ , $e$ or $\sqrt{2}$ are normal.
+
+However, the problem of giving a number normal to a given base has been solved succesfully. There are several examples but the most famous and simple one of such sequences is the Champernowne sequence ~\cite{champern} written in base 10:
+$$0 \; \;2 \;3 \dots 9 \; 10 \; 11 \; 12 \dots 98 \; 99 \; 100 \; 101 \; 102 \dots$$ 
+Note that spaces were added for reading convenience.
+
+
+Champernowne proved this constant to be normal in base 10. The construction can be done in any base, obtaining a numebr normal to that base. It is unknown whether Champernowne numbers are normal to
+the bases that are multiplicatively independent to the base used in the construction. There are many interesting generalizations of Champernowne's construction. The following theorem, proved in ~\cite{BC2018} let us give the definition of the Champernowne sequence that is used throughout this thesis.
+\\
+
+\begin{theorem}
+    Let $A$ be an alphabet. Let $X(n)$ be the concatenation of all words of length $n$ over $A$ in lexicographic order.
+     The infinite word $X(1)X(2)\dots$ is normal to alphabet $A$.
+\end{theorem}
+
+In the particular case of this work we use a binary alphabet  $A=\{0,1\}$ having $X(n)$ to be the concatenation of all words of length $n$ over the alphabet with two simbols $A=\{0,1\}$ in lexicographic order.Then, for example:
+$$X(2) = 00 \: 01 \: 10 \: 11$$
+
+Let the Champernowne sequence be the concatenation of $X(n)$ for $n = 1,2,\dots$ Then the first symbols of the Champernowne sequence are:
+$$champ = 0 \: 1 \: 00 \: 01 \: 10 \: 11 \: 000 \: 001 \: 010 \: 011 \: 100 \: 101 \: 110 \: 111 \: 0000 \: 0001 \: \dots$$
+
 
 \section{Supernormality}
 

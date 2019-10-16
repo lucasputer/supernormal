@@ -10,6 +10,12 @@ Veronica Becher, Olivier Carton, and Ignacio Cunningham.
 \newblock Low discrepancy sequences failing poissonian pair correlations.
 \newblock {\em Archiv der Mathematik}, 113, 04 2019.
 
+\bibitem[Cha33]{champern}
+D.~G. Champernowne.
+\newblock {The Construction of Decimals Normal in the Scale of Ten}.
+\newblock {\em Journal of the London Mathematical Society}, s1-8(4):254--260,
+  10 1933.
+
 \bibitem[{\'E}B09]{Borel}
 M.~{\'E}mile~Borel.
 \newblock Les probabilit{\'e}s d{\'e}nombrables et leurs applications
@@ -21,5 +27,12 @@ M.~{\'E}mile~Borel.
 Ísabel Pirsic and Wolfgang Stockinger.
 \newblock The champernowne constant is not poissonian.
 \newblock {\em Funct. Approx. Comment. Math.}, 60(2):253--262, 03 2019.
+
+\bibitem[Sie17]{Sierpinski}
+W.~Sierpinski.
+\newblock D\'emonstration \'el\'ementaire du th\'eor\`eme de m. borel sur les
+  nombres absolument normaux et d\'etermination effective d'une tel nombre.
+\newblock {\em Bulletin de la Soci\'et\'e Math\'ematique de France},
+  45:125--132, 1917.
 
 \end{thebibliography}

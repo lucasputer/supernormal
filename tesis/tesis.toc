@@ -1,15 +1,15 @@
 \babel@toc {english}{}
 \contentsline {chapter}{\numberline {1.}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Normality}{1}
-\contentsline {section}{\numberline {1.2}Supernormality}{2}
-\contentsline {chapter}{\numberline {2.}Supernormality is stronger than normality}{3}
-\contentsline {section}{\numberline {2.1}Supernormality implies normality (Proof by Olivier Carton)}{3}
-\contentsline {section}{\numberline {2.2}Normality does not imply supernormality}{4}
-\contentsline {subsection}{\numberline {2.2.1}Case Analysis}{6}
-\contentsline {subsubsection}{Case 1}{6}
-\contentsline {subsubsection}{Case 2}{7}
-\contentsline {subsubsection}{Case 3}{8}
-\contentsline {subsubsection}{Case 4}{10}
-\contentsline {subsubsection}{Case 5}{12}
-\contentsline {subsection}{\numberline {2.2.2}Bounding words that appear in Champernowne}{12}
-\contentsline {chapter}{\numberline {3.}Bibliography}{13}
+\contentsline {section}{\numberline {1.2}Supernormality}{3}
+\contentsline {chapter}{\numberline {2.}Supernormality is stronger than normality}{4}
+\contentsline {section}{\numberline {2.1}Supernormality implies normality (Proof by Olivier Carton)}{4}
+\contentsline {section}{\numberline {2.2}Normality does not imply supernormality}{5}
+\contentsline {subsection}{\numberline {2.2.1}Case Analysis}{7}
+\contentsline {subsubsection}{Case 1}{7}
+\contentsline {subsubsection}{Case 2}{8}
+\contentsline {subsubsection}{Case 3}{9}
+\contentsline {subsubsection}{Case 4}{11}
+\contentsline {subsubsection}{Case 5}{13}
+\contentsline {subsection}{\numberline {2.2.2}Bounding words that appear in Champernowne}{13}
+\contentsline {chapter}{\numberline {3.}Bibliography}{14}
