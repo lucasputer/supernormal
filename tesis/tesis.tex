@@ -69,13 +69,13 @@
 
 \section{Normality}
 
-Flipping a coin is probably the most basic form of randomness that one can think of. Flip a coin a large number of times and roughly half of them will come up heads and half of them will come up tails.
-As sucessive flips are independent, when flipping a coin repeatedly, after observing heads on one given flip, we can equiprobably observe heads or tails in the next one. This means that, if we keep flipping our coin, all combinations of heads and tails have the same chances of happening.
+Flipping a coin is the most basic form of randomness that one can think of. Flip a coin a large number of times and roughly half of them will come up heads and half of them will come up tails.
+As successive flips are independent, when flipping a coin repeatedly, after observing heads on one given flip, we have the same probability of observing heads or tails in the next one. This means that, if we keep flipping the coin, all combinations of heads and tails have the same chances of happening.
 
 This is the idea captured by Émile Borel  ~\cite{Borel} when he gave the definition of \textit{normality}, a concept that formalizes  the most basic form of randomness for real numbers. Precisely, we say that an infinite sequence of symbols of a given alphabet, for example zeros and ones, is \textit{normal} if all the different blocks of symbols of a given length occur with the same frequency.
-Of course that as the sequence is infinite, when we talk about the frequency of occurence of a given block of symbols we are refering to the asymptotic frequency of the block in the sequence.
+Of course that as the sequence is infinite, when we talk about the frequency of occurrence of a given block of symbols we are referring to the asymptotic frequency of the block in the sequence.
 
-Let $b$ be an integer greater or equal to 2 that we call a \textit{base}. If we represent a real numebr in a given base, we have the integer part followed by a fractionary expansion, which is a possibly infinite sequence of digits in base $b$.
+Let $b$ be an integer greater or equal to 2 that we call a \textit{base}. If we represent a real number in a given base, we have the integer part followed by a fractionary expansion, which is a possibly infinite sequence of digits in base $b$.
 
 Fixed a base $b$, the \textit{expansion} of a real number $\alpha$ en base $b$ is a sequence of digits $d_1d_2d_3\dots$ with every $d_i$ between 0 and $b-1$, such that
 $$\alpha = \floor{\alpha} + 0,d_1d_2d_3\dots$$
@@ -83,9 +83,10 @@ $$\alpha = \floor{\alpha} + 0,d_1d_2d_3\dots$$
 where $\floor{\alpha}$ is the integer part of $\alpha$.
 
 \textbf{Notation}
-Let $A$ be a finite set of symbols that we refer as the alphabet. We write $A^k$ to denote the set of words of length $k$ formed with symbols form $A$. The length of a finite word $w$ is denoted by $|w|$.
+Let $A$ be a finite set of symbols that we refer as the alphabet. We write $A^k$ to denote the set of words of length $k$ formed with symbols from $A$. The length of a finite word $w$ is denoted by $|w|$.
 The positions of finite and infinite words are numbered starting at 1. To denote the symbol at position $i$ of a word $w$, we write $w[i]$, and to denote the substring of $w$ from position $i$ to $j$, we use the notation $w[i \dots j]$.  
-Given two words $w$ and $u$, we denote $|w|_u$ as the number of occurrences of $u$ in $w$ and $||w||_u$ as the number of alligned occurrences of $u$ in $w$, or what is to say:
+Given two words $w$ and $u$, we denote $|w|_u$ as the number of occurrences of $u$ in $w$ and $||w||_u$ as the number of a
+ligned occurrences of $u$ in $w$, or what is to say:
     $$|w|_u = |\{i: w[i \dots i + |u| + 1] = u\}|$$
     $$||w||_u = |\{i: w[i \dots i + |u| + 1] = u \wedge i \equiv 1 \; mod \; |u| \}|$$
 
@@ -93,12 +94,12 @@ For example, $|aaaaa|_{aa} = 4$ and $||aaaaa||_{aa} = 2$.
 \\
 
 \begin{definition}
-    We say that an ininite sequence $w$ formed of symbols of an alphabet $A$ where $|A| = b$ is \textit{simply normal} when for every $d \in A$ it happens that:
+    We say that an infinite sequence $w$ formed of symbols of an alphabet $A$ where $|A| = b$ is \textit{simply normal} when for every $d \in A$ it happens that:
     $$\lim_{N\to\infty} \frac{|w[1 \dots N]|_d}{N} = \frac{1}{b}$$
 \end{definition}
 
-\begin{definition}[Normaility]
-    We say that an ininite sequence $w$ formed of symbols of an alphabet $A$ where $|A| = b$ is \textit{normal} when for every block $u$ it happens that:
+\begin{definition}[Normality]
+    We say that an infinite sequence $w$ formed of symbols of an alphabet $A$ where $|A| = b$ is \textit{normal} when for every block $u$ it happens that:
     $$\lim_{N\to\infty} \frac{|w[1 \dots N]|_u}{N} = \frac{1}{b^{|u|}}$$
 \end{definition}
 
@@ -113,16 +114,16 @@ For example, $|aaaaa|_{aa} = 4$ and $||aaaaa||_{aa} = 2$.
     Almost all real numbers (with respect to Lebesgue measure) are absolutely normal.
 \end{theorem}
 
-When Borel proved that almost all real numbers are absolutely normal, he conjectured that irrational algebraic numbers are absolutly normal. However, this problem remains open.
-Even though absolutly normal numbers have been found ~\cite{Sierpinski}, the solutions are not fully satisfactory if we take into account that it is not possible to prove any other properties on this numbers other that their absolute normality.
+When Borel proved that almost all real numbers are absolutely normal, he conjectured that irrational algebraic numbers are absolutely normal. However, this problem remains open.
+Even though absolutely normal numbers have been found ~\cite{Sierpinski}, the solutions are not fully satisfactory if we take into account that it is not possible to prove any other properties on this numbers other that their absolute normality.
 It is still an open problem to prove that any of the mathematical constants such as $\pi$ , $e$ or $\sqrt{2}$ are normal.
 
-However, the problem of giving a number normal to a given base has been solved succesfully. There are several examples but the most famous and simple one of such sequences is the Champernowne sequence ~\cite{champern} written in base 10:
+However, the problem of giving a sequence that is normal to a given base has been solved successfully. There are several examples but the most famous and simple one of such sequences is the Champernowne sequence ~\cite{champern} written in base 10:
 $$0 \; \;2 \;3 \dots 9 \; 10 \; 11 \; 12 \dots 98 \; 99 \; 100 \; 101 \; 102 \dots$$ 
 Note that spaces were added for reading convenience.
 
 
-Champernowne proved this constant to be normal in base 10. The construction can be done in any base, obtaining a numebr normal to that base. It is unknown whether Champernowne numbers are normal to
+Champernowne proved this constant to be normal in base 10. The construction can be done in any base, obtaining a number normal to that base. It is unknown whether Champernowne numbers are normal to
 the bases that are multiplicatively independent to the base used in the construction. There are many interesting generalizations of Champernowne's construction. The following theorem, proved in ~\cite{BC2018} let us give the definition of the Champernowne sequence that is used throughout this thesis.
 \\
 
@@ -131,7 +132,7 @@ the bases that are multiplicatively independent to the base used in the construc
      The infinite word $X(1)X(2)\dots$ is normal to alphabet $A$.
 \end{theorem}
 
-In the particular case of this work we use a binary alphabet  $A=\{0,1\}$ having $X(n)$ to be the concatenation of all words of length $n$ over the alphabet with two simbols $A=\{0,1\}$ in lexicographic order.Then, for example:
+In the particular case of this work we use a binary alphabet  $A=\{0,1\}$ having $X(n)$ to be the concatenation of all words of length $n$ over the alphabet with two symbols $A=\{0,1\}$ in lexicographic order.Then, for example:
 $$X(2) = 00 \: 01 \: 10 \: 11$$
 
 Let the Champernowne sequence be the concatenation of $X(n)$ for $n = 1,2,\dots$ Then the first symbols of the Champernowne sequence are:
@@ -146,7 +147,7 @@ $$champ = 0 \: 1 \: 00 \: 01 \: 10 \: 11 \: 000 \: 001 \: 010 \: 011 \: 100 \: 1
 % \end{definition}
 
 The notion of supernormality was defined by Zeev Rudnick a few years ago. Benjamin Weiss from the Einstein Institute of Math from the Hebrew University gave on June 16th, 2010 a lecture on “Random-like behavior in deterministic systems”  where the notion of \textit{supernormal} sequences is described under the name of \textit{Poisson generic} sequences ~\cite{Weiss}.
- The few things known about this notion are not published. However, in the conference, Weiss claims that almost every real number is supernormal and that the notion of supernormality is stronger than the classical notion of normaility. This means that if a number is supernormal then it is normal, but not the other way around. 
+ The few things known about this notion are not published. However, in the conference, Weiss claims that almost every real number is supernormal and that the notion of supernormality is stronger than the classical notion of Normality. This means that if a number is supernormal then it is normal, but not the other way around. 
 Weiss also states that the most famous example of a normal sequence, the Champernowne sequence, is not supernormal.
 Finally, he leaves open the problem of giving an explicit construction of a supernormal number.
 In this thesis we will prove that the Chamernowne sequence is not supernormal. This, together with the proof that supernormality implies normality, completes the proof that supernormality is stronger than normality.
@@ -175,13 +176,13 @@ $$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\lfloor\lambda(2^n+n-1)\rf
 % In the case of supernormality, the difference relies in the fact that what are some calculated i
 
 The idea behind normality is to look at increasing finite sample spaces of the sequence and check that for each block, the frequency of appearance is the same as the one for each of all the possible blocks.
-Supernormality doesn't look at at the frequence of occurence a block as normality does. We could say that $A^\lambda_{k,n}(x)$ is conducting some simple statistics where for each block of length $n$ we are counting how many times it occurs. 
+Supernormality doesn't look at the frequency of occurrence a block as normality does. We could say that $A^\lambda_{k,n}(x)$ is conducting some simple statistics where for each block of length $n$ we are counting how many times it occurs. 
  Then, the probability that a block occurs $k$ times is the number of blocks that occur $k$ times in the first $\floor{\lambda(2^n + n - 1)}$ symbols of the sequence divided by all the possible blocks.
 For a sequence to be supernormal, we need these proportions to converge in distribution to a Poisson distribution with parameter $\lambda$.
 It is important to notice that the $\lambda$ parameter is setting up how much of the sequence we will read in order to conduct the statistics, and that it may not be an integer, we need to take the integer part in order to consume an integer number of symbols of the sequence.
 
 
-Let's take as an illustrative example the finite sequence $x = 1001111001$. Taking $n=3$ and $\lambda = 1$, the words of length $n$ that occurr in $x$ are:
+Let's take as an illustrative example the finite sequence $x = 1001111001$. Taking $n=3$ and $\lambda = 1$, the words of length $n$ that occur in $x$ are:
 $$100 \; 001 \; 011\; 111\; 111\; 110\; 001$$
 
 Now if we count the occurrences of every possible word of length $3$ we have:
@@ -210,7 +211,7 @@ Now if we count the occurrences of every possible word of length $3$ we have:
    \end{tabular}
 \end{center}
 
-And now we can see the frequence and the count of every possible $k$ with their expected value if the sequence were supernormal which is $\frac{e^{-\lambda}\lambda^k}{k!}$ :
+And now we can see the frequency and the count of every possible $k$ with their expected value if the sequence were supernormal which is $\frac{e^{-\lambda}\lambda^k}{k!}$ :
 
 \begin{center}
     \begin{tabular}{|c | c |  c| c |} 
@@ -240,7 +241,7 @@ And now we can see the frequence and the count of every possible $k$ with their 
 
 Of course this is just a finite simple example, but for an infinite sequence to be supernomal, we need these frequencies to converge to a Poisson point process when $n \rightarrow \infty$. 
 
-As a more complex example we can analize what happens in the Champernowne sequence, which can also help us build an intuition on how to approach a proof for its non-normality.
+As a more complex example we can analyze what happens in the Champernowne sequence, which can also help us build an intuition on how to approach a proof for its non-normality.
 The following figures show for every $k$ taking $\lambda = 1$ and $n = 22$, the observed frequencies next to the expected ones.
 
 % \begin{figure}[h]
@@ -261,7 +262,7 @@ The following figures show for every $k$ taking $\lambda = 1$ and $n = 22$, the 
 As it can be observed in Figure\ref{fig:champ-22-freq}, the amount of words of length $n$ that do not appear in the first $2^n + n - 1$ symbols of Champernowne is much higher than the expected one for the sequence to be 1-supernormal. As we will observe later in the proof this is due to the fact that by the way that Champernowne is constructed.
 This experiment as well a supernormality check for other famous normal sequences and a few PRNSs are available at ~\cite{Puterman}
 
-% One more interesting thing to do experimentaly is to check wether some pseudorandom number generators generate sequences that empiricaly appear to be supernormal. We analized what happened with sequences genereated with the Mersenne Twister PRNG which is the PRNG used by Python and with the cellular autmata Rule 30 which was used as the PRNG in Mathematica.
+% One more interesting thing to do experimentaly is to check wether some pseudorandom number generators generate sequences that empiricaly appear to be supernormal. We analyzed what happened with sequences genereated with the Mersenne Twister PRNG which is the PRNG used by Python and with the cellular autmata Rule 30 which was used as the PRNG in Mathematica.
 
 %% ...
 \chapter{Supernormality is stronger than normality}
@@ -325,7 +326,7 @@ We aim to prove that normality does not imply supernormality. For this we prove 
 The strategy followed to achieve this is similar to the ones used in ~\cite{BCC2019} and  ~\cite{PS2019}.
 
 
-Let $X(n)$ be the concatenation of all words of length $n$ over the alphabet with two simbols $\mathcal{A}=\{0,1\}$ in lexicographic order.  It is clear that $X(n)$ has length $n2^n$. Then, for example:
+Let $X(n)$ be the concatenation of all words of length $n$ over the alphabet with two symbols $\mathcal{A}=\{0,1\}$ in lexicographic order.  It is clear that $X(n)$ has length $n2^n$. Then, for example:
 $$X(2) = 00 \: 01 \: 10 \: 11$$
 Note that spaces were added for reading convenience.
 
@@ -353,7 +354,7 @@ First, let's see that given $d$, we define $k = 2^d$, if we take $n \geq d + k +
     $2^{d+k+1} = 2^{d+k}2$ and $X(k)$ has length $k2^k = 2^d2^k = 2^{d+k}$ 
 \end{proof}
 
-We prove that Champernowne is not supernormal by showing that the frequence of words of length $k+d+1$ that do not occur in the first $2^{k+d+1}$ symbols of the Champernowne sequence is higher that the expected frequency if it were supernormal.
+We prove that Champernowne is not supernormal by showing that the frequency of words of length $k+d+1$ that do not occur in the first $2^{k+d+1}$ symbols of the Champernowne sequence is higher than the expected frequency if it were supernormal.
 To accomplish this, we exhaustively look how many different words of length $2^{k+d+1}$ are there within $X(k)$ and give an upper bound for the amount of different words that can appear in the first $2^{k+d+1}$ symbols of the Champernowne sequence.
 
 Now, let's take a look at what the words of length $k + d + 1$ that occur in $X(k)$ look like. There are four different cases that can happen of how a word $x$ is formed with elements from $X(k)$. 
@@ -378,11 +379,11 @@ with $n \in \{1,2,\dots ,k - d - 2\}$.
   \item \underline{Case 4:} 
   $$ x = u_{k-d-1+n} u_{k-d+n} \dots u_k \quad v_1 v_2 \dots v_k \quad w_1 w_2 \dots w_{d+1-n}$$
   with $n \in \{1, 2, \dots , d\}$
-  Which is the case where the word of length $k + d + 1$ is formed by a full word, and the extra $d + 1$ symbols are taken from both the end of the previous word and the beggining of the next one.
+  Which is the case where the word of length $k + d + 1$ is formed by a full word, and the extra $d + 1$ symbols are taken from both the end of the previous word and the beginning of the next one.
 
   \item \underline{Case 5:} 
   
-   In the previous cases we considered every word $u$ such that there is a word $v$ and in case 4 two words $v$ and $w$ that come after $u$ in $X(k)$. This is not true for the las two words of $X(k)$ so we consider them a different case.
+   In the previous cases we considered every word $u$ such that there is a word $v$ and in case 4 two words $v$ and $w$ that come after $u$ in $X(k)$. This is not true for the last two words of $X(k)$ so we consider them a different case.
   
 
 \end{itemize}
@@ -390,7 +391,7 @@ with $n \in \{1,2,\dots ,k - d - 2\}$.
 
 
 \subsection{Case Analysis}
-For the simplicity of the proof we define the function $next(w)$ that is used repetidely in the case analysis.
+For the simplicity of the proof we define the function $next(w)$ that is used repeatedly in the case analysis.
 
 \begin{definition}
     Let $next(w):\mathcal{A}^n \rightarrow \mathcal{A}^n $ be $|w|$ times 0 if $w$ only consists of $1s$ and the word that comes after $w$ in lexicographic order in any other case.
@@ -415,7 +416,7 @@ $$( 11111110 \qquad 1111 ) \; 1111$$
 There are two important things to notice here. The first one is that as the words of length $k + d + 1$ are formed by a full word of length $k$ followed by the first $d + 1$ symbols from the next word, in almost every case the first $d + 1$ symbols are equal to the last $d + 1$.
 The only way for this not to happen, is when the last $k - d - 1$ symbols from the first word $u$ are all $1s$, which means that the next word in lexicographic order $v$ consists of $next(v_1 v_2 \dots v_{d + 1})$ concatenated with $next(v_{d + 2} v_{d + 3} \dots v_{k})$.
 
-The second important thing to notice is that as $X(k)$ is the concatenation of all words of length $k$, all words of length $k$ occur one time in an alligned position modulo $k$. This means that the first $k$ symbols of $x$ takes every possible configuration. 
+The second important thing to notice is that as $X(k)$ is the concatenation of all words of length $k$, all words of length $k$ occur one time in an aligned position modulo $k$. This means that the first $k$ symbols of $x$ takes every possible configuration. 
 
 These two facts leave two possible schemes for what a word $x$ of case 1 may look like:
 
@@ -431,7 +432,7 @@ $$ 2^k - \frac{1}{2\cdot2^{d} }$$
 
 $ 2^k - \frac{1}{2\cdot2^{d} }$ different words.
 
-For the second scheme we substract one to the cases due to the fact that the last word of length $k$ in $X(k)$ has its continuation outside $X(k)$:
+For the second scheme we subtract one to the cases due to the fact that the last word of length $k$ in $X(k)$ has its continuation outside $X(k)$:
 $$2^{d + 1}   - 1$$
 $$2\cdot 2^d - 1$$
 $ 2\cdot 2^d - 1 $ different words.
@@ -453,8 +454,8 @@ $$1000 \; (0000 \qquad 10000001)$$
 $$\vdots$$
 $$1111 \; (1110 \qquad 11111111)$$
 
-As in the previous case, as $X(k)$ is the concatenation of all words of length $k$, all words of length $k$ occur one time in an alligned position modulo $k$. This means that the last $k$ symbols of $x$ take every possible configuration.
-The other important thing to notice is that as the first $d + 1$ symbols of $x$ come from the word $u$ which occups exactly before $v$ in lexicographic order, then: 
+As in the previous case, as $X(k)$ is the concatenation of all words of length $k$, all words of length $k$ occur one time in an aligned position modulo $k$. This means that the last $k$ symbols of $x$ take every possible configuration.
+The other important thing to notice is that as the first $d + 1$ symbols of $x$ come from the word $u$ which occupies exactly before $v$ in lexicographic order, then: 
 $$next(u_{k-d-1} u_{k-d} \dots u_k) = u_{v-d-1} v_{k-d} \dots v_k$$
 
 This leaves only one possible scheme for what a word $x$ of case 2 may look like:
@@ -466,7 +467,7 @@ $$(2^{d + 1} 2^{k-d})-1$$
 $$ 2\cdot 2^d  (\frac{2^k}{2^d}) - 1$$
 $$ 2 \cdot 2^k - 1$$
 
-$ 2 \cdot 2^k - 1 $ different words which is less than $2 \cdot 2^k$ diffrent words.
+$ 2 \cdot 2^k - 1 $ different words which is less than $2 \cdot 2^k$ different words.
 
 \subsubsection{Case 3}
 $$x = u_{n+1} u_{n+2} \dots u_k \quad  v_1 v_2 \dots v_{d+n+1} $$
@@ -501,7 +502,7 @@ $$111\; (1111\; 0 \qquad 111 \;1111 ) \;1$$
 
 In this case, it also happens that as $X(k)$ is the concatenation of all words of length $k$, for each value of $n$, all words of length $k$ take the $u$ position once, except the last of the words of length $k$ in $X(k)$.
 
-It is important to notice that for a given value of $n$, the first $n$ symbols of $u$ are not be considered to form $x$. This means that it can be interepreted that the symbols from  $u$ that are considered are, the first $d + 1$ symbols after $n$ which are called $A$ and the remaining $k - d - 1 - n$ symbols which are be called $B$.
+It is important to notice that for a given value of $n$, the first $n$ symbols of $u$ are not be considered to form $x$. This means that it can be interpreted that the symbols from  $u$ that are considered are, the first $d + 1$ symbols after $n$ which are called $A$ and the remaining $k - d - 1 - n$ symbols which are be called $B$.
 
 Now, if we divide the $n + d + 1$ symbols that are used from $v$ to form $x$ into the first $n$ symbols which are called $C$ and the remaining $d + 1$ symbols, it is possible to see that these $d + 1$ symbols are always equal to the symbols from $A$ except for the case where $B$ = $11\dots1$ as they account for the same indexes of $u$ and $v$ and $v$ comes immediately after $u$ in lexicographic order. 
 
@@ -558,9 +559,9 @@ In this case, it also happens that as $X(k)$ is the concatenation of all words o
 all words of length $k$ take the $u$ position once, except the last of the words of length $k$ in $X(k)$.
 
 We call $A$ the first $n$ symbols of $x$ which are taken from the end of $v$. The following $d + 1 - n$ symbols which are the first of $v$ are called $B$ and it happens that unless the remaining symbols of $v$ are all $1s$, 
-they are be the same as the last $d + 1 - n$ of $x$ because these symbols are the first $d + 1 - n$ from $w$.
+they are the same as the last $d + 1 - n$ of $x$ because these symbols are the first $d + 1 - n$ from $w$.
 Now, we consider the remaining $k - d - 1 + n$ symbols from $v$ as two blocks, one block $C$ of length $k - d - 1$ and the remaining $n$ symbols which are exctly $next(A)$ as $v$ is the next word in lexicographic order after $u$.
-This yields the two following schemes:
+This yields the following two schemes:
 
 $$\underbrace{\quad A \quad }_{n} \qquad \underbrace{\quad B \quad }_{d + 1 - n}  \qquad \underbrace{\quad C \quad }_{k-d+1} \qquad next(A) \qquad B$$
 
@@ -586,7 +587,7 @@ $$  2^k \sum_{n=1}^{d} \frac{2^n - 1}{2^n}  + 2 \cdot 2^d \sum_{n=1}^{d} 2^{- n}
 
 \subsubsection{Case 5}
 
-We consider the last to words of $X(k)$ as special cases. The last word of $X(k)$ does not apply to any of the cases since there are no words $v$ and $w$ inside $X(k)$ to consider the cases. Something similar occurs with the word previous to the last one and case 4. 
+We consider the last two words of $X(k)$ as special cases. The last word of $X(k)$ does not apply to any of the cases since there are no words $v$ and $w$ inside $X(k)$ to consider the cases. Something similar occurs with the word previous to the last one and case 4. 
 While it is true that we do know which words come immediately after  $X(k)$, which are the first words of size $d+k+2$ in lexicographic order, as we are giving an upper bound, it is valid to consider all of these as different words to all of the ones considered in the previous cases.
 By doing this, we would have to consider $d+k+1$ new words for the last word and $d$ words for the previous one. So this yields $2d+k+1$ words to consider.
 
@@ -598,7 +599,7 @@ $$\lim_{n\to\infty} \frac{\#\{w: |w| = n  , |champ[1...(2^n+n-1)]|_w > 0\}}{2^n}
 
 
 Now, by Fact \ref{p2} we know that $X(k)$ accounts for half of the words of the first $2^{d+k+1}$ symbols of Champernowne. 
-If we analize what happens with words of length $d+k+1$ using the bounds we have for the occurrences of different words within $X(k)$ and we assume that the remaining $2^{d+k} + d + k - 1$  symbols are all different, then
+If we analyze what happens with words of length $d+k+1$ using the bounds we have for the occurrences of different words within $X(k)$ and we assume that the remaining $2^{d+k} + d + k - 1$  symbols are all different, then
 
 
 
