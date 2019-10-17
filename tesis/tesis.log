@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  17 OCT 2019 15:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  17 OCT 2019 15:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -348,16 +348,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--128
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--157
+Underfull \hbox (badness 10000) in paragraph at lines 145--153
 
  []
 
 [2]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 168.
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 164.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
-Overfull \hbox (10.14902pt too wide) in paragraph at lines 168--168
+Overfull \hbox (10.14902pt too wide) in paragraph at lines 164--164
 \OT1/cmr/bx/n/10.95 Definition 1.2.2. \OT1/cmr/m/n/10.95 Let $\OML/cmm/m/it/10.95 ^^U > \OT1/cmr/m/n/10.95 0$ be a real num-ber. We say a bi-nary se-quence $\OML/cmm/m/it/10.95 x$ \OT1/cmr/m/n/10.95 is $\OML/cmm/m/it/10.95 ^^U\OMS/cmsy/m/n/10.95 ^^@$\OT1/cmr/m/n/10.95 supernormal
  []
 
@@ -365,7 +365,7 @@ Overfull \hbox (10.14902pt too wide) in paragraph at lines 168--168
 <images/champ-22-freq.png, id=45, 387.4475pt x 262.9825pt>
 File: images/champ-22-freq.png Graphic file (type png)
 <use images/champ-22-freq.png>
-Package pdftex.def Info: images/champ-22-freq.png  used on input line 256.
+Package pdftex.def Info: images/champ-22-freq.png  used on input line 252.
 (pdftex.def)             Requested size: 284.52756pt x 193.12729pt.
 
 
@@ -376,12 +376,12 @@ Chapter 2.
 [6
 
 ] [7] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 438--441
+Underfull \hbox (badness 10000) in paragraph at lines 436--439
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 474--477
+Underfull \hbox (badness 10000) in paragraph at lines 472--475
 
  []
 
@@ -412,7 +412,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  41i,10n,25p,470b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
-Output written on /Users/lucas/Repositories/supernorm/tesis/tesis.pdf (22 pages, 289976 bytes).
+Output written on /Users/lucas/Repositories/supernorm/tesis/tesis.pdf (22 pages, 290269 bytes).
 PDF statistics:
  151 PDF objects out of 1000 (max. 8388607)
  105 compressed objects within 2 object streams

@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex tesis"] 1571335493 "tesis.aux" "tesis.bbl" "tesis" 1571337143
+["bibtex tesis"] 1571335493 "tesis.aux" "tesis.bbl" "tesis" 1571338020
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/base/alpha.bst" 1480098433 23907 a5f93555796fb564b924339521f10a7c ""
-  "tesis.aux" 1571337143 2147 2c510012a446bd14f8c32d83ba69ff91 ""
+  "tesis.aux" 1571338019 2147 2c510012a446bd14f8c32d83ba69ff91 ""
   "tesis.bib" 1571324561 3787 a8032ef5833c883477f0cb7f58b2f485 ""
   (generated)
-  "tesis.blg"
   "tesis.bbl"
-["pdflatex"] 1571337143 "/Users/lucas/Repositories/supernorm/tesis/tesis.tex" "/Users/lucas/Repositories/supernorm/tesis/tesis.pdf" "tesis" 1571337143
-  "/Users/lucas/Repositories/supernorm/tesis/tesis.aux" 1571337143 2147 2c510012a446bd14f8c32d83ba69ff91 ""
-  "/Users/lucas/Repositories/supernorm/tesis/tesis.tex" 1571337142 33944 02f0ab2eddaaf9e0fbf2bda71b0fb175 ""
+  "tesis.blg"
+["pdflatex"] 1571338019 "/Users/lucas/Repositories/supernorm/tesis/tesis.tex" "/Users/lucas/Repositories/supernorm/tesis/tesis.pdf" "tesis" 1571338020
+  "/Users/lucas/Repositories/supernorm/tesis/tesis.aux" 1571338019 2147 2c510012a446bd14f8c32d83ba69ff91 ""
+  "/Users/lucas/Repositories/supernorm/tesis/tesis.tex" 1571338018 34077 ed0545934f851bcc75caf12ff47c1fd4 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1480098698 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -102,15 +102,15 @@
   "dedicatoria.tex" 1569272525 86 9d1034630c8c8470df7b9efe2eda9501 ""
   "images/champ-22-freq.png" 1571255162 9386 a8e761ecb059ad0fcf36d8e017a55ddf ""
   "logofcen.pdf" 1280949812 39758 9bdae1f60233e50ba5e4e659fa2e6078 ""
-  "tesis.aux" 1571337143 2147 2c510012a446bd14f8c32d83ba69ff91 ""
+  "tesis.aux" 1571338019 2147 2c510012a446bd14f8c32d83ba69ff91 ""
   "tesis.bbl" 1571335494 1655 e8d668ce4ca320d0cf6d3024e4dad0ec "bibtex tesis"
   "tesis.cls" 1312502354 36659 469a5b174f6a5f4de348ff19f86a677d ""
-  "tesis.tex" 1571337142 33944 02f0ab2eddaaf9e0fbf2bda71b0fb175 ""
-  "tesis.toc" 1571337143 895 c1a3f61085c029ba45a1a350bb448b37 ""
+  "tesis.tex" 1571338018 34077 ed0545934f851bcc75caf12ff47c1fd4 ""
+  "tesis.toc" 1571338019 895 c1a3f61085c029ba45a1a350bb448b37 ""
   (generated)
   "tesis.toc"
-  "tesis.log"
   "tesis.aux"
-  "/Users/lucas/Repositories/supernorm/tesis/tesis.log"
   "tesis.pdf"
+  "tesis.log"
+  "/Users/lucas/Repositories/supernorm/tesis/tesis.log"
   "/Users/lucas/Repositories/supernorm/tesis/tesis.pdf"

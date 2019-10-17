@@ -142,12 +142,8 @@ $$champ = 0 \: 1 \: 00 \: 01 \: 10 \: 11 \: 000 \: 001 \: 010 \: 011 \: 100 \: 1
 
 \section{Supernormality}
 
-% \begin{definition}
-    
-%     $$a_k(\lambda) = \frac{e^{-\lambda}\lambda^k}{k!}$$
-% \end{definition}
-
-The notion of supernormality was defined by Zeev Rudnick a few years ago. Benjamin Weiss from the Einstein Institute of Math from the Hebrew University gave on June 16th, 2010 a lecture on “Random-like behavior in deterministic systems”  where the notion of \textit{supernormal} sequences is described under the name of \textit{Poisson generic} sequences ~\cite{Weiss}.
+The notion of supernormality was defined by Zeev Rudnick a few years ago. 
+Benjamin Weiss from the Einstein Institute of Math from the Hebrew University gave on June 16th, 2010 a lecture on “Random-like behavior in deterministic systems”  where the notion of \textit{supernormal} sequences is described under the name of \textit{Poisson generic} sequences ~\cite{Weiss}.
  The few things known about this notion are not published. However, in the conference, Weiss claims that almost every real number is supernormal and that the notion of supernormality is stronger than the classical notion of Normality. This means that if a number is supernormal then it is normal, but not the other way around. 
 Weiss also states that the most famous example of a normal sequence, the Champernowne sequence, is not supernormal.
 Finally, he leaves open the problem of giving an explicit construction of a supernormal number.
@@ -261,7 +257,7 @@ The following figure shows for every $k$ taking $\lambda = 1$ and $n = 22$, the 
 \end{figure}
 
 As it can be observed in Figure\ref{fig:champ-22-freq}, the amount of words of length $n$ that do not appear in the first $2^n + n - 1$ symbols of Champernowne is much higher than the expected one for the sequence to be 1-supernormal. As we will observe later in the proof this is due to the fact that by the way that Champernowne is constructed.
-This experiment as well a supernormality check for other famous normal sequences and a few PRNSs are available at ~\cite{Puterman}.
+This experiment as well a supernormality check for other famous normal sequences and a few PRNGs are available at ~\cite{Puterman}.
 
 % One more interesting thing to do experimentaly is to check wether some pseudorandom number generators generate sequences that empiricaly appear to be supernormal. We analyzed what happened with sequences genereated with the Mersenne Twister PRNG which is the PRNG used by Python and with the cellular autmata Rule 30 which was used as the PRNG in Mathematica.
 
@@ -272,11 +268,11 @@ This experiment as well a supernormality check for other famous normal sequences
 
 
 \begin{fact}
-    $$\sum_{k \geq 0} a_k(\lambda) = e^{-\lambda}\sum_{k \geq 0} \frac{\lambda^k}{k!} = e^{-\lambda}e^{\lambda} = 1$$
+    $$\sum_{k \geq 0} \frac{\lambda^ke^{-\lambda}}{k!} = e^{-\lambda}\sum_{k \geq 0} \frac{\lambda^k}{k!} = e^{-\lambda}e^{\lambda} = 1$$
 \end{fact}
 
 \begin{fact}
-    $$\sum_{k \geq 0} ka_k(\lambda) = e^{-\lambda}\sum_{k \geq 1} \frac{\lambda^k}{(k-1)!} = \lambda e^{-\lambda} \sum_{k \geq 0} \frac{\lambda^k}{k!}= \lambda$$
+    $$\sum_{k \geq 0} k\frac{\lambda^ke^{-\lambda}}{k!} = e^{-\lambda}\sum_{k \geq 1} \frac{\lambda^k}{(k-1)!} = \lambda e^{-\lambda} \sum_{k \geq 0} \frac{\lambda^k}{k!}= \lambda$$
 \end{fact}
 
 
@@ -284,22 +280,24 @@ This experiment as well a supernormality check for other famous normal sequences
 
 
 \begin{fact}
-    $$\sum_{k \geq 0} A_{k,n} = 1$$
+    $$\sum_{k \geq 0} A^\lambda_{k,n} = 1$$
 \end{fact}
 
+Let $x$ be a normal sequence.
+
 \begin{fact}
-    $$A_{k,n} = 0 \textrm{ if } k > \lambda2^n$$
+    $$A^\lambda_{k,n}(x) = 0 \textrm{ if } k > \lambda2^n$$
 \end{fact}
 
 Let $\epsilon > 0$ be chosen.
 
 Let $k_0$ be chosen such that 
-$$\frac{1}{\lambda} \sum_{k > k_0} ka_k(\lambda) < \frac{\epsilon}{2}$$
+$$\frac{1}{\lambda} \sum_{k > k_0} k\frac{\lambda^ke^{-\lambda}}{k!} < \frac{\epsilon}{2}$$
 
 Let $n_0$ be chosen such that 
-$$\forall i,n \: s.t \:  0 \leq i \leq k_0 - 1 \wedge n > n_0 \wedge |A_{i,n}(\lambda) - a_i(\lambda)| \leq \frac{\epsilon\lambda}{2k_0(k_0+1)}$$
+$$\forall i,n \: s.t \:  0 \leq i \leq k_0 - 1 \wedge n > n_0 \wedge |A^\lambda_{i,n}(x) - \frac{\lambda^ke^{-\lambda}}{k!}| \leq \frac{\epsilon\lambda}{2k_0(k_0+1)}$$
 
-$$Rq? = \sum_{i=0}^{k_0-1} ka_k(\lambda) = \lambda - \sum_{k\geq k_0} ka_k(\lambda) \geq (\lambda - \frac{\epsilon}{2})$$
+$$Rq? = \sum_{i=0}^{k_0-1} k\frac{\lambda^ke^{-\lambda}}{k!} = \lambda - \sum_{k\geq k_0} k\frac{\lambda^ke^{-\lambda}}{k!} \geq (\lambda - \frac{\epsilon}{2})$$
 
 Consider the positions from 1 to $\lfloor\lambda2^n\rfloor$ in $x$. A position is ``blamed'' if the word of length $n$ starting at that position occurs more than $k_0$ times in $x\lfloor\lambda(2^n+n-1)\rfloor$.
 
@@ -307,8 +305,8 @@ The number of non-blamed positions is
 
 
 \begin{align*}
-    \sum_{i=0}^{k-1} iA_{i,n}(\lambda) 2^n &\geq 2^n\sum_{i=0}^{k-1} i (a_i(\lambda) - \frac{\epsilon\lambda}{2k_0(k_0+1)}) \\
-    &\geq 2^n \sum_{i=0}^{k-1} ia_{i}(\lambda) - \frac{2^n\epsilon\lambda}{2} \\
+    \sum_{i=0}^{k-1} iA^\lambda_{i,n}(x) 2^n &\geq 2^n\sum_{i=0}^{k-1} i (\frac{\lambda^ke^{-\lambda}}{k!} - \frac{\epsilon\lambda}{2k_0(k_0+1)}) \\
+    &\geq 2^n \sum_{i=0}^{k-1} i\frac{\lambda^ke^{-\lambda}}{k!} - \frac{2^n\epsilon\lambda}{2} \\
     &\geq 2^n\lambda (1-\frac{\epsilon}{2}) - \frac{2^n\epsilon\lambda}{2} \\
     &= 2^n\lambda(1-\epsilon) \\
 \end{align*}
@@ -336,8 +334,8 @@ $$champ = 0 \: 1 \: 00 \: 01 \: 10 \: 11 \: 000 \: 001 \: 010 \: 011 \: 100 \: 1
 
 By the definition of $\lambda$-supernormality, if we take $\lambda = 1$, then we need to prove that
 
-$$\lim_{n\to\infty} A_{k,n}(1) = a_k(1)$$
-$$\lim_{n\to\infty} \frac{\#\{w: |w| = n  , |x[1...(2^n+n-1)]|_w = k\}}{2^n} \neq \frac{e^{-1}}{k!}$$
+$$\lim_{n\to\infty} A^1_{k,n}(champ) \neq \frac{e^{-1}}{k!}$$
+$$\lim_{n\to\infty} \frac{\#\{w: |w| = n  , |champ[1...(2^n+n-1)]|_w = k\}}{2^n} \neq \frac{e^{-1}}{k!}$$
 
 \bigskip
 
