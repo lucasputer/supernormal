@@ -85,8 +85,7 @@ where $\floor{\alpha}$ is the integer part of $\alpha$.
 \textbf{Notation}
 Let $A$ be a finite set of symbols that we refer as the alphabet. We write $A^k$ to denote the set of words of length $k$ formed with symbols from $A$. The length of a finite word $w$ is denoted by $|w|$.
 The positions of finite and infinite words are numbered starting at 1. To denote the symbol at position $i$ of a word $w$, we write $w[i]$, and to denote the substring of $w$ from position $i$ to $j$, we use the notation $w[i \dots j]$.  
-Given two words $w$ and $u$, we denote $|w|_u$ as the number of occurrences of $u$ in $w$ and $||w||_u$ as the number of a
-ligned occurrences of $u$ in $w$, or what is to say:
+Given two words $w$ and $u$, we denote $|w|_u$ as the number of occurrences of $u$ in $w$ and $||w||_u$ as the number of aligned occurrences of $u$ in $w$, or what is to say:
     $$|w|_u = |\{i: w[i \dots i + |u| + 1] = u\}|$$
     $$||w||_u = |\{i: w[i \dots i + |u| + 1] = u \wedge i \equiv 1 \; mod \; |u| \}|$$
 
@@ -119,12 +118,12 @@ Even though absolutely normal numbers have been found ~\cite{Sierpinski}, the so
 It is still an open problem to prove that any of the mathematical constants such as $\pi$ , $e$ or $\sqrt{2}$ are normal.
 
 However, the problem of giving a sequence that is normal to a given base has been solved successfully. There are several examples but the most famous and simple one of such sequences is the Champernowne sequence ~\cite{champern} written in base 10:
-$$0 \; \;2 \;3 \dots 9 \; 10 \; 11 \; 12 \dots 98 \; 99 \; 100 \; 101 \; 102 \dots$$ 
+$$0 \; 1 \;2 \;3 \dots 9 \; 10 \; 11 \; 12 \dots 98 \; 99 \; 100 \; 101 \; 102 \dots$$ 
 Note that spaces were added for reading convenience.
 
 
 Champernowne proved this constant to be normal in base 10. The construction can be done in any base, obtaining a number normal to that base. It is unknown whether Champernowne numbers are normal to
-the bases that are multiplicatively independent to the base used in the construction. There are many interesting generalizations of Champernowne's construction. The following theorem, proved in ~\cite{BC2018} let us give the definition of the Champernowne sequence that is used throughout this thesis.
+the bases that are multiplicatively independent to the base used in the construction. There are many interesting generalizations of Champernowne's construction. The following theorem, proven in ~\cite{BC2018} let us give the definition of the Champernowne sequence that is used throughout this thesis.
 \\
 
 \begin{theorem}
@@ -135,8 +134,10 @@ the bases that are multiplicatively independent to the base used in the construc
 In the particular case of this work we use a binary alphabet  $A=\{0,1\}$ having $X(n)$ to be the concatenation of all words of length $n$ over the alphabet with two symbols $A=\{0,1\}$ in lexicographic order.Then, for example:
 $$X(2) = 00 \: 01 \: 10 \: 11$$
 
+\begin{definition}
 Let the Champernowne sequence be the concatenation of $X(n)$ for $n = 1,2,\dots$ Then the first symbols of the Champernowne sequence are:
 $$champ = 0 \: 1 \: 00 \: 01 \: 10 \: 11 \: 000 \: 001 \: 010 \: 011 \: 100 \: 101 \: 110 \: 111 \: 0000 \: 0001 \: \dots$$
+\end{definition}
 
 
 \section{Supernormality}
@@ -150,8 +151,8 @@ The notion of supernormality was defined by Zeev Rudnick a few years ago. Benjam
  The few things known about this notion are not published. However, in the conference, Weiss claims that almost every real number is supernormal and that the notion of supernormality is stronger than the classical notion of Normality. This means that if a number is supernormal then it is normal, but not the other way around. 
 Weiss also states that the most famous example of a normal sequence, the Champernowne sequence, is not supernormal.
 Finally, he leaves open the problem of giving an explicit construction of a supernormal number.
-In this thesis we will prove that the Chamernowne sequence is not supernormal. This, together with the proof that supernormality implies normality, completes the proof that supernormality is stronger than normality.
-Let's start by giving a formal definition of what a supernormal sequence is, which will be explained more in detail later.
+In this thesis we prove that the Chamernowne sequence is not supernormal. This, together with the proof that supernormality implies normality, completes the proof that supernormality is stronger than normality.
+Let's start by giving a formal definition of what a supernormal sequence is.
 \\
 
 
@@ -179,7 +180,7 @@ The idea behind normality is to look at increasing finite sample spaces of the s
 Supernormality doesn't look at the frequency of occurrence a block as normality does. We could say that $A^\lambda_{k,n}(x)$ is conducting some simple statistics where for each block of length $n$ we are counting how many times it occurs. 
  Then, the probability that a block occurs $k$ times is the number of blocks that occur $k$ times in the first $\floor{\lambda(2^n + n - 1)}$ symbols of the sequence divided by all the possible blocks.
 For a sequence to be supernormal, we need these proportions to converge in distribution to a Poisson distribution with parameter $\lambda$.
-It is important to notice that the $\lambda$ parameter is setting up how much of the sequence we will read in order to conduct the statistics, and that it may not be an integer, we need to take the integer part in order to consume an integer number of symbols of the sequence.
+It is important to notice that the $\lambda$ parameter is setting up how much of the sequence we read in order to conduct the statistics, and that it may not be an integer, we need to take the integer part in order to consume an integer number of symbols of the sequence.
 
 
 Let's take as an illustrative example the finite sequence $x = 1001111001$. Taking $n=3$ and $\lambda = 1$, the words of length $n$ that occur in $x$ are:
@@ -239,10 +240,10 @@ And now we can see the frequency and the count of every possible $k$ with their 
    \end{tabular}
 \end{center}
 
-Of course this is just a finite simple example, but for an infinite sequence to be supernomal, we need these frequencies to converge to a Poisson point process when $n \rightarrow \infty$. 
+Of course this is just a finite simple example, but for an infinite sequence to be supernomal, we need these frequencies to converge to a Poisson distribution when $n \rightarrow \infty$. 
 
 As a more complex example we can analyze what happens in the Champernowne sequence, which can also help us build an intuition on how to approach a proof for its non-normality.
-The following figures show for every $k$ taking $\lambda = 1$ and $n = 22$, the observed frequencies next to the expected ones.
+The following figure shows for every $k$ taking $\lambda = 1$ and $n = 22$, the observed frequencies next to the expected ones.
 
 % \begin{figure}[h]
 %     \includegraphics[width=10cm]{images/champ-16-freq.png}
@@ -260,7 +261,7 @@ The following figures show for every $k$ taking $\lambda = 1$ and $n = 22$, the 
 \end{figure}
 
 As it can be observed in Figure\ref{fig:champ-22-freq}, the amount of words of length $n$ that do not appear in the first $2^n + n - 1$ symbols of Champernowne is much higher than the expected one for the sequence to be 1-supernormal. As we will observe later in the proof this is due to the fact that by the way that Champernowne is constructed.
-This experiment as well a supernormality check for other famous normal sequences and a few PRNSs are available at ~\cite{Puterman}
+This experiment as well a supernormality check for other famous normal sequences and a few PRNSs are available at ~\cite{Puterman}.
 
 % One more interesting thing to do experimentaly is to check wether some pseudorandom number generators generate sequences that empiricaly appear to be supernormal. We analyzed what happened with sequences genereated with the Mersenne Twister PRNG which is the PRNG used by Python and with the cellular autmata Rule 30 which was used as the PRNG in Mathematica.
 
@@ -326,7 +327,7 @@ We aim to prove that normality does not imply supernormality. For this we prove 
 The strategy followed to achieve this is similar to the ones used in ~\cite{BCC2019} and  ~\cite{PS2019}.
 
 
-Let $X(n)$ be the concatenation of all words of length $n$ over the alphabet with two symbols $\mathcal{A}=\{0,1\}$ in lexicographic order.  It is clear that $X(n)$ has length $n2^n$. Then, for example:
+Let $X(n)$ be the concatenation of all words of length $n$ over the alphabet with two symbols $A=\{0,1\}$ in lexicographic order.  It is clear that $X(n)$ has length $n2^n$. Then, for example:
 $$X(2) = 00 \: 01 \: 10 \: 11$$
 Note that spaces were added for reading convenience.
 
@@ -394,7 +395,7 @@ with $n \in \{1,2,\dots ,k - d - 2\}$.
 For the simplicity of the proof we define the function $next(w)$ that is used repeatedly in the case analysis.
 
 \begin{definition}
-    Let $next(w):\mathcal{A}^n \rightarrow \mathcal{A}^n $ be $|w|$ times 0 if $w$ only consists of $1s$ and the word that comes after $w$ in lexicographic order in any other case.
+    Let $next(w):A^n \rightarrow A^n $ be $|w|$ times 0 if $w$ only consists of $1s$ and the word that comes after $w$ in lexicographic order in any other case.
 \end{definition}
 
 \subsubsection{Case 1}
