@@ -97,7 +97,7 @@ For example, $|aaaaa|_{aa} = 4$ and $||aaaaa||_{aa} = 2$.
     $$\lim_{N\to\infty} \frac{|w[1 \dots N]|_d}{N} = \frac{1}{b}$$
 \end{definition}
 
-\begin{definition}
+\begin{definition}[Normaility]
     We say that an ininite sequence $w$ formed of symbols of an alphabet $A$ where $|A| = b$ is \textit{normal} when for every block $u$ it happens that:
     $$\lim_{N\to\infty} \frac{|w[1 \dots N]|_u}{N} = \frac{1}{b^{|u|}}$$
 \end{definition}
@@ -140,23 +140,128 @@ $$champ = 0 \: 1 \: 00 \: 01 \: 10 \: 11 \: 000 \: 001 \: 010 \: 011 \: 100 \: 1
 
 \section{Supernormality}
 
-\begin{definition}
-    Let $\lambda > 0$ be a real number. Let $k \in \mathds{Z}_{\ge 0}$.
-    $$a_k(\lambda) = \frac{e^{-\lambda}\lambda^k}{k!}$$
-\end{definition}
+% \begin{definition}
+    
+%     $$a_k(\lambda) = \frac{e^{-\lambda}\lambda^k}{k!}$$
+% \end{definition}
 
+The notion of supernormality was defined by Zeev Rudnick a few years ago. Benjamin Weiss from the Einstein Institute of Math from the Hebrew University gave on June 16th, 2010 a lecture on “Random-like behavior in deterministic systems”  where the notion of \textit{supernormal} sequences is described under the name of \textit{Poisson generic} sequences ~\cite{Weiss}.
+ The few things known about this notion are not published. However, in the conference, Weiss claims that almost every real number is supernormal and that the notion of supernormality is stronger than the classical notion of normaility. This means that if a number is supernormal then it is normal, but not the other way around. 
+Weiss also states that the most famous example of a normal sequence, the Champernowne sequence, is not supernormal.
+Finally, he leaves open the problem of giving an explicit construction of a supernormal number.
+In this thesis we will prove that the Chamernowne sequence is not supernormal. This, together with the proof that supernormality implies normality, completes the proof that supernormality is stronger than normality.
+Let's start by giving a formal definition of what a supernormal sequence is, which will be explained more in detail later.
+\\
+
+
+\begin{definition}
 Let $x$ be a sequence over a binary alphabet.
 For $u,w$ words, $|w|_u$ is the number of occurrences of $u$ in $w$.
-Let $A_{k,n}$ be the frequency of occurrence of words of length $n$ that occur exactly $k$ times in the first $\floor{\lambda(2^n+n-1)}$ symbols of $x$, or what is to say:
-$$A_{k,n}(\lambda) = \frac{\#\{w: |w| = n  , |x[1...\lfloor\lambda(2^n+n-1)\rfloor]|_w = k\}}{2^n}$$
-
-\begin{definition}
-    $x$ is $\lambda-$supernormal if $$\lim_{n\to\infty} A_{k,n}(\lambda) = a_k(\lambda)$$ for each integer $k \geq 0$.
+Let $A^\lambda_{k,n}(x)$ be the frequency of occurrence of words of length $n$ that occur exactly $k$ times in the first $\floor{\lambda(2^n+n-1)}$ symbols of $x$, or what is to say:
+$$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\lfloor\lambda(2^n+n-1)\rfloor]|_w = k\}}{2^n}$$
 \end{definition}
 
+
 \begin{definition}
-    $x$ is supernormal if it is $\lambda-$supernormal $\forall \lambda \in \mathds{R}$
+    Let $\lambda > 0$ be a real number. We say a binary sequence $x$ is $\lambda-$supernormal if $\forall k \in \mathds{N}_{0}$ $$\lim_{n\to\infty} A^\lambda_{k,n}(x) = \frac{e^{-\lambda}\lambda^k}{k!}$$ for each integer $k \geq 0$.
 \end{definition}
+
+\begin{definition}[Supernormality]
+    We say a binary sequence $x$ is supernormal if it is $\lambda-$supernormal $\forall \lambda > 0$
+\end{definition}
+
+
+% The idea behind normality is to look at increasing finite sample spaces of the sequence and check that for each block $b$, the frequency of appearance of converges to $\frac{1}{2^{|b|}}$.
+% In the case of supernormality, the difference relies in the fact that what are some calculated i
+
+The idea behind normality is to look at increasing finite sample spaces of the sequence and check that for each block, the frequency of appearance is the same as the one for each of all the possible blocks.
+Supernormality doesn't look at at the frequence of occurence a block as normality does. We could say that $A^\lambda_{k,n}(x)$ is conducting some simple statistics where for each block of length $n$ we are counting how many times it occurs. 
+ Then, the probability that a block occurs $k$ times is the number of blocks that occur $k$ times in the first $\floor{\lambda(2^n + n - 1)}$ symbols of the sequence divided by all the possible blocks.
+For a sequence to be supernormal, we need these proportions to converge in distribution to a Poisson distribution with parameter $\lambda$.
+It is important to notice that the $\lambda$ parameter is setting up how much of the sequence we will read in order to conduct the statistics, and that it may not be an integer, we need to take the integer part in order to consume an integer number of symbols of the sequence.
+
+
+Let's take as an illustrative example the finite sequence $x = 1001111001$. Taking $n=3$ and $\lambda = 1$, the words of length $n$ that occurr in $x$ are:
+$$100 \; 001 \; 011\; 111\; 111\; 110\; 001$$
+
+Now if we count the occurrences of every possible word of length $3$ we have:
+
+\begin{center}
+    \begin{tabular}{|c | c|} 
+    \hline
+    Word & Count \\ [0.5ex] 
+    \hline
+    000 & 0 \\ 
+    \hline
+    001 & 2 \\ 
+    \hline
+    010 & 0 \\ 
+    \hline
+    011 & 1 \\ 
+    \hline
+    100 & 1 \\ 
+    \hline
+    101 & 0 \\ 
+    \hline
+    110 & 1 \\ 
+    \hline
+    111 & 2 \\ 
+    \hline
+   \end{tabular}
+\end{center}
+
+And now we can see the frequence and the count of every possible $k$ with their expected value if the sequence were supernormal which is $\frac{e^{-\lambda}\lambda^k}{k!}$ :
+
+\begin{center}
+    \begin{tabular}{|c | c |  c| c |} 
+    \hline
+    $k$ & Count &  Frequency & Expected Frequency \\ [0.1ex] 
+    \hline
+    0 & 3 & $\frac{3}{8}$ & $e^{-1} $ \\ [0.5ex] 
+    \hline
+    1 & 3 &$\frac{3}{8}$ & $e^{-1} $ \\  [0.5ex] 
+    \hline
+    2 & 2 &$\frac{1}{4}$ & $\frac{e^{-1}}{2} $ \\  [0.5ex] 
+    \hline
+    3 & 0 & 0 & $\frac{e^{-1}}{3!} $ \\  [0.5ex] 
+    \hline
+    4 & 0 & 0 & $\frac{e^{-1}}{4!} $ \\ [0.5ex] 
+    \hline
+    5 & 0 & 0 & $\frac{e^{-1}}{5!} $ \\ [0.5ex] 
+    \hline
+    6 & 0 & 0  & $\frac{e^{-1}}{6!} $ \\ [0.5ex] 
+    \hline
+    7 & 0 & 0 & $\frac{e^{-1}}{7!} $ \\ [0.5ex] 
+    \hline
+    8 & 0 & 0 & $\frac{e^{-1}}{8!} $ \\  [0.5ex] 
+    \hline
+   \end{tabular}
+\end{center}
+
+Of course this is just a finite simple example, but for an infinite sequence to be supernomal, we need these frequencies to converge to a Poisson point process when $n \rightarrow \infty$. 
+
+As a more complex example we can analize what happens in the Champernowne sequence, which can also help us build an intuition on how to approach a proof for its non-normality.
+The following figures show for every $k$ taking $\lambda = 1$ and $n = 22$, the observed frequencies next to the expected ones.
+
+% \begin{figure}[h]
+%     \includegraphics[width=10cm]{images/champ-16-freq.png}
+%     \centering
+%     \caption{Observed and expected frequencies for $n = 16$ and $\lambda = 1$}
+%     \label{fig:champ-16-freq}
+% \end{figure}
+
+\begin{figure}[h]
+    \includegraphics[width=10cm]{images/champ-22-freq.png}
+    \centering
+    \caption{Observed and expected frequencies for $n = 22$ and $\lambda = 1$}
+    \label{fig:champ-22-freq}
+
+\end{figure}
+
+As it can be observed in Figure\ref{fig:champ-22-freq}, the amount of words of length $n$ that do not appear in the first $2^n + n - 1$ symbols of Champernowne is much higher than the expected one for the sequence to be 1-supernormal. As we will observe later in the proof this is due to the fact that by the way that Champernowne is constructed.
+This experiment as well a supernormality check for other famous normal sequences and a few PRNSs are available at ~\cite{Puterman}
+
+% One more interesting thing to do experimentaly is to check wether some pseudorandom number generators generate sequences that empiricaly appear to be supernormal. We analized what happened with sequences genereated with the Mersenne Twister PRNG which is the PRNG used by Python and with the cellular autmata Rule 30 which was used as the PRNG in Mathematica.
 
 %% ...
 \chapter{Supernormality is stronger than normality}

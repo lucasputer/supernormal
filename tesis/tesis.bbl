@@ -28,11 +28,21 @@ M.~{\'E}mile~Borel.
 \newblock The champernowne constant is not poissonian.
 \newblock {\em Funct. Approx. Comment. Math.}, 60(2):253--262, 03 2019.
 
+\bibitem[Put19]{Puterman}
+Lucas Puterman.
+\newblock Supernormal experiments - https://github.com/lucasputer/supernormal,
+  2019.
+
 \bibitem[Sie17]{Sierpinski}
 W.~Sierpinski.
 \newblock D\'emonstration \'el\'ementaire du th\'eor\`eme de m. borel sur les
   nombres absolument normaux et d\'etermination effective d'une tel nombre.
 \newblock {\em Bulletin de la Soci\'et\'e Math\'ematique de France},
   45:125--132, 1917.
+
+\bibitem[Wei10]{Weiss}
+Benjamin Weiss.
+\newblock Pmsp - random-like behavior in deterministic systems -
+  https://youtu.be/8ab7591de68?t=1280, 2010.
 
 \end{thebibliography}
