@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  22 OCT 2019 16:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  25 OCT 2019 02:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -195,35 +195,37 @@ Package: amsthm 2017/10/31 v2.20.4
 )
 \c@theorem=\count111
 \c@corollary=\count112
-\c@fact=\count113
-\c@definition=\count114
+\c@lemma=\count113
+\c@proposition=\count114
+\c@fact=\count115
+\c@definition=\count116
  (/Users/lucas/Repositories/supernorm/tesis/tesis.aux)
 \openout1 = `tesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
  (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count115
+\scratchcounter=\count117
 \scratchdimen=\dimen131
 \scratchbox=\box28
-\nofMPsegments=\count116
-\nofMParguments=\count117
+\nofMPsegments=\count118
+\nofMParguments=\count119
 \everyMPshowfont=\toks29
-\MPscratchCnt=\count118
+\MPscratchCnt=\count120
 \MPscratchDim=\dimen132
-\MPnumerator=\count119
-\makeMPintoPDFobject=\count120
+\MPnumerator=\count121
+\makeMPintoPDFobject=\count122
 \everyMPtoPDFconversion=\toks30
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -306,12 +308,12 @@ Package pdftex.def Info: logofcen.pdf  used on input line 10.
  [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/lucas/Repositories/supernorm/tesis/logofcen.pdf>]) (/Users/lucas/Repositories/supernorm/tesis/abs_esp.tex)
-Overfull \hbox (10.1393pt too wide) in paragraph at lines 23--54
+Overfull \hbox (10.1393pt too wide) in paragraph at lines 23--53
 \OT1/cmr/bx/n/10.95 Palabras claves: \OT1/cmr/m/n/10.95 Nor-mal-i-dad, Su-per-nor-mal-i-dad, Cham-per-nowne, Pois-son, Poisson-generic.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--54
+Underfull \hbox (badness 10000) in paragraph at lines 23--53
 
  []
 
@@ -333,19 +335,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--54
 ]
 Cap\'itulo 1.
 
-Package natbib Warning: Citation `Borel' on page 1 undefined on input line 80.
+Package natbib Warning: Citation `Borel' on page 1 undefined on input line 79.
 
 
-Package natbib Warning: Citation `kuipers' on page 1 undefined on input line 89.
+Package natbib Warning: Citation `kuipers' on page 1 undefined on input line 88.
 
 
-Package natbib Warning: Citation `bugeaud' on page 1 undefined on input line 89.
+Package natbib Warning: Citation `bugeaud' on page 1 undefined on input line 88.
 
 
-Package natbib Warning: Citation `BC2018' on page 1 undefined on input line 90.
+Package natbib Warning: Citation `BC2018' on page 1 undefined on input line 89.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--108
+Underfull \hbox (badness 10000) in paragraph at lines 105--107
 
  []
 
@@ -354,46 +356,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--108
 
 ]
 
-Package natbib Warning: Citation `Borel' on page 2 undefined on input line 127.
+Package natbib Warning: Citation `Borel' on page 2 undefined on input line 126.
 
 
-Package natbib Warning: Citation `Sierpinski' on page 2 undefined on input line 131.
+Package natbib Warning: Citation `Sierpinski' on page 2 undefined on input line 130.
 
 
-Package natbib Warning: Citation `turing' on page 2 undefined on input line 131.
+Package natbib Warning: Citation `turing' on page 2 undefined on input line 130.
 
 
-Package natbib Warning: Citation `BHS' on page 2 undefined on input line 131.
+Package natbib Warning: Citation `BHS' on page 2 undefined on input line 130.
 
 
-Package natbib Warning: Citation `FN' on page 2 undefined on input line 131.
+Package natbib Warning: Citation `FN' on page 2 undefined on input line 130.
 
 
-Package natbib Warning: Citation `champern' on page 2 undefined on input line 139.
+Package natbib Warning: Citation `champern' on page 2 undefined on input line 138.
 
 
-Package natbib Warning: Citation `champern' on page 2 undefined on input line 151.
+Package natbib Warning: Citation `champern' on page 2 undefined on input line 150.
 
 
-Package natbib Warning: Citation `BC2018' on page 2 undefined on input line 151.
+Package natbib Warning: Citation `BC2018' on page 2 undefined on input line 150.
 
 
-Package natbib Warning: Citation `Weiss' on page 2 undefined on input line 169.
+Package natbib Warning: Citation `Weiss' on page 2 undefined on input line 168.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 176--180
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 175--179
 
  []
 
-[2] [3]
+[3]
 <images/champ-22-freq.png, id=44, 387.4475pt x 262.9825pt>
 File: images/champ-22-freq.png Graphic file (type png)
 <use images/champ-22-freq.png>
-Package pdftex.def Info: images/champ-22-freq.png  used on input line 285.
+Package pdftex.def Info: images/champ-22-freq.png  used on input line 278.
 (pdftex.def)             Requested size: 320.0935pt x 217.26819pt.
 
 
-Package natbib Warning: Citation `Puterman' on page 4 undefined on input line 292.
+Package natbib Warning: Citation `Puterman' on page 4 undefined on input line 285.
 
 [4 </Users/lucas/Repositories/supernorm/tesis/images/champ-22-freq.png>]
 Cap\'itulo 2.
@@ -401,29 +403,42 @@ Cap\'itulo 2.
 
 ]
 
-Package natbib Warning: Citation `BC2018' on page 6 undefined on input line 388.
+Package natbib Warning: Citation `BC19' on page 6 undefined on input line 428.
 
 
-Package natbib Warning: Citation `champern' on page 6 undefined on input line 393.
+Overfull \hbox (6.12985pt too wide) in paragraph at lines 427--429
+[]\OT1/cmr/m/n/10.95 It has been proven that the car-di-nal-ity of the set $\OML/cmm/m/it/10.95 Bad\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 n; w; ^^O\OT1/cmr/m/n/10.95 )$ is less than $2[]\OML/cmm/m/it/10.95 e[]$\OT1/cmr/m/n/10.95 ,
+ []
+
+[6]
+
+Package natbib Warning: Citation `hotspot' on page 7 undefined on input line 475.
 
 
-Package natbib Warning: Citation `PS2019' on page 6 undefined on input line 395.
+Package natbib Warning: Citation `BC2018' on page 7 undefined on input line 475.
+
+[7]
+
+Package natbib Warning: Citation `champern' on page 8 undefined on input line 503.
 
 
-Package natbib Warning: Citation `BCC2019' on page 6 undefined on input line 398.
+Package natbib Warning: Citation `PS2019' on page 8 undefined on input line 505.
 
-[6] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 535--540
+
+Package natbib Warning: Citation `BCC2019' on page 8 undefined on input line 508.
+
+[8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 644--649
 
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 574--577
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 683--686
 
  []
 
-[10] [11] [12] [13] [14] (/Users/lucas/Repositories/supernorm/tesis/tesis.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 73--76
+[11] [12] [13] [14] [15] (/Users/lucas/Repositories/supernorm/tesis/tesis.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 79--82
 []\OT1/cmr/m/sc/10.95 Weiss, B.  \OT1/cmr/m/n/10.95 Pmsp - random-like be-hav-ior in de-ter-min-is-tic sys-tems -
  []
 
@@ -431,7 +446,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--76
 
 Package natbib Warning: There were undefined citations.
 
-[15
+[16
 
 
 ] (/Users/lucas/Repositories/supernorm/tesis/tesis.aux
@@ -440,32 +455,32 @@ Package natbib Warning: Citation(s) may have changed.
 (natbib)                Rerun to get citations correct.
 
 
-/Users/lucas/Repositories/supernorm/tesis/tesis.aux:52: Package natbib Error: Bibliography not compatible with author-year citations.
+/Users/lucas/Repositories/supernorm/tesis/tesis.aux:55: Package natbib Error: Bibliography not compatible with author-year citations.
 (natbib)                Press <return> to continue in numerical citation style.
 
 See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.52 ...mand\NAT@force@numbers{}\NAT@force@numbers
+l.55 ...mand\NAT@force@numbers{}\NAT@force@numbers
                                                   
 Check the bibliography entries for non-compliant syntax,
 or select author-year BibTeX style, e.g. plainnat
 
 ) ) 
 Here is how much of TeX's memory you used:
- 4319 strings out of 492649
- 60301 string characters out of 6129622
- 147010 words of memory out of 5000000
- 8123 multiletter control sequences out of 15000+600000
+ 4327 strings out of 492649
+ 60396 string characters out of 6129622
+ 149943 words of memory out of 5000000
+ 8131 multiletter control sequences out of 15000+600000
  12518 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,35p,459b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,12n,35p,459b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on /Users/lucas/Repositories/supernorm/tesis/tesis.pdf (20 pages, 310941 bytes).
+Output written on /Users/lucas/Repositories/supernorm/tesis/tesis.pdf (21 pages, 313277 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
+ 148 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

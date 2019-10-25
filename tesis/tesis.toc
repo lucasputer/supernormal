@@ -3,11 +3,11 @@
 \contentsline {section}{\numberline {1.2}Supernormality}{2}
 \contentsline {chapter}{\numberline {2.}Supernormality is stronger than normality}{5}
 \contentsline {section}{\numberline {2.1}Supernormality implies normality}{5}
-\contentsline {section}{\numberline {2.2}Normality does not imply supernormality}{6}
-\contentsline {subsection}{\numberline {2.2.1}Case Analysis}{8}
-\contentsline {subsubsection}{Case 1}{8}
-\contentsline {subsubsection}{Case 2}{9}
-\contentsline {subsubsection}{Case 3}{10}
-\contentsline {subsubsection}{Case 4}{12}
-\contentsline {subsubsection}{Case 5}{13}
-\contentsline {subsection}{\numberline {2.2.2}A bound for the number of words occurring in $champ$}{13}
+\contentsline {section}{\numberline {2.2}Normality does not imply supernormality}{8}
+\contentsline {subsection}{\numberline {2.2.1}Case Analysis}{9}
+\contentsline {subsubsection}{Case 1}{9}
+\contentsline {subsubsection}{Case 2}{10}
+\contentsline {subsubsection}{Case 3}{11}
+\contentsline {subsubsection}{Case 4}{13}
+\contentsline {subsubsection}{Case 5}{14}
+\contentsline {subsection}{\numberline {2.2.2}A bound for the number of words occurring in $champ$}{14}

@@ -15,16 +15,15 @@
 %\usepackage[parfill]{parskip}
 
 
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{corollary}{Corollary}[theorem]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{fact}{Fact}[section]
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[]
+\newtheorem{corollary}{Corollary}[]
+\newtheorem{lemma}{theorem}[]
+\newtheorem{proposition}{Proposition}[]
+\newtheorem{fact}{Fact}[]
+% \theoremstyle{definition}
+\newtheorem{definition}{Definition}[]
 
-
-\usepackage{amsthm}
+\setcitestyle{square}
  
 
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
@@ -87,7 +86,7 @@ Since the sequence is infinite,
 when we talk about the frequency of occurrence of a given block of symbols 
 we are referring to the asymptotic frequency of the block in the sequence.
 For a presentation on normal numbers see the books  \cite{kuipers} and \cite{bugeaud}. 
-For the work done  normal numbers from a computer science perspective see \cite{BC2018}.
+For the work done on normal numbers from a computer science perspective see \cite{BC2018}.
 
 
 Let $b$ be an integer greater or equal to 2 that we call a \textit{base}. If we represent a real number in a given base, we have the integer part followed by a fractionary expansion, which is a possibly infinite sequence of digits in base $b$.
@@ -168,19 +167,15 @@ $$champ = 0 \: 1 \: 00 \: 01 \: 10 \: 11 \: 000 \: 001 \: 010 \: 011 \: 100 \: 1
 
 The notion of supernormality was defined by Zeev Rudnick a few years ago. Benjamin Weiss from the Einstein Institute of Math from the Hebrew University gave on June 16th, 2010 a lecture on “Random-like behavior in deterministic systems”  where the notion of \textit{supernormal} sequences is described under the name of \textit{Poisson generic} sequences ~\cite{Weiss}.
 There are no publications about this notion, what is known about it is  not published. 
-However, in the conference, Weiss claims that almost every real number (in teh sense of Lebesgue measure)
+However, in the conference, Weiss claims that almost every real number (in the sense of Lebesgue measure)
  is supernormal and that the notion of supernormality is stronger than the classical notion of Normality. This means that if a number is supernormal then it is normal, but not the other way around. 
-Weiss also states that the most famous example of a normal sequence, the Champernowne sequence, is not supernormal.
+During the conference Weiss gives an outline of the proof that supernormality implies normality and also states that the most famous example of a normal sequence, the Champernowne sequence, is not supernormal.
 Finally, he leaves open the problem of giving an explicit construction of a supernormal number.
 
-In this thesis we prove that the Chamernowne sequence is not supernormal. 
+In this thesis we prove that the $champ$ sequence defined above is not supernormal. 
 This, together with the proof that supernormality implies normality, completes the proof that supernormality is stronger than normality.
 Let's start by giving a formal definition of what a supernormal sequence is.
 \\
-
-% ESta notacion esta repetida. 
-% O bien deci que recordas esta notacion, o  bien la pones aqui por primera vez (la sacas de la introduccion)
-%For $u,w$ words, $|w|_u$ is the number of occurrences of $u$ in $w$.
 
 %\begin{definition}
 Let $x$ be a sequence over a binary alphabet.
@@ -189,26 +184,24 @@ $$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\lfloor\lambda(2^n+n-1)\rf
 %\end{definition}
 %\medskip
 
-\begin{definition}
+\begin{definition}[Supernormality]
     Let $\lambda > 0$ be a real number. 
-   A binary sequence $x$ is {\em $\lambda-$supernormal} if  for every non-negative integer $k$,
+   A binary sequence $x$ is $\lambda-$supernormal if  for every non-negative integer $k$,
  $$\lim_{n\to\infty} A^\lambda_{k,n}(x) = \frac{e^{-\lambda}\lambda^k}{k!}$$
-%\end{definition}
+% \end{definition}
 %
 %\begin{definition}[Supernormality]
 
-    A binary sequence $x$ is {\em supernormal} if,  for every positive real $\lambda$, $x$ is $\lambda-$supernormal.
+    A binary sequence $x$ is \textit{supernormal} if,  for every positive real $\lambda$, $x$ is $\lambda-$supernormal.
 \end{definition}
 
-
-% The idea behind normality is to look at increasing finite sample spaces of the sequence and check that for each block $b$, the frequency of appearance of converges to $\frac{1}{2^{|b|}}$.
-% In the case of supernormality, the difference relies in the fact that what are some calculated i
 
 The idea behind normality is to look at increasing finite sample spaces of the sequence and check that for each block, the frequency of appearance is the same as the one for each of all the possible blocks.
 Supernormality doesn't look at the frequency of occurrence a block as normality does. We could say that $A^\lambda_{k,n}(x)$ is conducting some simple statistics where for each block of length $n$ we are counting how many times it occurs. 
  Then, the probability that a block occurs $k$ times is the number of blocks that occur $k$ times in the first $\floor{\lambda(2^n + n - 1)}$ symbols of the sequence divided by all the possible blocks.
-For a sequence to be supernormal, we need these proportions to converge in distribution to a Poisson distribution with parameter $\lambda$.
-It is important to notice that the $\lambda$ parameter is setting up how much of the sequence we read in order to conduct the statistics, and that it may not be an integer, we need to take the integer part in order to consume an integer number of symbols of the sequence.
+For a sequence to be supernormal, we need these proportions to converge in distribution to a Poisson distribution with parameter $\lambda$. 
+% The Poisson distribution is a discrete probability distribution that expresses the probability of a given number of events occurring in a fixed interval of space if these events occur with a known constant rate and independently of the distance from the last event.
+It is important to notice that the $\lambda$ parameter is setting up how much of the sequence we read in order to conduct the statistics, and as it may not be an integer, we need to take the integer part in order to consume an integer number of symbols of the sequence.
 
 
 Let's take as an illustrative example the finite sequence $x = 1001111001$. Taking $n=3$ and $\lambda = 1$, the words of length $n$ that occur in $x$ are:
@@ -329,64 +322,181 @@ $$\lim_{n\to\infty} A^\lambda_{k,n}(x) = \frac{e^{-\lambda}\lambda^k}{k!}$$
     $$A_{k,n} = 0 \textrm{ if } k > \lambda2^n$$
 \end{fact}
 
+% Assume  $x$ is supernormal.
+% Fix a positive $\epsilon$.
+% Let $k_0$ be such that 
+% $$\frac{1}{\lambda} \sum_{k > k_0} ka_k(\lambda) < \frac{\epsilon}{2}$$
+
+% Let $n_0$ be  such that  for all 
+% $ i,n$ such that $  0 \leq i \leq k_0 - 1$, $n > n_0$ and 
+% $$  |A_{i,n}(\lambda) - a_i(\lambda)| \leq \frac{\epsilon\lambda}{2k_0(k_0+1)}$$
+
+% \note{No entiendo esta notacion}
+% $$Rq? = \sum_{i=0}^{k_0-1} ka_k(\lambda) = \lambda - \sum_{k\geq k_0} ka_k(\lambda) \geq (\lambda - \frac{\epsilon}{2})$$
+
+% Fix $\lambda$ equal to $1$. Consider the positions in $x[1..\lfloor\lambda(2^n+n-1)\rfloor]$. A position is blamed if 
+% the word of length~$n$ starting at that position occurs more than $k_0$ times in $x\lfloor\lambda(2^n+n-1)\rfloor$.
+% % \note{ Deberia decir  in $x[1..\lfloor\lambda(2^n+n-1)\rfloor]$. }
+% A lower bound for the number of non-blamed positions in $x[1..\lfloor\lambda(2^n+n-1)\rfloor]$ is:
+
+% \begin{align*}
+%     \sum_{i=0}^{k_0-1} iA_{i,n}(\lambda) 2^n &\geq 2^n\sum_{i=0}^{k_0-1} i (a_i(\lambda) - \frac{\epsilon\lambda}{2k_0(k_0+1)}) \\
+%     &\geq 2^n \sum_{i=0}^{k_0-1} ia_{i}(\lambda) - \frac{2^n\epsilon\lambda}{2} \\
+%     &\geq 2^n\lambda (1-\frac{\epsilon}{2}) - \frac{2^n\epsilon\lambda}{2} \\
+%     &= 2^n\lambda(1-\epsilon) \\
+% \end{align*}
+
+% We cover the positions $1\dots \lambda2^n$ by blocks of length~$n$ such that blocks do not start at a blamed  position. 
+% However a block may contain blamed positions.
+ 
+% $$\overbracket{\raisebox{6.4pt}{\qquad}}^{n} \overbracket{\raisebox{6.4pt}{\qquad}}^{n}\times\times\overbracket{\;\quad \times}^{n} \times \overbracket{\raisebox{6.4pt}{\qquad}}^{n} \overbracket{\raisebox{6.4pt}{\qquad}}^{n} \times \overbracket{\;\; \times \times}^{n} \times\times\times \overbracket{\raisebox{6.4pt}{\qquad}}^{n}$$
+
+% % \note{Aqui la palabra left no esta bien.}
+% The amount of positions that are not covered is less than $\epsilon\lambda 2^n$. 
+
+% \begin{definition}
+%   Let $A$ be an alphabet of b symbols. We define the set of words of
+% length $k$ such that a given word w has a number of occurrences that differs from the
+% expected value in plus or minus $\epsilon k$, or what is to say:
+
+% $$Bad(A, k,w, \epsilon) = \{v \in A^k : \lvert \frac{|v|_k}{k} - b^{-|w|} \rvert  \geq \epsilon \}$$
+
+% We say that a block $b$ of length $k$ is \textit{bad} for a word $w$ and a given $\epsilon$ if $b \in Bad(A,k,w, \epsilon).$
+% \end{definition}
+
+% \note{Aqui hay que introducir la nocion de Bad block (de normalidad) de una  longitud dada $n$ y  para un $\epsilon$ dado y 
+%  y para un cierto word $w$.}
+% Fix a word   $w$ of length  $\lfloor \log n\rfloor$.
+% The number of bad blocks  for   $w$ and a for fixed value of epsilon is $o($number of possible blocks$)$. 
+% \note{No introdujiste notacion asimptotica de $O$ grande y $o$ chica. 
+% Escribi que  la proporcion de bloques malos en el total de  bloques tiende a cero. }
+% Since each such bad block can occur at most  $k_0 - 1$ times,  the total number of bad blocks for $w$ and $epsilon$
+% in $x[1\dots 2^n]$  decreases exponentially in $n$.
+
+% La supernormalidad determina que no todos los bloques de longitud $n$ aparecen  en $x[1\dots 2^n]$,  y 
+% y no todos los que aparecen lo hacen la misma cantidad de veces. Sin embargo 
+%  casi todas los bloques de longitud $n$ que aparecen en $x[1\dots 2^n]$ son buenos para $w$.
+% Podemos ahora  acotar por arriba y por abajo la cantidad de ocurrencias de $w$ en $x[1\dots 2^n]$.
+% Conluimos usando el  Hot spot lemma.
+% \note{Copiar  del  capitulo \cite{BC2018} para redactar el Hot Spot Lemma y luego usarlo}
+
 Assume  $x$ is supernormal.
 Fix a positive $\epsilon$.
 Let $k_0$ be such that 
 $$\frac{1}{\lambda} \sum_{k > k_0} ka_k(\lambda) < \frac{\epsilon}{2}$$
 
 Let $n_0$ be  such that  for all 
-$ i,n$ such that $  0 \leq i \leq k_0 - 1$, $n > n_0$ and 
-$$  |A_{i,n}(\lambda) - a_i(\lambda)| \leq \frac{\epsilon\lambda}{2k_0(k_0+1)}$$
+$ i,n$ such that $  0 \leq i \leq k_0 $, $n > n_0$ and 
+  $$|A^\lambda_{i,n}(x) - a_i(\lambda)| \leq \frac{\epsilon\lambda}{2k_0^2}$$
 
-\note{No entiendo esta notacion}
-$$Rq? = \sum_{i=0}^{k_0-1} ka_k(\lambda) = \lambda - \sum_{k\geq k_0} ka_k(\lambda) \geq (\lambda - \frac{\epsilon}{2})$$
 
-Fix $\lambda$ equal to $1$. Consider the positions in $x[1..\lfloor\lambda(2^n+n-1)\rfloor]$. A position is blamed if 
-the word of length~$n$ starting at that position occurs more than $k_0$ times in $x\lfloor\lambda(2^n+n-1)\rfloor$.
-% \note{ Deberia decir  in $x[1..\lfloor\lambda(2^n+n-1)\rfloor]$. }
-A lower bound for the number of non-blamed positions in $x[1..\lfloor\lambda(2^n+n-1)\rfloor]$ is:
+ $$\sum_{i=0}^{k_0} ka_k(\lambda) = \lambda - \sum_{k> k_0} ka_k(\lambda) \geq \lambda(1 - \frac{\epsilon}{2})$$
+
+We fix $\lambda$ equal to 1 for the simplicity of the proof, nonetheless the result is analogous with any value.
+Consider the positions from $1$ to $ 2^n $ in $x$. 
+We say that a position is \textit{blamed} if the word of length $n$ starting at that position 
+occurs more than $k_0$ times in 
+ $x[1..(2^n+n-1)]$. 
+
+ The number of blamed positions 
+ between  $1$ and $2^n$ is:
 
 \begin{align*}
-    \sum_{i=0}^{k_0-1} iA_{i,n}(\lambda) 2^n &\geq 2^n\sum_{i=0}^{k_0-1} i (a_i(\lambda) - \frac{\epsilon\lambda}{2k_0(k_0+1)}) \\
-    &\geq 2^n \sum_{i=0}^{k_0-1} ia_{i}(\lambda) - \frac{2^n\epsilon\lambda}{2} \\
-    &\geq 2^n\lambda (1-\frac{\epsilon}{2}) - \frac{2^n\epsilon\lambda}{2} \\
-    &= 2^n\lambda(1-\epsilon) \\
+   2^n -  \sum_{i=0}^{k_0} iA^{1}_{i,n}(x) 2^n 
+     &\leq 2^n - \Big(2^n\sum_{i=0}^{k_0} i a_i(1) - \frac{\epsilon}{2k^2_0}\Big) \\
+    &\leq 2^n -  \Big(2^n \sum_{i=0}^{k_0} ia_{i}(1) - \frac{2^n\epsilon}{2} \Big)\\
+    &\leq 2^n - \Big(2^n \big(1-\frac{\epsilon}{2}\big) - \frac{2^n\epsilon }{2}\Big) \\
+    &\leq 2^n\epsilon.
 \end{align*}
 
-We cover the positions $1\dots \lambda2^n$ by blocks of length~$n$ such that blocks do not start at a blamed  position. 
-However a block may contain blamed positions.
+We cover the positions from $1 $ to $2^n$ with consecutive
+ non-overlapping blocks of length~$n$ such that 
+no block starts at a blamed  position. 
+this means that a block may contain blamed positions as long as they are not the first one. In the following illustrative example, $\times$ represents a blamed position:
  
 $$\overbracket{\raisebox{6.4pt}{\qquad}}^{n} \overbracket{\raisebox{6.4pt}{\qquad}}^{n}\times\times\overbracket{\;\quad \times}^{n} \times \overbracket{\raisebox{6.4pt}{\qquad}}^{n} \overbracket{\raisebox{6.4pt}{\qquad}}^{n} \times \overbracket{\;\; \times \times}^{n} \times\times\times \overbracket{\raisebox{6.4pt}{\qquad}}^{n}$$
 
-% \note{Aqui la palabra left no esta bien.}
-The amount of positions that are not covered is less than $\epsilon\lambda 2^n$. 
 
 \begin{definition}
-  Let $A$ be an alphabet of b symbols. We define the set of words of
-length $k$ such that a given word w has a number of occurrences that differs from the
-expected value in plus or minus $\epsilon k$, or what is to say:
+  Let $Bad(n, w, \epsilon)$ be the set of binary words of length $n$ where the word $w$ differs from the expected frecuency more than $n \epsilon$, or what is to say:
 
-$$Bad(A, k,w, \epsilon) = \{v \in A^k : \lvert \frac{|v|_k}{k} - b^{-|w|} \rvert  \geq \epsilon \}$$
-
-We say that a block $b$ of length $k$ is \textit{bad} for a word $w$ and a given $\epsilon$ if $b \in Bad(A,k,w, \epsilon).$
+  $$Bad(n, w, \epsilon)=\Big{\{}v\in \{0,1\}^n: \Big{|} |v|_w - n 2^{-|w|} \Big{|} \geq \epsilon n \Big{\} }$$
 \end{definition}
 
-\note{Aqui hay que introducir la nocion de Bad block (de normalidad) de una  longitud dada $n$ y  para un $\epsilon$ dado y 
- y para un cierto word $w$.}
-Fix a word   $w$ of length  $\lfloor \log n\rfloor$.
-The number of bad blocks  for   $w$ and a for fixed value of epsilon is $o($number of possible blocks$)$. 
-\note{No introdujiste notacion asimptotica de $O$ grande y $o$ chica. 
-Escribi que  la proporcion de bloques malos en el total de  bloques tiende a cero. }
-Since each such bad block can occur at most  $k_0 - 1$ times,  the total number of bad blocks for $w$ and $epsilon$
-in $x[1\dots 2^n]$  decreases exponentially in $n$.
 
-La supernormalidad determina que no todos los bloques de longitud $n$ aparecen  en $x[1\dots 2^n]$,  y 
-y no todos los que aparecen lo hacen la misma cantidad de veces. Sin embargo 
- casi todas los bloques de longitud $n$ que aparecen en $x[1\dots 2^n]$ son buenos para $w$.
-Podemos ahora  acotar por arriba y por abajo la cantidad de ocurrencias de $w$ en $x[1\dots 2^n]$.
-Conluimos usando el  Hot spot lemma.
-\note{Copiar  del  capitulo \cite{BC2018} para redactar el Hot Spot Lemma y luego usarlo}
+It has been proven that the cardinality of the set $Bad(n, w, \epsilon)$ is less than $2^{n+1} e^{-\epsilon^2 n/(6|w|)}$,
+see \cite[Lemma 7.3.5]{BC19}. Which means that the amount of \textit{bad} words decreases exponentially.
 
+Supernormality determines that  some blocks of length $n$
+do not occur in $x[1\dots  2^n]$, and different blocks may 
+have different number of occurrences.
+
+The idea now is to check that for a given word $w$ the blocks of length $n$ mantain the right frequencies.
+We now fix $ n, \epsilon$ and $w$ and give an upper bound of  the number of occurrence of $w$ in 
+$x[1 .. 2^n]$. To do so we consider the following:
+\begin{enumerate}
+\item Each blamed position can allocate at most one occurrence of $w$.
+\item Each bad block in $Bad(n, w, \epsilon)$ can occur in $x[1.. 2^n]$
+ at most $k_0$ times.
+\item A bad block in $Bad(n, w, \epsilon)$ has at most $n-|w|+1$ occurrences of $w$.
+\item The sequence $x[1..  2^n]$ can be splitted in at most $ 2^n/n$ consecutive blocks
+of length $n$.  
+\item Every block  of length $n$ that starts at a position that is not blamed,  and it is not a bad block
+ contains at most $n 2^{-|w|} + \epsilon n $ occurrences of $w$.
+\item In between two consecutive blocks of length $n$ there are at most $|w|-1$ occurrences of $w$.
+\end{enumerate}
+Thus,
+\begin{align*}
+|x[1.. 2^n]|_w & \leq 
+ \#\text{blamed positions} +
+\\& \hspace*{1cm}k_0 \#(\text{bad blocks}) (n-|w|+1)+
+\\& \hspace*{1cm}\#(\text{not bad blocks starting at non-blamed positions}) (n 2^{-|w|} + \epsilon n)+
+\\& \hspace*{1cm} \#(\text{in between blocks})  (|w|-1)
+\\
+&\leq 2^n \epsilon + 
+\\& \hspace*{1cm}2^{n+1} e^{-\epsilon^2 n/(6|w|)} (n-|w|+1)+
+\\& \hspace*{1cm} ( 2^n /n) (n 2^{-|w|} + \epsilon n)+
+\\& \hspace*{1cm} ( 2^n/n) (|w|-1)
+\end{align*}
+Hence, 
+\begin{align*}
+\frac{|x[1..  2^n]|_w }{ 2^n}&\leq 
+ \frac{n}{ 2^{n}} \epsilon+   \epsilon+
+2 e^{-\epsilon^2 n/(6|w|)}  (n-|w|+1)+\frac{ \epsilon}{2^{n}}+
++  \frac{1}{2^{|w|}} + (|w|-1)/n
+\end{align*}
+This  inequality above holds for every  for every $\epsilon$, thus,
+\begin{align*}
+\lim_{n\to \infty}\frac{|x[1.. 2^n]|_w }{ 2^n}= {2^{-|w|}}
+\end{align*}
+
+
+To show that $x$ is normal we will show that it satisfies the following lemma known as the
+Hot spot lemma which was proven by Piatetski-Shapiro  and rediscovered later by Borwein and Bailey \cite{hotspot} who gave it this name, see \cite[Theorem 7.4.1]{BC2018}.
+\begin{theorem}
+  The following conditions are equivalent:
+  \begin{enumerate}
+    \item The binary sequence x is normal.
+    \item There is a constant C such that for infinitley many lengths l and for every w in $\{0,1\}^l$
+    $$\limsup_{N\to \infty}  \frac{|x[1.. N]|_w }{N} \leq C \frac{1}{2^{|w|}}$$
+  \end{enumerate}
+\end{theorem} 
+ 
+
+To show such a constant $C$ exists, we fix $N$ and let $n$ be such that $2^{n-1}\leq N<2^{n}$. 
+\begin{align*}
+\frac{{|x[1.. N]|_w }}{N}\leq \frac{{|x[1.. 2^{n}]|_w }}{2^{n-1}}.
+\end{align*}
+Then, using the bounds obtained above,
+\begin{align*}
+\limsup_{N\to \infty}  \frac{|x[1.. N]|_w }{N} 
+&\leq \limsup_{n\to \infty}\frac{{|x[1.. 2^{n}]|_w }}{2^{n-1}}\\
+&\leq \limsup_{n\to \infty}\frac{{|x[1.. 2^{n}]|_w }}{2^{n-1}}\\
+&\leq 2\frac{1}{2^{|w|}}.
+\end{align*}
+Thus the constant $C$ is equal to $2$.
+
+\pagebreak
 
 \section{Normality does not imply supernormality}
 We aim to prove that normality does not imply supernormality. 
@@ -396,8 +506,7 @@ Our strategy is similar to that used by Pirsic and Stockinger in ~\cite{PS2019} 
 the Champernowne 
 sequence then $(2^n x \mod 1)_{n\geq 1}$ fails the Poissonian pair correlation.
 With a similar startegy  Becher, Carton and Mollo Cunningham ~\cite{BCC2019}
- proved that when $x$ is 
-the is a sequence of nested perfect necklaces, then $(2^n x \mod 1)_{n\geq 1}$ fails the Poissonian pair correlation.
+ proved that when $x$ is a sequence of nested perfect necklaces, then $(2^n x \mod 1)_{n\geq 1}$ fails the Poissonian pair correlation.
 
 Let $X(n)$ be the concatenation of all words of length $n$ over the alphabet with two symbols $A=\{0,1\}$ in lexicographic order.  It is clear that $X(n)$ has length $n2^n$. Then, for example:
 $$X(2) = 00 \: 01 \: 10 \: 11$$

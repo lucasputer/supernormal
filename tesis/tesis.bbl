@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{hotspot}
+{\sc Bailey, D.~H., and Misiurewicz, M.}
+\newblock A strong hot spot theorem.
+\newblock {\em Proceedings of the American Mathematical Society 134}, 9 (2006),
+  2495--2501.
+
 \bibitem{BC2018}
 {\sc Becher, V., and Carton, O.}
 \newblock Normal numbers and computer science.
