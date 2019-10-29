@@ -181,8 +181,8 @@ Let's start by giving a formal definition of what a supernormal sequence is.
 
 %\begin{definition}
 Let $x$ be a sequence over a binary alphabet.
-Let $A^\lambda_{k,n}(x)$ be the frequency of occurrence of words of length $n$ that occur exactly $k$ times in the first $\floor{\lambda(2^n+n-1)}$ symbols of $x$, or what is to say:
-$$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\lfloor\lambda(2^n+n-1)\rfloor]|_w = k\}}{2^n}$$
+Let $A^\lambda_{k,n}(x)$ be the frequency of occurrence of words of length $n$ that occur exactly $k$ times in the first $\floor{\lambda 2^n+n-1}$ symbols of $x$, or what is to say:
+$$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\lfloor\lambda 2^n+n-1)\rfloor]|_w = k\}}{2^n}$$
 %\end{definition}
 %\medskip
 
@@ -200,7 +200,7 @@ $$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\lfloor\lambda(2^n+n-1)\rf
 
 The idea behind normality is to look at increasing finite sample spaces of the sequence and check that for each block, the frequency of appearance is the same as the one for each of all the possible blocks.
 Supernormality doesn't look at the frequency of occurrence a block as normality does. We could say that $A^\lambda_{k,n}(x)$ is conducting some simple statistics where for each block of length $n$ we are counting how many times it occurs. 
- Then, the probability that a block occurs $k$ times is the number of blocks that occur $k$ times in the first $\floor{\lambda(2^n + n - 1)}$ symbols of the sequence divided by all the possible blocks.
+ Then, the probability that a block occurs $k$ times is the number of blocks that occur $k$ times in the first $\floor{\lambda 2^n + n - 1)}$ symbols of the sequence divided by all the possible blocks.
 For a sequence to be supernormal, we need these proportions to converge in distribution to a Poisson distribution with parameter $\lambda$. 
 It is important to notice that the $\lambda$ parameter is setting up how much of the sequence we read in order to conduct the statistics, and as it may not be an integer, we need to take the integer part in order to consume an integer number of symbols of the sequence.
 
@@ -295,7 +295,7 @@ This experiment as well a supernormality check for other famous normal sequences
 \section{Supernormality implies normality}
 
 Recall that given an infinite  binary sequence $x$, and non-negative intergers $k$ and $n$,
-$$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\lfloor\lambda(2^n+n-1)\rfloor]|_w = k\}}{2^n}$$
+$$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\lfloor\lambda 2^n+n-1)\rfloor]|_w = k\}}{2^n}$$
 The sequence $x$ is supernormal if for every positive real $\lambda$ and for every non-negative integer $k$,
 $$\lim_{n\to\infty} A^\lambda_{k,n}(x) = \frac{e^{-\lambda}\lambda^k}{k!}$$ 
 

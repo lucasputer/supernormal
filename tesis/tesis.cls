@@ -1078,11 +1078,11 @@
       \noindent
       \hbox to 1.8em{\hss\@makefnmark\kern 0.25em}#1}
 \fi
-\def\contentsname{Contenidos}
+\def\contentsname{Contents}
 \def\listfigurename{Lista de Figuras}
 \def\listtablename{Lista de Tablas}
-\def\bibname{Bibliograf\'ia}
-\def\refname{Referencias}
+\def\bibname{Bibliography}
+\def\refname{References}
 \def\indexname{\'Indice}
 \def\figurename{Figura}
 \def\tablename{Tabla}
