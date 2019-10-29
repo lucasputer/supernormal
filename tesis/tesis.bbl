@@ -22,6 +22,13 @@
 \newblock A polynomial-time algorithm for computing absolutely normal numbers.
 \newblock {\em Information and Computation 232\/} (2013), 1--9.
 
+\bibitem{Borel}
+{\sc Borel, {\'E}.}
+\newblock Les probabilit{\'e}s d{\'e}nombrables et leurs applications
+  arithm{\'e}tiques.
+\newblock {\em Rendiconti del Circolo Matematico di Palermo (1884-1940) 27}, 1
+  (Dec 1909), 247--271.
+
 \bibitem{bugeaud}
 {\sc Bugeaud, Y.}
 \newblock {\em Distribution Modulo One and {D}iophantine Approximation}.
@@ -33,13 +40,6 @@
 \newblock {The Construction of Decimals Normal in the Scale of Ten}.
 \newblock {\em Journal of the London Mathematical Society s1-8}, 4 (10 1933),
   254--260.
-
-\bibitem{Borel}
-{\sc {\'E}mile~Borel, M.}
-\newblock Les probabilit{\'e}s d{\'e}nombrables et leurs applications
-  arithm{\'e}tiques.
-\newblock {\em Rendiconti del Circolo Matematico di Palermo (1884-1940) 27}, 1
-  (Dec 1909), 247--271.
 
 \bibitem{FN}
 {\sc Figuiera, S., and Nies, A.}
@@ -77,7 +77,7 @@
 
 \bibitem{Weiss}
 {\sc Weiss, B.}
-\newblock Pmsp - random-like behavior in deterministic systems -
+\newblock Random-like behavior in deterministic systems -
   https://youtu.be/8ab7591de68?t=1280, 2010.
 
 \end{thebibliography}

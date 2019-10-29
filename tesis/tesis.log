@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  28 OCT 2019 23:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  29 OCT 2019 10:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -437,9 +437,9 @@ ments - https://github.com/lucasputer/supernormal,
  []
 
 
-Underfull \hbox (badness 6412) in paragraph at lines 79--82
-[]\OT1/cmr/m/sc/10.95 Weiss, B.  \OT1/cmr/m/n/10.95 Pmsp - random-like be-hav-i
-or in de-ter-min-is-tic sys-tems -
+Underfull \hbox (badness 10000) in paragraph at lines 79--82
+[]\OT1/cmr/m/sc/10.95 Weiss, B.  \OT1/cmr/m/n/10.95 Random-like be-hav-ior in d
+e-ter-min-is-tic sys-tems -
  []
 
 ) [17
@@ -471,7 +471,7 @@ sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
 local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/lo
 cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on tesis.pdf (22 pages, 314574 bytes).
+Output written on tesis.pdf (22 pages, 314381 bytes).
 PDF statistics:
  151 PDF objects out of 1000 (max. 8388607)
  105 compressed objects within 2 object streams
