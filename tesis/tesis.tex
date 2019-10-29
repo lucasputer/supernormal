@@ -68,7 +68,9 @@
 
 %%%% ACA VA EL CONTENIDO DE LA TESIS
 
+
 \chapter{Introduction}
+This thesis was done with the joint direction of Verónica Becher and Olivier Carton under the Laboratoire International Associé SINFIN, Université Paris Diderot-CNRS/Universidad de Buenos Aires-CONICET).
 
 
 \section{Normality}
@@ -124,7 +126,7 @@ For example, $|aaaaa|_{aa} = 4$.
 %\end{theorem}
 
 Borel  proved in \cite{Borel} that almost all real numbers are absolutely normal. Years later 
-he conjectured that al the irrational algebraic numbers are absolutely normal. 
+he conjectured that all the irrational algebraic numbers are absolutely normal. 
 %However, 
 This problem remains open.
 Even though absolutely normal numbers have been found~\cite{Sierpinski,turing,BHS,FN},
@@ -200,11 +202,12 @@ The idea behind normality is to look at increasing finite sample spaces of the s
 Supernormality doesn't look at the frequency of occurrence a block as normality does. We could say that $A^\lambda_{k,n}(x)$ is conducting some simple statistics where for each block of length $n$ we are counting how many times it occurs. 
  Then, the probability that a block occurs $k$ times is the number of blocks that occur $k$ times in the first $\floor{\lambda(2^n + n - 1)}$ symbols of the sequence divided by all the possible blocks.
 For a sequence to be supernormal, we need these proportions to converge in distribution to a Poisson distribution with parameter $\lambda$. 
-% The Poisson distribution is a discrete probability distribution that expresses the probability of a given number of events occurring in a fixed interval of space if these events occur with a known constant rate and independently of the distance from the last event.
 It is important to notice that the $\lambda$ parameter is setting up how much of the sequence we read in order to conduct the statistics, and as it may not be an integer, we need to take the integer part in order to consume an integer number of symbols of the sequence.
 
+The Poisson distribution is a discrete probability distribution that expresses the probability of a given number of events occurring in a fixed interval of space if these events occur with a known constant rate and independently of the distance from the last event.
 
-Let's take as an illustrative example the finite sequence $x = 1001111001$. Taking $n=3$ and $\lambda = 1$, the words of length $n$ that occur in $x$ are:
+
+Let's use as an illustrative example of what we are looking to when we check if a sequence is supernormal, the finite sequence $x = 1001111001$. Taking $n=3$ and $\lambda = 1$, the words of length $n$ that occur in $x$ are:
 $$100, \; 001, \; 011,\; 111,\; 111,\; 110,\; 001$$
 
 Now if we count the occurrences of every possible word of length $3$ we have:
@@ -262,10 +265,11 @@ And now we can see the frequency and the count of every possible $k$ with their
    \end{tabular}
 \end{center}
 
-Of course this is just a finite simple example, but for an infinite sequence to be supernomal, we need these frequencies to converge to a Poisson distribution when $n \rightarrow \infty$. 
+Of course this is just a finite simple example, but for an infinite sequence to be supernormal, we need these frequencies to converge to a Poisson distribution when $n \rightarrow \infty$. 
 
-As a more complex example we can analyze what happens in the $champ$ sequence defined above, which can also help us build an intuition on how to approach a proof for its non-normality.
-The following figure shows for every $k$ taking $\lambda = 1$ and $n = 22$, the observed frequencies next to the expected ones.
+As a more complex example we can analyze what happens in the $champ$ sequence defined above, which can 
+also help us build an intuition on how to approach a proof the lack of supernormality.
+The following figure shows for every $k$, taking $\lambda = 1$ and $n = 22$, the observed frequencies and the expected ones.
 
 % \begin{figure}[h]
 %     \includegraphics[width=10cm]{images/champ-16-freq.png}
@@ -298,9 +302,11 @@ $$\lim_{n\to\infty} A^\lambda_{k,n}(x) = \frac{e^{-\lambda}\lambda^k}{k!}$$
 
 
 \begin{definition} 
+  For the simplicity of the proof we define $a_k(\lambda)$ as the probability mass function of the Poisson distribution:
    $$a_k(\lambda) = \frac{e^{-\lambda}\lambda^k}{k!}$$
 \end{definition}
 
+We now observe a few useful facts:
 
 \begin{fact}
     $$\sum_{k \geq 0} a_k(\lambda) = e^{-\lambda}\sum_{k \geq 0} \frac{\lambda^k}{k!} = e^{-\lambda}e^{\lambda} = 1$$
@@ -319,7 +325,7 @@ $$\lim_{n\to\infty} A^\lambda_{k,n}(x) = \frac{e^{-\lambda}\lambda^k}{k!}$$
 \end{fact}
 
 \begin{fact}
-    $$A_{k,n} = 0 \textrm{ if } k > \lambda2^n$$
+    $$A^{\lambda}_{k,n}(x) = 0 \textrm{ if } k > \lambda2^n$$
 \end{fact}
 
 % Assume  $x$ is supernormal.
@@ -380,6 +386,13 @@ $$\lim_{n\to\infty} A^\lambda_{k,n}(x) = \frac{e^{-\lambda}\lambda^k}{k!}$$
 % Conluimos usando el  Hot spot lemma.
 % \note{Copiar  del  capitulo \cite{BC2018} para redactar el Hot Spot Lemma y luego usarlo}
 
+
+
+Let's also recall that a sequence $x$ is normal if  for every binary word $w$,
+\[
+\lim_{n\to\infty} \frac{|x[1..n]|_w}{n}= 2^{-|w|}.
+\]
+
 Assume  $x$ is supernormal.
 Fix a positive $\epsilon$.
 Let $k_0$ be such that 
@@ -390,7 +403,8 @@ $ i,n$ such that $  0 \leq i \leq k_0 $, $n > n_0$ and
   $$|A^\lambda_{i,n}(x) - a_i(\lambda)| \leq \frac{\epsilon\lambda}{2k_0^2}$$
 
 
- $$\sum_{i=0}^{k_0} ka_k(\lambda) = \lambda - \sum_{k> k_0} ka_k(\lambda) \geq \lambda(1 - \frac{\epsilon}{2})$$
+ $$\sum_{i=0}^{k_0} ka_k(\lambda) = \lambda - \sum_{k> k_0} ka_k(\lambda) \geq \lambda\Big(1 - \frac{\epsilon}{2}\Big)$$
+
 
 We fix $\lambda$ equal to 1 for the simplicity of the proof, nonetheless the result is analogous with any value.
 Consider the positions from $1$ to $ 2^n $ in $x$. 
@@ -412,51 +426,51 @@ occurs more than $k_0$ times in
 We cover the positions from $1 $ to $2^n$ with consecutive
  non-overlapping blocks of length~$n$ such that 
 no block starts at a blamed  position. 
-this means that a block may contain blamed positions as long as they are not the first one. In the following illustrative example, $\times$ represents a blamed position:
+This means that a block may contain blamed positions as long as they are not the first one. 
+In the following example, the symbol $\times$ represents a blamed position:
  
 $$\overbracket{\raisebox{6.4pt}{\qquad}}^{n} \overbracket{\raisebox{6.4pt}{\qquad}}^{n}\times\times\overbracket{\;\quad \times}^{n} \times \overbracket{\raisebox{6.4pt}{\qquad}}^{n} \overbracket{\raisebox{6.4pt}{\qquad}}^{n} \times \overbracket{\;\; \times \times}^{n} \times\times\times \overbracket{\raisebox{6.4pt}{\qquad}}^{n}$$
 
 
 \begin{definition}
-  Let $Bad(n, w, \epsilon)$ be the set of binary words of length $n$ where the word $w$ differs from the expected frecuency more than $n \epsilon$, or what is to say:
-
+  Let $Bad(n, w, \epsilon)$ be the set of binary words of length $n$ where the word $w$ differs from the expected frequency by normality
+ more than $n \epsilon$. Thus,
   $$Bad(n, w, \epsilon)=\Big{\{}v\in \{0,1\}^n: \Big{|} |v|_w - n 2^{-|w|} \Big{|} \geq \epsilon n \Big{\} }$$
 \end{definition}
 
 
-It has been proven that the cardinality of the set $Bad(n, w, \epsilon)$ is less than $2^{n+1} e^{-\epsilon^2 n/(6|w|)}$,
-see \cite[Lemma 7.3.5]{BC19}. Which means that the amount of \textit{bad} words decreases exponentially.
+The cardinality of the set $Bad(n, w, \epsilon)$ is less than $2^{n+1} e^{-\epsilon^2 n/(6|w|)}$,
+see \cite[Lemma 7.3.5]{BC2018}. Therefore, the cardinality of the  \textit{bad} words of a given length $n$ decreases exponentially in~$n$.
 
 Supernormality determines that  some blocks of length $n$
 do not occur in $x[1\dots  2^n]$, and different blocks may 
 have different number of occurrences.
-
-The idea now is to check that for a given word $w$ the blocks of length $n$ mantain the right frequencies.
-We now fix $ n, \epsilon$ and $w$ and give an upper bound of  the number of occurrence of $w$ in 
+%The idea now is to check that for a given word $w$ the blocks of length $n$ mantain the right frequencies.
+We now fix $ n, \epsilon$ and $w$ and give an upper bound of  the number of occurrences of $w$ in 
 $x[1 .. 2^n]$. To do so we consider the following:
 \begin{enumerate}
 \item Each blamed position can allocate at most one occurrence of $w$.
-\item Each bad block in $Bad(n, w, \epsilon)$ can occur in $x[1.. 2^n]$
+\item Each block in $Bad(n, w, \epsilon)$ can occur in $x[1.. 2^n]$
  at most $k_0$ times.
-\item A bad block in $Bad(n, w, \epsilon)$ has at most $n-|w|+1$ occurrences of $w$.
+\item Each block in $Bad(n, w, \epsilon)$ has at most $n-|w|+1$ occurrences of $w$.
 \item The sequence $x[1..  2^n]$ can be splitted in at most $ 2^n/n$ consecutive blocks
-of length $n$.  
-\item Every block  of length $n$ that starts at a position that is not blamed,  and it is not a bad block
+of length~$n$.  
+\item Each block  of length $n$ that starts at a position that is not blamed,  and it is not a bad block
  contains at most $n 2^{-|w|} + \epsilon n $ occurrences of $w$.
 \item In between two consecutive blocks of length $n$ there are at most $|w|-1$ occurrences of $w$.
 \end{enumerate}
 Thus,
 \begin{align*}
-|x[1.. 2^n]|_w & \leq 
+|x[1.. 2^n]|_w \leq &
  \#\text{blamed positions} +
-\\& \hspace*{1cm}k_0 \#(\text{bad blocks}) (n-|w|+1)+
-\\& \hspace*{1cm}\#(\text{not bad blocks starting at non-blamed positions}) (n 2^{-|w|} + \epsilon n)+
-\\& \hspace*{1cm} \#(\text{in between blocks})  (|w|-1)
+\\& k_0 \#(\text{bad blocks}) (n-|w|+1)+
+\\& \#(\text{not bad blocks starting at non-blamed positions}) (n 2^{-|w|} + \epsilon n)+
+\\&  \#(\text{in between blocks})  (|w|-1)
 \\
-&\leq 2^n \epsilon + 
-\\& \hspace*{1cm}2^{n+1} e^{-\epsilon^2 n/(6|w|)} (n-|w|+1)+
-\\& \hspace*{1cm} ( 2^n /n) (n 2^{-|w|} + \epsilon n)+
-\\& \hspace*{1cm} ( 2^n/n) (|w|-1)
+\leq& 2^n \epsilon + 
+\\& 2^{n+1} e^{-\epsilon^2 n/(6|w|)} (n-|w|+1)+
+\\&  ( 2^n /n) (n 2^{-|w|} + \epsilon n)+
+\\&  ( 2^n/n) (|w|-1)
 \end{align*}
 Hence, 
 \begin{align*}
@@ -465,25 +479,26 @@ Hence,
 2 e^{-\epsilon^2 n/(6|w|)}  (n-|w|+1)+\frac{ \epsilon}{2^{n}}+
 +  \frac{1}{2^{|w|}} + (|w|-1)/n
 \end{align*}
-This  inequality above holds for every  for every $\epsilon$, thus,
+This  inequality above holds for every  for every $\epsilon$. By taking limit when $n$ goes to infinity we obtain 
 \begin{align*}
 \lim_{n\to \infty}\frac{|x[1.. 2^n]|_w }{ 2^n}= {2^{-|w|}}
 \end{align*}
 
 
-To show that $x$ is normal we will show that it satisfies the following lemma known as the
-Hot spot lemma which was proven by Piatetski-Shapiro  and rediscovered later by Borwein and Bailey \cite{hotspot} who gave it this name, see \cite[Theorem 7.4.1]{BC2018}.
-\begin{theorem}
-  The following conditions are equivalent:
-  \begin{enumerate}
-    \item The binary sequence x is normal.
-    \item There is a constant C such that for infinitley many lengths l and for every w in $\{0,1\}^l$
-    $$\limsup_{N\to \infty}  \frac{|x[1.. N]|_w }{N} \leq C \frac{1}{2^{|w|}}$$
-  \end{enumerate}
-\end{theorem} 
- 
+To show that $x$ is normal it remains to see that the wanted 
+limit holds when we count occurrences of any given word at initial segments of $x$ of arbitrary length:
+\begin{align*}
+\lim_{n\to \infty}\frac{|x[1.. n]|_w }{ n}= {2^{-|w|}}
+\end{align*}
 
-To show such a constant $C$ exists, we fix $N$ and let $n$ be such that $2^{n-1}\leq N<2^{n}$. 
+To get the wanted result we apply the  Hot Spot lemma, originally by Piatetski-Shapiro  and reconsidered 
+later by Borwein and Bailey \cite{hotspot}  who gave it this name. For  the history and references see~\cite[Theorem 7.4.1]{BC2018}.
+The Hot Spot lemma says that a binary sequence $x$ is normal if and only if there is a constant $C$ 
+such that for infinitely many lengths $\ell$ and for every w in~$\{0,1\}^\ell$,
+    $$\limsup_{N\to \infty}  \frac{|x[1.. N]|_w }{N} \leq C \frac{1}{2^{|w|}}$$
+ We now determine that the constant $C$ exists and it is equal to $2$
+Fx $N$ and let $n$ be such that $2^{n-1}\leq N<2^{n}$. 
+Then,
 \begin{align*}
 \frac{{|x[1.. N]|_w }}{N}\leq \frac{{|x[1.. 2^{n}]|_w }}{2^{n-1}}.
 \end{align*}
@@ -491,11 +506,11 @@ Then, using the bounds obtained above,
 \begin{align*}
 \limsup_{N\to \infty}  \frac{|x[1.. N]|_w }{N} 
 &\leq \limsup_{n\to \infty}\frac{{|x[1.. 2^{n}]|_w }}{2^{n-1}}\\
-&\leq \limsup_{n\to \infty}\frac{{|x[1.. 2^{n}]|_w }}{2^{n-1}}\\
+%&\leq \limsup_{n\to \infty}\frac{{|x[1.. 2^{n}]|_w }}{2^{n-1}}\\
 &\leq 2\frac{1}{2^{|w|}}.
 \end{align*}
 Thus the constant $C$ is equal to $2$.
-
+We conclude that $x$ is norma to base $2$.
 \pagebreak
 
 \section{Normality does not imply supernormality}
@@ -505,7 +520,7 @@ fails to be supernormal. For this we show that  it is not 1-supernormal.
 Our strategy is similar to that used by Pirsic and Stockinger in ~\cite{PS2019}  where they proved that when $x$ is 
 the Champernowne 
 sequence then $(2^n x \mod 1)_{n\geq 1}$ fails the Poissonian pair correlation.
-With a similar startegy  Becher, Carton and Mollo Cunningham ~\cite{BCC2019}
+With a similar strategy  Becher, Carton and Mollo Cunningham ~\cite{BCC2019}
  proved that when $x$ is a sequence of nested perfect necklaces, then $(2^n x \mod 1)_{n\geq 1}$ fails the Poissonian pair correlation.
 
 Let $X(n)$ be the concatenation of all words of length $n$ over the alphabet with two symbols $A=\{0,1\}$ in lexicographic order.  It is clear that $X(n)$ has length $n2^n$. Then, for example:
@@ -543,7 +558,7 @@ The sequence $X(k)$ occurs in $champ[1.. 2^{d+k+1}]$ and  the length of $X(k)$ i
   $2^{d+k+1} = 2^{d+k}2$ and $X(k)$ has length $k2^k = 2^d2^k = 2^{d+k}$ 
 \end{proof}
 
-We prove that champ is not supernormal by showing that the frequency of words
+We prove that $champ$ is not supernormal by showing that the frequency of words
  of length $k+d+1$ that do not occur in the first $2^{k+d+1}$ symbols of the champ
  sequence is higher than the expected frequency if it were supernormal.
 To accomplish this, we exhaustively count how many different words of length $2^{k+d+1}$ 
@@ -571,7 +586,7 @@ If a  word $x$  of length $k + d + 1$  occurs in $X(k)$ it must be in one of the
   $$x = u_{n+1} u_{n+2} \dots u_k \quad  v_1 v_2 \dots v_{d+n+1} $$
 with $n \in \{1,2,\dots ,k - d - 2\}$.
 
-Thus, $x$ is the concatenation of a proper suffix of a word of length $k$ and a proper prefix of the next word of lenghth $k$ .
+Thus, $x$ is the concatenation of a proper suffix of a word of length $k$ and a proper prefix of the next word of length $k$ .
  %but  is the case where the $k + d + 1$ symbols are taken from two words of length $k$ and none of the words is complete.
 
   

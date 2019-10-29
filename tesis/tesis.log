@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  25 OCT 2019 02:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  28 OCT 2019 23:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -388,7 +388,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--53
 ]
 Cap\'itulo 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--107
+Overfull \hbox (4.88248pt too wide) in paragraph at lines 73--74
+\OT1/cmr/m/n/10.95 the Lab-o-ra-toire In-ter-na-tional As-soci^^Se SIN-FIN, Uni
+-ver-sit^^Se Paris Diderot-CNRS/Universidad
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--109
 
  []
 
@@ -396,7 +402,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--107
 
 
 ] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 175--179
+Underfull \hbox (badness 10000) in paragraph at lines 177--181
 
  []
 
@@ -404,34 +410,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 175--179
 <images/champ-22-freq.png, id=44, 387.4475pt x 262.9825pt>
 File: images/champ-22-freq.png Graphic file (type png)
 <use images/champ-22-freq.png>
-Package pdftex.def Info: images/champ-22-freq.png  used on input line 278.
+Package pdftex.def Info: images/champ-22-freq.png  used on input line 282.
 (pdftex.def)             Requested size: 320.0935pt x 217.26819pt.
- [4 <./images/champ-22-freq.png>]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4] [5 <./images/champ-22-freq.png>]
 Cap\'itulo 2.
-[5
+[6
 
-]
-
-Package natbib Warning: Citation `BC19' on page 6 undefined on input line 428.
-
-
-Overfull \hbox (6.12985pt too wide) in paragraph at lines 427--429
-[]\OT1/cmr/m/n/10.95 It has been proven that the car-di-nal-ity of the set $\OM
-L/cmm/m/it/10.95 Bad\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 n; w; ^^O\OT1/cmr/m
-/n/10.95 )$ is less than $2[]\OML/cmm/m/it/10.95 e[]$\OT1/cmr/m/n/10.95 ,
- []
-
-[6] [7] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 644--649
+] [7] [8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 659--664
 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 683--686
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 698--701
 
  []
 
-[11] [12] [13] [14] [15] (./tesis.bbl
+[12] [13] [14] [15] [16] (./tesis.bbl
 Overfull \hbox (16.23944pt too wide) in paragraph at lines 60--63
 []\OT1/cmr/m/sc/10.95 Puterman, L.  \OT1/cmr/m/n/10.95 Su-per-nor-mal ex-per-i-
 ments - https://github.com/lucasputer/supernormal,
@@ -443,11 +442,7 @@ Underfull \hbox (badness 6412) in paragraph at lines 79--82
 or in de-ter-min-is-tic sys-tems -
  []
 
-)
-
-Package natbib Warning: There were undefined citations.
-
-[16
+) [17
 
 
 ] (./tesis.aux) ) 
@@ -476,10 +471,10 @@ sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
 local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/lo
 cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on tesis.pdf (21 pages, 313309 bytes).
+Output written on tesis.pdf (22 pages, 314574 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
+ 151 PDF objects out of 1000 (max. 8388607)
+ 105 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
