@@ -1,0 +1,331 @@
+\documentclass[10pt,mathserif]{beamer}%fleqn
+\usepackage{amscd, amsthm,amssymb,latexsym}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+%\usepackage{beamerthemesplit}
+
+
+\usepackage{url}
+\mode<presentation>{
+	\usecolortheme{}
+	\useinnertheme{}
+	\useoutertheme{}
+}
+
+%\usepackage{enumitem}
+%\setenumerate{itemsep=0.005ex,topsep=3pt}
+%\setitemize{itemsep=0.005ex,topsep=3pt}
+
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+  \insertshorttitle\hfill%
+  \insertframenumber\,/\,\inserttotalframenumber}
+
+
+\setbeamertemplate{headline}{}
+\beamertemplatenavigationsymbolsempty
+
+%\definecolor{magenta}{RGB}{250,0,150}
+%\definecolor{black}{RGB}{250,0,150}
+
+%\definecolor{mora}{RGB}{120,0,100}
+%\definecolor{pink}{RGB}{255,100,160}
+
+%\setbeamercolor{block title example}{bg=white,fg=red}
+%\setbeamercolor{structure}{bg=white,fg=red}
+%\setbeamercolor{title}{bg=white,fg=red}
+%\setbeamercolor{normal text}{bg=white,fg=mora}
+%\setbeamercolor{frametitle}{bg=white,fg=red}
+
+\begin{document}
+
+%\small
+
+\binoppenalty=10000 
+\relpenalty=10000
+\hyphenpenalty=5000
+\exhyphenpenalty=1000
+
+
+\newtheorem{observation}{Observation}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{belief}{Belief}
+\newtheorem{question}{Question}
+
+
+
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor } 
+\newcommand{\ceil}[1]{\lceil #1 \rceil }
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\card}{\mbox{\raisebox{.13em}{{$\scriptstyle \#$}}}}
+\newcommand{\expa}[1]{\{#1\}}
+\newcommand {\base}[2]{\langle{#1};{#2}\rangle}
+\newcommand{\ybar}{{\overline{y}}}
+\newcommand{\xbar}{{\overline{x}}}
+
+\newcommand{\cf}{\text{\em cf}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\wh}[1]{\widehat{#1}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\uno}{\mathbbm{1}}
+
+
+\newcommand{\alocc}[2]{|\!|#1|\!|_{#2}}
+\newcommand{\occ}[2]{|#1|_{#2}}
+
+\languagepath{spanish}
+\deftranslation[to=spanish]{Theorem}{Teorema}
+\deftranslation[to=spanish]{theorem}{teorema}
+\deftranslation[to=spanish]{Definition}{Definición}
+\deftranslation[to=spanish]{definition}{definición}
+\deftranslation[to=spanish]{Problem}{Problema}
+\deftranslation[to=spanish]{problem}{problema}
+\deftranslation[to=spanish]{Corollary}{Corolario}
+\deftranslation[to=spanish]{corollary}{corolario}
+\deftranslation[to=spanish]{Lemma}{Lema}
+\deftranslation[to=spanish]{lemma}{lema}
+
+
+
+
+%\title[Del azar con dos símbolos al azar con tres símbolos]{Del azar con dos símbolos al azar con tres símbolos}
+%\author[Ariel Zylber]{Ariel Zylber}
+%\institute{Universidad de Buenos Aires, Argentina}
+%\date{\vspace*{-3cm}\footnotesize{Tesis de Licenciatura, Universidad de Buenos Aires, Noviembre 21, 2017}}
+
+\title{{\normalsize Tesis de Licenciatura en Ciencias de la Computación}
+\\\vspace*{2cm}
+\mbox{\Large Números Muy Normales}}
+
+\author{\large Lucas Puterman
+\\\vspace*{1cm}}
+
+
+\date{{\footnotesize
+\hspace*{-6cm}
+\begin{tabular}{l}
+Directora: Ver\'onica Becher \\
+Departamento de Computaci\'on\\
+Facultad de Ciencias Exactas y Naturales\\
+ Universidad de Buenos Aires\\
+20 de Noviembre, 2019
+\end{tabular}
+}}
+
+\begin{frame}
+\maketitle
+\setcounter{framenumber}{0}
+\thispagestyle{empty}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Sobre secuencias aleatorias}
+
+\begin{center}
+  \includegraphics[scale=0.5]{imagenes/peso.jpg}
+\end{center}
+
+Supongamos que tiramos una moneda infinitas veces y anotamos un $1$ cada vez que sale cara y $0$ cada vez que sale ceca ¿Cuáles de estas secuencias es creíble que sea el resultado de este experimento?
+\pause
+\bigskip
+
+\begin{itemize}
+\item $11111111111111111111111111111111111\ldots$
+\pause
+\item $01001000100001000001000000100000001\ldots$
+\pause
+\item $01010101010101010101010101010101010\ldots$
+\pause
+\item $10000110001010001110010010110011010\ldots$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Secuencias normales}
+Podemos pensar que en una secuencia aleatoria no hay ningún patrón de~$\ell$ símbolos que sea más frecuente que otro.\\
+\pause
+\begin{definition}
+Notamos $\occ{u}{v}$ a la \textit{cantidad de ocurrencias} de la palabra $v$ dentro de la palabra $u$.\\
+\pause
+\medskip
+Además, notamos $u[i,j]$ a la subsecuencia de $u$ formada tomando todos los símbolos entre el $i$ y el $j$ inclusive.
+\end{definition}
+\pause
+\medskip
+Nos gustaría que para un prefijo de una secuencia aleatoria suficientemente grande, 
+la cantidad de ocurrencias de cada palabra de cierta longitud sea casi la misma.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Secuencias normales}
+
+\begin{definition}[{{\scriptsize  Borel, 1909}}]
+Dado un alfabeto $A$ y alguna secuencia infinita $u \in A^{\omega}$, 
+decimos que $u$ es \textit{simplemente normal para la longitud $\ell$} 
+si cada secuencia $v$ de longitud 
+%$l$
+\color{magenta}
+$\ell$
+\color{black} verifica que 
+$$
+\lim_{n \rightarrow \infty} \frac{\occ{u[1,\ell n]}{v}}{n} = \frac{1}{|A|^{\ell}}.
+$$
+\medskip
+\pause
+
+\medskip
+Decimos que $u$ es \textit{normal} 
+si es simplemente normal para toda longitud~$\ell \in \NN$.
+ \end{definition}
+\pause
+
+\begin{problem}[{{\scriptsize  Borel, 1909}}]
+Encontrar ejemplos naturales de secuencias normales. \\
+Decidir si la representación en base $b$ de $\pi$, $e$ ó $\sqrt{2}$ es normal.
+\end{problem}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{La secuencia de Champernowne}
+
+  \begin{problem}
+  Encontrar algún ejemplo explícito de una secuencia normal.
+  \end{problem}
+  \pause
+  \begin{theorem}[{{\scriptsize  Champernowne, 1933}}]
+  La secuencia
+  $$1234567891011121314151617181920\ldots$$
+  es normal 
+  sobre 
+  el alfabeto $A = \{0, 1, \ldots, 9\}$.
+  \end{theorem}
+\end{frame}
+
+\begin{frame}
+\frametitle{$champ$, La secuencia que usaremos}
+  
+
+  \begin{theorem}[{{\scriptsize  Bugeaud, 2012}}]
+    Sea $A$ un alfabeto. Llamamos  $X(n)$ a la concatenación de todas las palabras de lomgitud $n$ formadas por símbolos de $A$ en orden lexicográfico.
+    
+    La palabra infinita $X(1)X(2)\dots$ es normal en el alfabeto $A$
+  \end{theorem}
+
+  \medskip
+  \pause
+  En particular, nosotros vamos a usar el alfabeto  $A=\{0,1\}$ Entonces, por ejemplo:
+  $$X(2) = 00 \: 01 \: 10 \: 11$$
+  \medskip
+  \pause
+  Entonces, los primeros símbolos de la secuencia que llamamos $champ$ son:
+  $$champ = 0 \: 1 \: 00 \: 01 \: 10 \: 11 \: 000 \: 001 \: 010 \: 011 \: 100 \: 101 \: 110 \: 111 \: 0000 \: 0001 \: \dots$$
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Supernormalidad}
+Sea $x$ una secuencia binaria. Sea $A^\lambda_{k,n}(x)$  la frecuencia de ocurrencia de las palabras de longitud $n$ que ocurren exactamente $k$ veces comenzando en las primeras $\floor{\lambda 2^n}$ posiciones de $x$. Es decir:
+$$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\floor{\lambda 2^n}]|_w = k\}}{2^n}$$
+\pause
+\begin{definition}
+  Sea $\lambda$ un real mayor a cero. Decimos que la secuencia binaria $x$ es $\lambda$-supernormal si para todo entero no negativo $k$ sucede que
+  $$\lim_{n\to\infty} A^\lambda_{k,n}(x) = \frac{e^{-\lambda}\lambda^k}{k!}$$
+
+  Decimos que $x$ es supernormal si es $\lambda$-supernormal para todo $\lambda.$
+\end{definition}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Un ejemplo para entender mejor}
+  Veamos como ejemplo de juguete si la secuencia finita $x = 10011110$ es supernormal tomando $n=3$ y $\lambda = 1$.
+  \pause
+  Las palabras de tamaño 3 que ocurren en $x$ son:
+  $$100, \; 001, \; 011,\; 111,\; 111,\; 110$$
+  \pause
+  Si contamos las cantidad de ocurrencias de cada palabra de tamaño 3 tenemos: 
+  \begin{center}
+    \begin{tabular}{|c | c|} 
+    \hline
+    Word & Count \\ [0.5ex] 
+    \hline
+    000 & 0 \\ 
+    \hline
+    001 & 1 \\ 
+    \hline
+    010 & 0 \\ 
+    \hline
+    011 & 1 \\ 
+    \hline
+    100 & 1 \\ 
+    \hline
+    101 & 0 \\ 
+    \hline
+    110 & 1 \\ 
+    \hline
+    111 & 2 \\ 
+    \hline
+   \end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Un ejemplo para entender mejor}
+  Ahora, veamos las cantidad, las frecuencias y el valor esperado para cada $k$ posible si $x$ fuera 1-supernormal.
+  \pause
+  \begin{center}
+    \begin{tabular}{|c | c |  c| c |} 
+    \hline
+    $k$ & Count &  Frequency & Expected Frequency \\ [0.1ex] 
+    \hline
+    0 & 3 & $\frac{3}{8}$ & $e^{-1} $ \\ [0.5ex] 
+    \hline
+    1 & 4 &$\frac{1}{2}$ & $e^{-1} $ \\  [0.5ex] 
+    \hline
+    2 & 1 &$\frac{1}{8}$ & $\frac{e^{-1}}{2} $ \\  [0.5ex] 
+    \hline
+    3 & 0 & 0 & $\frac{e^{-1}}{3!} $ \\  [0.5ex] 
+    \hline
+    4 & 0 & 0 & $\frac{e^{-1}}{4!} $ \\ [0.5ex] 
+    \hline
+    5 & 0 & 0 & $\frac{e^{-1}}{5!} $ \\ [0.5ex] 
+    \hline
+    6 & 0 & 0  & $\frac{e^{-1}}{6!} $ \\ [0.5ex] 
+    \hline
+    7 & 0 & 0 & $\frac{e^{-1}}{7!} $ \\ [0.5ex] 
+    \hline
+    8 & 0 & 0 & $\frac{e^{-1}}{8!} $ \\  [0.5ex] 
+    \hline
+   \end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{El resultado de esta tesis}
+  
+  \begin{theorem}
+    La noción de supernormalidad es más fuerte que la noción de normalidad.
+
+    Es decir, los siguientes enunciados son ciertos:
+    \begin{enumerate}
+      \item Sea $x$ una secuencia infinita. Si $x$ es supernormal, entonces $x$ es normal. (supernormal $\Rightarrow$ normal )
+      \item Sea $x$ una secuencia infinita. Si $x$ es normal, no necesariamente  $x$ es supernormal. (normal $\nRightarrow$ supernormal )
+    \end{enumerate}
+  \end{theorem}
+
+
+\end{frame}
+
+\end{document}
+
+

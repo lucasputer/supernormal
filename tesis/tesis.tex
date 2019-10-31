@@ -181,8 +181,8 @@ Let's start by giving a formal definition of what a supernormal sequence is.
 
 %\begin{definition}
 Let $x$ be a sequence over a binary alphabet.
-Let $A^\lambda_{k,n}(x)$ be the frequency of occurrence of words of length $n$ that occur exactly $k$ times in the first $\floor{\lambda 2^n+n-1}$ symbols of $x$, or what is to say:
-$$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\lfloor\lambda 2^n+n-1)\rfloor]|_w = k\}}{2^n}$$
+Let $A^\lambda_{k,n}(x)$ be the frequency of occurrence of words of length $n$ that occur exactly $k$ times in the first $\floor{\lambda 2^n}$ symbols of $x$, or what is to say:
+$$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\lfloor\lambda 2^n)\rfloor]|_w = k\}}{2^n}$$
 %\end{definition}
 %\medskip
 
@@ -200,15 +200,15 @@ $$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\lfloor\lambda 2^n+n-1)\rf
 
 The idea behind normality is to look at increasing finite sample spaces of the sequence and check that for each block, the frequency of appearance is the same as the one for each of all the possible blocks.
 Supernormality doesn't look at the frequency of occurrence a block as normality does. We could say that $A^\lambda_{k,n}(x)$ is conducting some simple statistics where for each block of length $n$ we are counting how many times it occurs. 
- Then, the probability that a block occurs $k$ times is the number of blocks that occur $k$ times in the first $\floor{\lambda 2^n + n - 1)}$ symbols of the sequence divided by all the possible blocks.
+ Then, the probability that a block occurs $k$ times is the number of blocks that occur $k$ times in the first $\floor{\lambda 2^n}$ symbols of the sequence divided by all the possible blocks.
 For a sequence to be supernormal, we need these proportions to converge in distribution to a Poisson distribution with parameter $\lambda$. 
-It is important to notice that the $\lambda$ parameter is setting up how much of the sequence we read in order to conduct the statistics, and as it may not be an integer, we need to take the integer part in order to consume an integer number of symbols of the sequence.
+The motivation for checking the first $\floor{\lambda 2^n}$ symbols comes from the fact that there are $2^n$ possible words of length $n$, and as the $\lambda$ parameter is setting up how much of the sequence we read in order to conduct the statistics, and as it may not be an integer, we need to take the integer part in order to consume an integer number of symbols of the sequence.
 
 The Poisson distribution is a discrete probability distribution that expresses the probability of a given number of events occurring in a fixed interval of space if these events occur with a known constant rate and independently of the distance from the last event.
 
 
-Let's use as an illustrative example of what we are looking to when we check if a sequence is supernormal, the finite sequence $x = 1001111001$. Taking $n=3$ and $\lambda = 1$, the words of length $n$ that occur in $x$ are:
-$$100, \; 001, \; 011,\; 111,\; 111,\; 110,\; 001$$
+Let's use as an illustrative example of what we are looking to when we check if a sequence is supernormal, the finite sequence $x = 10011110$. Taking $n=3$ and $\lambda = 1$, the words of length $n$ that occur in $x$ are:
+$$100, \; 001, \; 011,\; 111,\; 111,\; 110$$
 
 Now if we count the occurrences of every possible word of length $3$ we have:
 
@@ -219,7 +219,7 @@ Now if we count the occurrences of every possible word of length $3$ we have:
     \hline
     000 & 0 \\ 
     \hline
-    001 & 2 \\ 
+    001 & 1 \\ 
     \hline
     010 & 0 \\ 
     \hline
@@ -246,9 +246,9 @@ And now we can see the frequency and the count of every possible $k$ with their
     \hline
     0 & 3 & $\frac{3}{8}$ & $e^{-1} $ \\ [0.5ex] 
     \hline
-    1 & 3 &$\frac{3}{8}$ & $e^{-1} $ \\  [0.5ex] 
+    1 & 4 &$\frac{1}{2}$ & $e^{-1} $ \\  [0.5ex] 
     \hline
-    2 & 2 &$\frac{1}{4}$ & $\frac{e^{-1}}{2} $ \\  [0.5ex] 
+    2 & 1 &$\frac{1}{8}$ & $\frac{e^{-1}}{2} $ \\  [0.5ex] 
     \hline
     3 & 0 & 0 & $\frac{e^{-1}}{3!} $ \\  [0.5ex] 
     \hline
@@ -285,7 +285,7 @@ The following figure shows for every $k$, taking $\lambda = 1$ and $n = 22$, the
     \label{fig:champ-22-freq}
 \end{figure}
 
-As it can be observed in Figure\ref{fig:champ-22-freq}, the amount of words of length $n$ that do not appear in the first $2^n + n - 1$ symbols of $champ$ is much higher than the expected one for the sequence to be 1-supernormal. As we will observe later in the proof this is due to the fact that by the way that $champ$ is constructed.
+As it can be observed in Figure\ref{fig:champ-22-freq}, the amount of words of length $n$ that do not appear in the first $2^n$ symbols of $champ$ is much higher than the expected one for the sequence to be 1-supernormal. As we will observe later in the proof this is due to the fact that by the way that $champ$ is constructed.
 This experiment as well a supernormality check for other famous normal sequences and a few PRNGs are available at ~\cite{Puterman}.
 
 % One more interesting thing to do experimentaly is to check wether some pseudorandom number generators generate sequences that empiricaly appear to be supernormal. We analyzed what happened with sequences genereated with the Mersenne Twister PRNG which is the PRNG used by Python and with the cellular autmata Rule 30 which was used as the PRNG in Mathematica.
@@ -295,7 +295,7 @@ This experiment as well a supernormality check for other famous normal sequences
 \section{Supernormality implies normality}
 
 Recall that given an infinite  binary sequence $x$, and non-negative intergers $k$ and $n$,
-$$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\lfloor\lambda 2^n+n-1)\rfloor]|_w = k\}}{2^n}$$
+$$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\lfloor\lambda 2^n)\rfloor]|_w = k\}}{2^n}$$
 The sequence $x$ is supernormal if for every positive real $\lambda$ and for every non-negative integer $k$,
 $$\lim_{n\to\infty} A^\lambda_{k,n}(x) = \frac{e^{-\lambda}\lambda^k}{k!}$$ 
 
@@ -328,65 +328,6 @@ We now observe a few useful facts:
     $$A^{\lambda}_{k,n}(x) = 0 \textrm{ if } k > \lambda2^n$$
 \end{fact}
 
-% Assume  $x$ is supernormal.
-% Fix a positive $\epsilon$.
-% Let $k_0$ be such that 
-% $$\frac{1}{\lambda} \sum_{k > k_0} ka_k(\lambda) < \frac{\epsilon}{2}$$
-
-% Let $n_0$ be  such that  for all 
-% $ i,n$ such that $  0 \leq i \leq k_0 - 1$, $n > n_0$ and 
-% $$  |A_{i,n}(\lambda) - a_i(\lambda)| \leq \frac{\epsilon\lambda}{2k_0(k_0+1)}$$
-
-% \note{No entiendo esta notacion}
-% $$Rq? = \sum_{i=0}^{k_0-1} ka_k(\lambda) = \lambda - \sum_{k\geq k_0} ka_k(\lambda) \geq (\lambda - \frac{\epsilon}{2})$$
-
-% Fix $\lambda$ equal to $1$. Consider the positions in $x[1..\lfloor\lambda(2^n+n-1)\rfloor]$. A position is blamed if 
-% the word of length~$n$ starting at that position occurs more than $k_0$ times in $x\lfloor\lambda(2^n+n-1)\rfloor$.
-% % \note{ Deberia decir  in $x[1..\lfloor\lambda(2^n+n-1)\rfloor]$. }
-% A lower bound for the number of non-blamed positions in $x[1..\lfloor\lambda(2^n+n-1)\rfloor]$ is:
-
-% \begin{align*}
-%     \sum_{i=0}^{k_0-1} iA_{i,n}(\lambda) 2^n &\geq 2^n\sum_{i=0}^{k_0-1} i (a_i(\lambda) - \frac{\epsilon\lambda}{2k_0(k_0+1)}) \\
-%     &\geq 2^n \sum_{i=0}^{k_0-1} ia_{i}(\lambda) - \frac{2^n\epsilon\lambda}{2} \\
-%     &\geq 2^n\lambda (1-\frac{\epsilon}{2}) - \frac{2^n\epsilon\lambda}{2} \\
-%     &= 2^n\lambda(1-\epsilon) \\
-% \end{align*}
-
-% We cover the positions $1\dots \lambda2^n$ by blocks of length~$n$ such that blocks do not start at a blamed  position. 
-% However a block may contain blamed positions.
- 
-% $$\overbracket{\raisebox{6.4pt}{\qquad}}^{n} \overbracket{\raisebox{6.4pt}{\qquad}}^{n}\times\times\overbracket{\;\quad \times}^{n} \times \overbracket{\raisebox{6.4pt}{\qquad}}^{n} \overbracket{\raisebox{6.4pt}{\qquad}}^{n} \times \overbracket{\;\; \times \times}^{n} \times\times\times \overbracket{\raisebox{6.4pt}{\qquad}}^{n}$$
-
-% % \note{Aqui la palabra left no esta bien.}
-% The amount of positions that are not covered is less than $\epsilon\lambda 2^n$. 
-
-% \begin{definition}
-%   Let $A$ be an alphabet of b symbols. We define the set of words of
-% length $k$ such that a given word w has a number of occurrences that differs from the
-% expected value in plus or minus $\epsilon k$, or what is to say:
-
-% $$Bad(A, k,w, \epsilon) = \{v \in A^k : \lvert \frac{|v|_k}{k} - b^{-|w|} \rvert  \geq \epsilon \}$$
-
-% We say that a block $b$ of length $k$ is \textit{bad} for a word $w$ and a given $\epsilon$ if $b \in Bad(A,k,w, \epsilon).$
-% \end{definition}
-
-% \note{Aqui hay que introducir la nocion de Bad block (de normalidad) de una  longitud dada $n$ y  para un $\epsilon$ dado y 
-%  y para un cierto word $w$.}
-% Fix a word   $w$ of length  $\lfloor \log n\rfloor$.
-% The number of bad blocks  for   $w$ and a for fixed value of epsilon is $o($number of possible blocks$)$. 
-% \note{No introdujiste notacion asimptotica de $O$ grande y $o$ chica. 
-% Escribi que  la proporcion de bloques malos en el total de  bloques tiende a cero. }
-% Since each such bad block can occur at most  $k_0 - 1$ times,  the total number of bad blocks for $w$ and $epsilon$
-% in $x[1\dots 2^n]$  decreases exponentially in $n$.
-
-% La supernormalidad determina que no todos los bloques de longitud $n$ aparecen  en $x[1\dots 2^n]$,  y 
-% y no todos los que aparecen lo hacen la misma cantidad de veces. Sin embargo 
-%  casi todas los bloques de longitud $n$ que aparecen en $x[1\dots 2^n]$ son buenos para $w$.
-% Podemos ahora  acotar por arriba y por abajo la cantidad de ocurrencias de $w$ en $x[1\dots 2^n]$.
-% Conluimos usando el  Hot spot lemma.
-% \note{Copiar  del  capitulo \cite{BC2018} para redactar el Hot Spot Lemma y luego usarlo}
-
-
 
 Let's also recall that a sequence $x$ is normal if  for every binary word $w$,
 \[
@@ -410,7 +351,7 @@ We fix $\lambda$ equal to 1 for the simplicity of the proof, nonetheless the res
 Consider the positions from $1$ to $ 2^n $ in $x$. 
 We say that a position is \textit{blamed} if the word of length $n$ starting at that position 
 occurs more than $k_0$ times in 
- $x[1..(2^n+n-1)]$. 
+ $x[1..(2^n)]$. 
 
  The number of blamed positions 
  between  $1$ and $2^n$ is:
@@ -537,7 +478,7 @@ $$champ = 0 \: 1 \: 00 \: 01 \: 10 \: 11 \: 000 \: 001 \: 010 \: 011 \: 100 \: 1
 
 By the definition of $\lambda$-supernormality, if we take $\lambda = 1$, then we need to prove that there is a non-negative integer $k$ such that
 %$$\lim_{n\to\infty} A_{k,n}(1) = a_k(1)$$  % aqui faltaba  negar  la igualdad
-$$\lim_{n\to\infty} \frac{\#\{w: |w| = n  , |x[1...(2^n+n-1)]|_w = k\}}{2^n} \neq \frac{e^{-1}}{k!}$$
+$$\lim_{n\to\infty} \frac{\#\{w: |w| = n  , |x[1...2^n]|_w = k\}}{2^n} \neq \frac{e^{-1}}{k!}$$
 
 \bigskip
 
@@ -613,7 +554,7 @@ or, if there are not two words of length $k$ after it. Notice that this case is 
 
 
 %\begin{definition}
-    The function  $next(w):A^n \rightarrow A^n $ is defined as follows. If $w$ is a row of $n$ many $1$s then  $next(w)$ is a row of $n+1$ many $0$s.
+    The function  $next(w):A^n \rightarrow A^n $ is defined as follows. If $w$ is a row of $n$ many $1$s then  $next(w)$ is a row of $n$ many $0$s.
 %Ibe $|w|$ times 0 if $w$ only consists of $1s$ and the word that comes after $w$ in lexicographic order in any other case.
 Else, $next(w)$ is the word  after $w$ in lexicographic order.
 %\end{definition}
@@ -821,8 +762,8 @@ By doing this, we would have to consider $d+k+1$ new words for the last word and
 
 % \note{en todos lados hay que poner $champ$ en vez de Champernowne}
 If the $champ$ %Champernowne
- sequence were supernormal then the expected frequency of words that appear at least one time in the first $2^n + n -1$ symbols would satisfy:
-$$\lim_{n\to\infty} \frac{\#\{w: |w| = n  , |champ[1...(2^n+n-1)]|_w > 0\}}{2^n}  = 1 - e^{-1}$$
+ sequence were supernormal then the expected frequency of words that appear at least one time in the first $2^n$ symbols would satisfy:
+$$\lim_{n\to\infty} \frac{\#\{w: |w| = n  , |champ[1...2^n]|_w > 0\}}{2^n}  = 1 - e^{-1}$$
 
 
 Now, by Fact \ref{p2} we know that $X(k)$ accounts for half of the words of the first $2^{d+k+1}$ symbols of $champ$. 
@@ -830,18 +771,18 @@ If we analyze what happens with words of length $d+k+1$ using the bounds we have
 
 
 \begin{align*}
-&\lim_{d\to\infty} \frac{\#\{w : |w| = d+k+1, |champ[1 \dots 2^{d+k+1}+d+k+1-1]|_w > 0 \}}{2^{d+k+1}} =\\
-&\lim_{d\to\infty} \frac{\#\{w : |w| = d+k+1, |champ[1 \dots 2^{d+k+1}+d+k]|_w > 0 \}}{2^{d+k+1}} <\\
-&\lim_{d\to\infty} \frac{ \textrm{Case 1} + \textrm{Case 2}+ \textrm{Case 4} + \textrm{Case 5} + \textrm{other half} + (d + k) }{2^{d+k+1}} =\\
-&\lim_{d\to\infty} \frac{(2^k - 2\cdot 2^d) + (2 \cdot 2^k)+ (d2^k + 2 \cdot 2^d) + (2d+k+1) + (2^{d+k}) + (d + k) }{2^{d+k+1}} =\\
-&\lim_{d\to\infty} \frac{(2^k - 2k) + (2 \cdot 2^k)+ (d2^k + 2k) + (3d+2k+1) + (k2^{k})}{2k2^{k}} =\\
-&\lim_{d\to\infty} \frac{3\cdot2^k + d2^k  + 3d+2k+1}{2k2^{k}} + \frac{1}{2} =\\
+&\lim_{d\to\infty} \frac{\#\{w : |w| = d+k+1, |champ[1 \dots 2^{d+k+1}]|_w > 0 \}}{2^{d+k+1}} =\\
+&\lim_{d\to\infty} \frac{\#\{w : |w| = d+k+1, |champ[1 \dots 2^{d+k+1}]|_w > 0 \}}{2^{d+k+1}} <\\
+&\lim_{d\to\infty} \frac{ \textrm{Case 1} + \textrm{Case 2}+ \textrm{Case 4} + \textrm{Case 5} + \textrm{other half}}{2^{d+k+1}} =\\
+&\lim_{d\to\infty} \frac{(2^k - 2\cdot 2^d) + (2 \cdot 2^k)+ (d2^k + 2 \cdot 2^d) + (2d+k+1) + (2^{d+k}) }{2^{d+k+1}} =\\
+&\lim_{d\to\infty} \frac{(2^k - 2k) + (2 \cdot 2^k)+ (d2^k + k) + (2d+2k+1) + (k2^{k})}{2k2^{k}} =\\
+&\lim_{d\to\infty} \frac{3\cdot2^k + d2^k  + 2d+k+1}{2k2^{k}} + \frac{1}{2} =\\
 &\lim_{d\to\infty} \frac{3}{2k} + \frac{d}{2k} + \frac{d}{k2^{k}} + \frac{1}{2\cdot2^{k}} + \frac{1}{2k2^{k}} + \frac{1}{2} = \frac{1}{2} \\
 &< 1 - e^{-1}
 \end{align*}
 
 Finally, if in the original sequence we consider that the $n$'s such that $n = d + 2^d + 1$ are a subsequence of $n=1,2,\dots$ then we can say that if
-$$\lim_{n\to\infty} \frac{\#\{w: |w| = n  , |champ[1...(2^n+n-1)]|_w > 0\}}{2^n}$$
+$$\lim_{n\to\infty} \frac{\#\{w: |w| = n  , |champ[1...2^n]|_w > 0\}}{2^n}$$
 exists, then it is not $1 - e^{-1}$.
 This implies that Champernowne is not 1-supernormal which means it is not supernormal.
 

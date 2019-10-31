@@ -1,13 +1,13 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  29 OCT 2019 12:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  31 OCT 2019 11:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/lucas/Repositories/supernorm/tesis/tesis.tex
-(/Users/lucas/Repositories/supernorm/tesis/tesis.tex
+**tesis.tex
+(./tesis.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
-(/Users/lucas/Repositories/supernorm/tesis/tesis.cls
+(./tesis.cls
 Document Class: tesis 1996/25/01 1.0g LaTeX document class (wm).
 \hours=\count80
 \minutes=\count81
@@ -29,13 +29,16 @@ File: bk11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip44
 \belowcaptionskip=\skip45
 \bibindent=\dimen102
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/xcolor/xcolor.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
- (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 )
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
@@ -47,34 +50,44 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 )
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/base/inputenc.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/03/24 v5.7 Page Geometry
- (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-) (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
-) (/usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count91
@@ -89,15 +102,18 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen111
 \Gm@layoutvoffset=\dimen112
 \Gm@dimlist=\toks17
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/natbib/natbib.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip46
 \bibsep=\skip47
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count94
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/mathtools/mathtools.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
- (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count95
 \calc@Bcount=\count96
@@ -109,23 +125,28 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count97
 \calc@Cskip=\skip50
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/mathtools/mhsetup.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
- (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
 \ex@=\dimen115
-)) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen116
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count98
@@ -179,9 +200,11 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_below_intertext_sep=\dimen128
 \l_MT_above_shortintertext_sep=\dimen129
 \l_MT_below_shortintertext_sep=\dimen130
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/doublestroke/dsfont.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/amscls/amsthm.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks23
 \thm@bodyfont=\toks24
@@ -199,7 +222,21 @@ Package: amsthm 2017/10/31 v2.20.4
 \c@proposition=\count114
 \c@fact=\count115
 \c@definition=\count116
- (/Users/lucas/Repositories/supernorm/tesis/tesis.aux)
+ (./tesis.aux
+
+./tesis.aux:55: Package natbib Error: Bibliography not compatible with author-y
+ear citations.
+(natbib)                Press <return> to continue in numerical citation style.
+
+
+See the natbib package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 ...mand\NAT@force@numbers{}\NAT@force@numbers
+                                                  
+? 
+)
 \openout1 = `tesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
@@ -229,21 +266,29 @@ LaTeX Font Info:    ... okay on input line 34.
 \everyMPtoPDFconversion=\toks30
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
- (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
- (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
- (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-))) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+)))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
- (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
- (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
- (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -251,19 +296,25 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-))) (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO)
+)))
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -299,7 +350,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/Users/lucas/Repositories/supernorm/tesis/caratula.tex
+(./caratula.tex
 <logofcen.pdf, id=1, 108.405pt x 108.405pt>
 File: logofcen.pdf Graphic file (type pdf)
 <use logofcen.pdf>
@@ -307,9 +358,11 @@ Package pdftex.def Info: logofcen.pdf  used on input line 10.
 (pdftex.def)             Requested size: 73.97733pt x 73.98073pt.
  [1
 
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/lucas/Repositories/supernorm/tesis/logofcen.pdf>]) (/Users/lucas/Repositories/supernorm/tesis/abs_esp.tex)
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./logof
+cen.pdf>]) (./abs_esp.tex)
 Overfull \hbox (10.1393pt too wide) in paragraph at lines 23--53
-\OT1/cmr/bx/n/10.95 Palabras claves: \OT1/cmr/m/n/10.95 Nor-mal-i-dad, Su-per-nor-mal-i-dad, Cham-per-nowne, Pois-son, Poisson-generic.
+\OT1/cmr/bx/n/10.95 Palabras claves: \OT1/cmr/m/n/10.95 Nor-mal-i-dad, Su-per-n
+or-mal-i-dad, Cham-per-nowne, Pois-son, Poisson-generic.
  []
 
 
@@ -320,12 +373,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--53
 [1
 
 
-] (/Users/lucas/Repositories/supernorm/tesis/abs_en.tex) [2
+] (./abs_en.tex) [2
 
 
-] (/Users/lucas/Repositories/supernorm/tesis/dedicatoria.tex) [3
+] (./dedicatoria.tex) [3
 
-] (/Users/lucas/Repositories/supernorm/tesis/tesis.toc)
+] (./tesis.toc)
 \tf@toc=\write3
 \openout3 = `tesis.toc'.
 
@@ -336,20 +389,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--53
 Cap\'itulo 1.
 
 Overfull \hbox (4.88248pt too wide) in paragraph at lines 73--74
-\OT1/cmr/m/n/10.95 the Lab-o-ra-toire In-ter-na-tional As-soci^^Se SIN-FIN, Uni-ver-sit^^Se Paris Diderot-CNRS/Universidad
+\OT1/cmr/m/n/10.95 the Lab-o-ra-toire In-ter-na-tional As-soci^^Se SIN-FIN, Uni
+-ver-sit^^Se Paris Diderot-CNRS/Universidad
  []
-
-
-Package natbib Warning: Citation `Borel' on page 1 undefined on input line 81.
-
-
-Package natbib Warning: Citation `kuipers' on page 1 undefined on input line 90.
-
-
-Package natbib Warning: Citation `bugeaud' on page 1 undefined on input line 90.
-
-
-Package natbib Warning: Citation `BC2018' on page 1 undefined on input line 91.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 107--109
@@ -359,35 +401,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--109
 [1
 
 
-]
-
-Package natbib Warning: Citation `Borel' on page 2 undefined on input line 128.
-
-
-Package natbib Warning: Citation `Sierpinski' on page 2 undefined on input line 132.
-
-
-Package natbib Warning: Citation `turing' on page 2 undefined on input line 132.
-
-
-Package natbib Warning: Citation `BHS' on page 2 undefined on input line 132.
-
-
-Package natbib Warning: Citation `FN' on page 2 undefined on input line 132.
-
-
-Package natbib Warning: Citation `champern' on page 2 undefined on input line 140.
-
-
-Package natbib Warning: Citation `champern' on page 2 undefined on input line 152.
-
-
-Package natbib Warning: Citation `BC2018' on page 2 undefined on input line 152.
-
-
-Package natbib Warning: Citation `Weiss' on page 2 undefined on input line 170.
-
-[2]
+] [2]
 Underfull \hbox (badness 10000) in paragraph at lines 177--181
 
  []
@@ -402,85 +416,62 @@ Package pdftex.def Info: images/champ-22-freq.png  used on input line 282.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Package natbib Warning: Citation `Puterman' on page 4 undefined on input line 289.
-
-[4] [5 </Users/lucas/Repositories/supernorm/tesis/images/champ-22-freq.png>]
+[4] [5 <./images/champ-22-freq.png>]
 Cap\'itulo 2.
 [6
 
-]
-
-Package natbib Warning: Citation `BC2018' on page 7 undefined on input line 443.
-
-[7]
-
-Package natbib Warning: Citation `hotspot' on page 8 undefined on input line 495.
-
-
-Package natbib Warning: Citation `BC2018' on page 8 undefined on input line 495.
-
-[8]
-
-Package natbib Warning: Citation `champern' on page 9 undefined on input line 518.
-
-
-Package natbib Warning: Citation `PS2019' on page 9 undefined on input line 520.
-
-
-Package natbib Warning: Citation `BCC2019' on page 9 undefined on input line 523.
-
-[9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 659--664
+] [7] [8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 600--605
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 698--701
+Underfull \hbox (badness 10000) in paragraph at lines 639--642
 
  []
 
-[12] [13] [14] [15] [16] (/Users/lucas/Repositories/supernorm/tesis/tesis.bbl
+[12] [13] [14] [15] [16] (./tesis.bbl
+Overfull \hbox (16.23944pt too wide) in paragraph at lines 60--63
+[]\OT1/cmr/m/sc/10.95 Puterman, L.  \OT1/cmr/m/n/10.95 Su-per-nor-mal ex-per-i-
+ments - https://github.com/lucasputer/supernormal,
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 79--82
-[]\OT1/cmr/m/sc/10.95 Weiss, B.  \OT1/cmr/m/n/10.95 Random-like be-hav-ior in de-ter-min-is-tic sys-tems -
+[]\OT1/cmr/m/sc/10.95 Weiss, B.  \OT1/cmr/m/n/10.95 Random-like be-hav-ior in d
+e-ter-min-is-tic sys-tems -
  []
 
-)
-
-Package natbib Warning: There were undefined citations.
-
-[17
+) [17
 
 
-] (/Users/lucas/Repositories/supernorm/tesis/tesis.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-
-/Users/lucas/Repositories/supernorm/tesis/tesis.aux:55: Package natbib Error: Bibliography not compatible with author-year citations.
-(natbib)                Press <return> to continue in numerical citation style.
-
-See the natbib package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.55 ...mand\NAT@force@numbers{}\NAT@force@numbers
-                                                  
-Check the bibliography entries for non-compliant syntax,
-or select author-year BibTeX style, e.g. plainnat
-
-) ) 
+] (./tesis.aux) ) 
 Here is how much of TeX's memory you used:
- 4326 strings out of 492649
- 60388 string characters out of 6129622
- 149939 words of memory out of 5000000
+ 4325 strings out of 492649
+ 59442 string characters out of 6129622
+ 150154 words of memory out of 5000000
  8130 multiletter control sequences out of 15000+600000
  12518 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,12n,35p,459b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on /Users/lucas/Repositories/supernorm/tesis/tesis.pdf (22 pages, 314418 bytes).
+ 41i,12n,35p,439b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmcsc10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
+pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
+local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/lo
+cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on tesis.pdf (22 pages, 314262 bytes).
 PDF statistics:
  151 PDF objects out of 1000 (max. 8388607)
  105 compressed objects within 2 object streams
