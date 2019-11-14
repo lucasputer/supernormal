@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 NOV 2019 13:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 NOV 2019 15:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -541,30 +541,23 @@ Package babel Info: Making " an active character on input line 561.
 Package babel Info: Making . an active character on input line 662.
 Package babel Info: Making < an active character on input line 707.
 Package babel Info: Making > an active character on input line 707.
-)) (/Users/lucas/Repositories/supernorm/presentacion/presentacion.aux
-LaTeX Info: Redefining \. on input line 23.
-LaTeX Info: Redefining \% on input line 23.
-
-
-LaTeX Warning: Label `fig:champ-22-freq' multiply defined.
-
-)
+)) (/Users/lucas/Repositories/supernorm/presentacion/presentacion.aux)
 \openout1 = `presentacion.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -626,7 +619,7 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box54
-Package hyperref Info: Link coloring OFF on input line 40.
+Package hyperref Info: Link coloring OFF on input line 41.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -634,10 +627,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count164
 )
-LaTeX Info: Redefining \ref on input line 40.
-LaTeX Info: Redefining \pageref on input line 40.
-LaTeX Info: Redefining \nameref on input line 40.
- (/Users/lucas/Repositories/supernorm/presentacion/presentacion.out) (/Users/lucas/Repositories/supernorm/presentacion/presentacion.out)
+LaTeX Info: Redefining \ref on input line 41.
+LaTeX Info: Redefining \pageref on input line 41.
+LaTeX Info: Redefining \nameref on input line 41.
 \@outlinefile=\write5
 \openout5 = `presentacion.out'.
 
@@ -654,8 +646,8 @@ Dictionary: translator-numbers-dictionary, Language: English
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/translator/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \. on input line 40.
-LaTeX Info: Redefining \% on input line 40.
+LaTeX Info: Redefining \. on input line 41.
+LaTeX Info: Redefining \% on input line 41.
  (/Users/lucas/Repositories/supernorm/presentacion/presentacion.nav)
 \c@observation=\count165
 \c@conjecture=\count166
@@ -665,17 +657,17 @@ LaTeX Info: Redefining \% on input line 40.
 
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
-(hyperref)                setting the option has no effect on input line 108.
+(hyperref)                setting the option has no effect on input line 109.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 126.
+LaTeX Font Info:    Try loading font information for U+msa on input line 127.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 126.
+LaTeX Font Info:    Try loading font information for U+msb on input line 127.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 126.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 127.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [1
@@ -684,35 +676,35 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 <imagenes/peso.jpg, id=22, 65.64525pt x 66.36795pt>
 File: imagenes/peso.jpg Graphic file (type jpg)
 <use imagenes/peso.jpg>
-Package pdftex.def Info: imagenes/peso.jpg  used on input line 150.
+Package pdftex.def Info: imagenes/peso.jpg  used on input line 151.
 (pdftex.def)             Requested size: 32.82253pt x 33.18388pt.
  [2
 
  </Users/lucas/Repositories/supernorm/presentacion/imagenes/peso.jpg>]
 File: imagenes/peso.jpg Graphic file (type jpg)
 <use imagenes/peso.jpg>
-Package pdftex.def Info: imagenes/peso.jpg  used on input line 150.
+Package pdftex.def Info: imagenes/peso.jpg  used on input line 151.
 (pdftex.def)             Requested size: 32.82253pt x 33.18388pt.
  [3
 
 ]
 File: imagenes/peso.jpg Graphic file (type jpg)
 <use imagenes/peso.jpg>
-Package pdftex.def Info: imagenes/peso.jpg  used on input line 150.
+Package pdftex.def Info: imagenes/peso.jpg  used on input line 151.
 (pdftex.def)             Requested size: 32.82253pt x 33.18388pt.
  [4
 
 ]
 File: imagenes/peso.jpg Graphic file (type jpg)
 <use imagenes/peso.jpg>
-Package pdftex.def Info: imagenes/peso.jpg  used on input line 150.
+Package pdftex.def Info: imagenes/peso.jpg  used on input line 151.
 (pdftex.def)             Requested size: 32.82253pt x 33.18388pt.
  [5
 
 ]
 File: imagenes/peso.jpg Graphic file (type jpg)
 <use imagenes/peso.jpg>
-Package pdftex.def Info: imagenes/peso.jpg  used on input line 150.
+Package pdftex.def Info: imagenes/peso.jpg  used on input line 151.
 (pdftex.def)             Requested size: 32.82253pt x 33.18388pt.
  [6
 
@@ -764,7 +756,7 @@ Package pdftex.def Info: imagenes/peso.jpg  used on input line 150.
 <imagenes/champ-16-freq.png, id=175, 387.4475pt x 262.9825pt>
 File: imagenes/champ-16-freq.png Graphic file (type png)
 <use imagenes/champ-16-freq.png>
-Package pdftex.def Info: imagenes/champ-16-freq.png  used on input line 357.
+Package pdftex.def Info: imagenes/champ-16-freq.png  used on input line 358.
 (pdftex.def)             Requested size: 230.46739pt x 156.43439pt.
  [29
 
@@ -772,12 +764,12 @@ Package pdftex.def Info: imagenes/champ-16-freq.png  used on input line 357.
 <imagenes/champ-22-freq.png, id=187, 387.4475pt x 262.9825pt>
 File: imagenes/champ-22-freq.png Graphic file (type png)
 <use imagenes/champ-22-freq.png>
-Package pdftex.def Info: imagenes/champ-22-freq.png  used on input line 367.
+Package pdftex.def Info: imagenes/champ-22-freq.png  used on input line 368.
 (pdftex.def)             Requested size: 230.46739pt x 156.43439pt.
 pdfTeX warning (ext4): destination with the same identifier (name{fig:champ-22-freq}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.367 \end{frame}
+l.368 \end{frame}
                   [30
 
  </Users/lucas/Repositories/supernorm/presentacion/imagenes/champ-22-freq.png>] [31
@@ -813,7 +805,7 @@ l.367 \end{frame}
 ] [46
 
 ]
-Overfull \hbox (16.59967pt too wide) detected at line 631
+Overfull \hbox (16.59967pt too wide) detected at line 632
 \OT1/cmr/m/n/10 11111011 11111100 11111101 11111[][] 0 [] 
  []
 
@@ -837,6 +829,282 @@ Overfull \hbox (16.59967pt too wide) detected at line 631
 
 ] [56
 
+] [57
+
+] [58
+
+] [59
+
+] [60
+
+]
+Overfull \hbox (9.25677pt too wide) detected at line 868
+\OT1/cmr/m/n/9 0000000 (0 000 0000 1 000) 00010
+ []
+
+
+Overfull \hbox (9.25677pt too wide) detected at line 868
+\OT1/cmr/m/n/9 0000000 (1 000 0001 0 000) 00011
+ []
+
+
+Overfull \hbox (9.25677pt too wide) detected at line 868
+\OT1/cmr/m/n/9 0011111 (0 001 1111 1 001) 10000
+ []
+
+
+Overfull \hbox (9.25677pt too wide) detected at line 868
+\OT1/cmr/m/n/9 0011111 (1 010 0000 0 010) 00001
+ []
+
+
+Overfull \hbox (9.25677pt too wide) detected at line 868
+\OT1/cmr/m/n/9 1111110 (1 111 1111 0 111) 11111
+ []
+
+[61
+
+]
+Overfull \hbox (9.25677pt too wide) detected at line 894
+\OT1/cmr/m/n/9 000000 (00 00 0000 01 00) 000010
+ []
+
+
+Overfull \hbox (9.25677pt too wide) detected at line 894
+\OT1/cmr/m/n/9 000000 (01 00 0000 10 00) 000011
+ []
+
+
+Overfull \hbox (9.25677pt too wide) detected at line 894
+\OT1/cmr/m/n/9 001111 (01 00 1111 10 00) 111111
+ []
+
+
+Overfull \hbox (9.25677pt too wide) detected at line 894
+\OT1/cmr/m/n/9 001111 (10 00 1111 11 01) 000000
+ []
+
+
+Overfull \hbox (9.25677pt too wide) detected at line 894
+\OT1/cmr/m/n/9 001111 (11 01 0000 00 01) 000001
+ []
+
+
+Overfull \hbox (9.25677pt too wide) detected at line 894
+\OT1/cmr/m/n/9 111111 (01 11 1111 10 11) 111111
+ []
+
+
+Overfull \vbox (11.54492pt too high) detected at line 894
+ []
+
+[62
+
+]
+Overfull \hbox (2.4664pt too wide) detected at line 928
+\OT1/cmr/m/n/10 000000 ([][] [][] 0000 [][] [][]) 000010
+ []
+
+
+Overfull \hbox (2.4664pt too wide) detected at line 928
+\OT1/cmr/m/n/10 000000 ([][] [][] 0000 [][] [][]) 000011
+ []
+
+
+Overfull \hbox (2.4664pt too wide) detected at line 928
+\OT1/cmr/m/n/10 001111 ([][] [][] 1111 [][] [][]) 111111
+ []
+
+
+Overfull \hbox (2.4664pt too wide) detected at line 928
+\OT1/cmr/m/n/10 001111 ([][] [][] [][] [][] [][]) 000000
+ []
+
+
+Overfull \hbox (2.4664pt too wide) detected at line 928
+\OT1/cmr/m/n/10 001111 ([][] [][] 0000 [][] [][]) 000001
+ []
+
+
+Overfull \hbox (2.4664pt too wide) detected at line 928
+\OT1/cmr/m/n/10 111111 ([][] [][] 1111 [][] [][]) 111111
+ []
+
+
+Overfull \hbox (1.3165pt too wide) detected at line 928
+[]  []  []  [][] [][]
+ []
+
+[63
+
+]
+Overfull \hbox (2.4664pt too wide) detected at line 928
+\OT1/cmr/m/n/10 000000 ([][] [][] 0000 [][] [][]) 000010
+ []
+
+
+Overfull \hbox (2.4664pt too wide) detected at line 928
+\OT1/cmr/m/n/10 000000 ([][] [][] 0000 [][] [][]) 000011
+ []
+
+
+Overfull \hbox (2.4664pt too wide) detected at line 928
+\OT1/cmr/m/n/10 001111 ([][] [][] 1111 [][] [][]) 111111
+ []
+
+
+Overfull \hbox (2.4664pt too wide) detected at line 928
+\OT1/cmr/m/n/10 001111 ([][] [][] [][] [][] [][]) 000000
+ []
+
+
+Overfull \hbox (2.4664pt too wide) detected at line 928
+\OT1/cmr/m/n/10 001111 ([][] [][] 0000 [][] [][]) 000001
+ []
+
+
+Overfull \hbox (2.4664pt too wide) detected at line 928
+\OT1/cmr/m/n/10 111111 ([][] [][] 1111 [][] [][]) 111111
+ []
+
+
+Overfull \hbox (1.3165pt too wide) detected at line 928
+[]  []  []  [][] [][]
+ []
+
+[64
+
+]
+/Users/lucas/Repositories/supernorm/presentacion/presentacion.tex:947: Misplaced alignment tab character &.
+\beamer@doifinframe ...s diferentes, entonces: $$&
+                                                  \lim _{d\to \infty } \frac...
+l.947 \end{frame}
+                 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/lucas/Repositories/supernorm/presentacion/presentacion.tex:947: Misplaced alignment tab character &.
+\beamer@doifinframe ... > 0 \}}{2^{d+k+1}} <$$ $$&
+                                                  \lim _{d\to \infty } \frac...
+l.947 \end{frame}
+                 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/lucas/Repositories/supernorm/presentacion/presentacion.tex:947: Misplaced alignment tab character &.
+\beamer@doifinframe ...}} =$$ \par \pause \par $$&
+                                                  \lim _{d\to \infty } \frac...
+l.947 \end{frame}
+                 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Overfull \vbox (5.43475pt too high) detected at line 947
+ []
+
+[65
+
+]
+/Users/lucas/Repositories/supernorm/presentacion/presentacion.tex:947: Misplaced alignment tab character &.
+\beamer@doifinframe ...s diferentes, entonces: $$&
+                                                  \lim _{d\to \infty } \frac...
+l.947 \end{frame}
+                 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/lucas/Repositories/supernorm/presentacion/presentacion.tex:947: Misplaced alignment tab character &.
+\beamer@doifinframe ... > 0 \}}{2^{d+k+1}} <$$ $$&
+                                                  \lim _{d\to \infty } \frac...
+l.947 \end{frame}
+                 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/lucas/Repositories/supernorm/presentacion/presentacion.tex:947: Misplaced alignment tab character &.
+\beamer@doifinframe ...}} =$$ \par \pause \par $$&
+                                                  \lim _{d\to \infty } \frac...
+l.947 \end{frame}
+                 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Overfull \vbox (5.43475pt too high) detected at line 947
+ []
+
+[66
+
+]
+/Users/lucas/Repositories/supernorm/presentacion/presentacion.tex:947: Misplaced alignment tab character &.
+\beamer@doifinframe ...s diferentes, entonces: $$&
+                                                  \lim _{d\to \infty } \frac...
+l.947 \end{frame}
+                 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/lucas/Repositories/supernorm/presentacion/presentacion.tex:947: Misplaced alignment tab character &.
+\beamer@doifinframe ... > 0 \}}{2^{d+k+1}} <$$ $$&
+                                                  \lim _{d\to \infty } \frac...
+l.947 \end{frame}
+                 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/lucas/Repositories/supernorm/presentacion/presentacion.tex:947: Misplaced alignment tab character &.
+\beamer@doifinframe ...}} =$$ \par \pause \par $$&
+                                                  \lim _{d\to \infty } \frac...
+l.947 \end{frame}
+                 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Overfull \vbox (5.43475pt too high) detected at line 947
+ []
+
+[67
+
+] [68
+
 ]
 \tf@nav=\write6
 \openout6 = `presentacion.nav'.
@@ -847,34 +1115,40 @@ Overfull \hbox (16.59967pt too wide) detected at line 631
 \tf@snm=\write8
 \openout8 = `presentacion.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 766.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 766.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 962.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 962.
  (/Users/lucas/Repositories/supernorm/presentacion/presentacion.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 766.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 766.
-Package rerunfilecheck Info: File `presentacion.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 962.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 962.
 
 
-LaTeX Warning: There were multiply-defined labels.
+Package rerunfilecheck Warning: File `presentacion.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `presentacion.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 17893 strings out of 492649
- 333575 string characters out of 6129622
- 429761 words of memory out of 5000000
- 21252 multiletter control sequences out of 15000+600000
- 15052 words of font info for 62 fonts, out of 8000000 for 9000
+ 17940 strings out of 492649
+ 333918 string characters out of 6129622
+ 429511 words of memory out of 5000000
+ 21278 multiletter control sequences out of 15000+600000
+ 15934 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,13n,51p,871b,508s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/lucas/Repositories/supernorm/presentacion/presentacion.pdf (56 pages, 454589 bytes).
+ 48i,13n,51p,871b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on /Users/lucas/Repositories/supernorm/presentacion/presentacion.pdf (68 pages, 546576 bytes).
 PDF statistics:
- 423 PDF objects out of 1000 (max. 8388607)
- 330 compressed objects within 4 object streams
- 114 named destinations out of 1000 (max. 500000)
+ 526 PDF objects out of 1000 (max. 8388607)
+ 411 compressed objects within 5 object streams
+ 138 named destinations out of 1000 (max. 500000)
  58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

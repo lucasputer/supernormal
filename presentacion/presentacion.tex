@@ -25,6 +25,7 @@
 \setbeamertemplate{headline}{}
 \beamertemplatenavigationsymbolsempty
 
+
 %\definecolor{magenta}{RGB}{250,0,150}
 %\definecolor{black}{RGB}{250,0,150}
 
@@ -373,7 +374,7 @@ $$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\floor{\lambda 2^n}]|_w = 
     \pause 
     \item La idea va a ser encontrar un $k$ tal que $X(k)$ sea lo suficientemente grande y este completamente contenido en $champ[1\dots 2^n]$ y analizar cuales son las palabras distintas que aparecen.
     \pause 
-    \item Si tomamos $n \geq d + k + 1$ con $k = 2^d$, sucede que $X(k)$ está completamente contenido en $champ[1\dots 2^n]$.
+    \item Si tomamos $n = d + k + 1$ con $k = 2^d$, sucede que $X(k)$ está completamente contenido en $champ[1\dots 2^n]$ y además ocupa la mitad del espacio.
     \pause 
     \item Nos fijamos que pinta tienen las secuencias de longitud $d + k + 1$ que aparecen adentro de $X(k)$ y damos una cota para la cantidad de palabras distintas que pueden aparecer.
     \pause
@@ -761,6 +762,201 @@ $$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\floor{\lambda 2^n}]|_w = 
     \end{column}
     \end{columns}
 \end{frame} 
+
+\begin{frame}
+  \frametitle{Análisis por caso - Caso 3}
+  $$x = u_{n+1} u_{n+2} \dots u_k \quad  v_1 v_2 \dots v_{d+n+1}   \qquad n \in \{1,2,\dots ,k - d - 2\}  $$
+  Este caso representa cuando los $k + d + 1$ símbolos son tomados de dos palabras $u$ y $v$ de longitud $k$ y ninguna de las dos está completas.
+  Ejemplo tomando $n = 3$, $k = 8$ y $d = 3$.
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+        $$000\; (0000\; 0 \qquad 000 \;0000 ) \;1$$
+        $$000\; (0000\; 1 \qquad 000 \;0001 ) \;0$$
+        $$000\; (0001\; 0 \qquad 000 \;0001 ) \;1$$
+        $$000\; (0001\; 1 \qquad 000 \;0010 ) \;0$$
+        $$\vdots$$
+        $$111\; (1110\; 1 \qquad 111 \;1111 ) \;0$$
+        $$111\; (1111\; 0 \qquad 111 \;1111 ) \;1$$
+    \end{column}
+    \begin{column}{0.5\textwidth}  %%<--- here
+
+    \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Análisis por caso - Caso 3}
+  $$x = u_{n+1} u_{n+2} \dots u_k \quad  v_1 v_2 \dots v_{d+n+1}   \qquad n \in \{1,2,\dots ,k - d - 2\}  $$
+  Este caso representa cuando los $k + d + 1$ símbolos son tomados de dos palabras $u$ y $v$ de longitud $k$ y ninguna de las dos está completas.
+  Ejemplo tomando \textbf{$n = 1$}, $k = 8$ y $d = 3$.
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{small}
+
+      $$0\; (0000\; 000 \qquad 0 \;0000 ) \;001$$
+      $$0\; (0000 \;001 \qquad 0 \;0000 ) \;010$$
+      $$\vdots$$
+      $$0\; (0001 \;110 \qquad 0 \;0001 ) \;111$$
+      $$0\; (0001 \;111 \qquad 0 \;0010 ) \;000$$
+      $$0\; (0010 \;000 \qquad 0 \;0010 ) \;001$$
+      $$\vdots$$
+      $$1\; (1111 \;101 \qquad 1 \;1111 ) \;110$$
+      $$0\; (1111 \;110 \qquad 1 \;1111 ) \;111$$
+      \end{small}
+    \end{column}
+    \begin{column}{0.5\textwidth}  %%<--- here
+          
+    \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Análisis por caso - Caso 3}
+  $$x = u_{n+1} u_{n+2} \dots u_k \quad  v_1 v_2 \dots v_{d+n+1}   \qquad n \in \{1,2,\dots ,k - d - 2\}  $$
+  Este caso representa cuando los $k + d + 1$ símbolos son tomados de dos palabras $u$ y $v$ de longitud $k$ y ninguna de las dos está completas.
+  Ejemplo tomando $n = 1$, $k = 8$ y $d = 3$.
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{small}
+
+      $$0\; (\textcolor{red}{0000}\; 000 \qquad 0 \;\textcolor{red}{0000} ) \;001$$
+      $$0\; (\textcolor{red}{0000} \;001 \qquad 0 \;\textcolor{red}{0000} ) \;010$$
+      $$\vdots$$
+      $$0\; (\textcolor{red}{0001} \;110 \qquad 0 \;\textcolor{red}{0001} ) \;111$$
+      $$0\; (\textcolor{red}{0001} \;\textcolor{blue}{111} \qquad 0 \;\textcolor{cyan}{0010} ) \;000$$
+      $$0\; (\textcolor{red}{0010} \;000 \qquad 0 \;\textcolor{red}{0010} ) \;001$$
+      $$\vdots$$
+      $$1\; (\textcolor{red}{1111} \;101 \qquad 1 \;\textcolor{red}{1111} ) \;110$$
+      $$0\; (\textcolor{red}{1111} \;110 \qquad 1 \;\textcolor{red}{1111} ) \;111$$
+      \end{small}
+    \end{column}
+    \begin{column}{0.5\textwidth}  %%<--- here
+      \pause
+      $$\underbrace{\quad \textcolor{red}{A} \quad }_{d +1} \qquad \underbrace{\quad B \quad }_{k - d - 1}  \qquad \textcolor{red}{A}$$
+      $$\underbrace{\quad \textcolor{red}{A} \quad }_{d +1} \qquad \underbrace{\; \textcolor{blue}{11\dots1}C \; }_{k - d - 1}  \qquad \textcolor{cyan}{next(A)}$$
+
+      Pero el primer esquema ya lo contamos en el caso 1 y el segundo esquema es un caso particular de uno de los esquemas del caso 2.
+      
+      Por lo que el caso 3 no nos arroja nuevas palabras.
+    \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Análisis por caso - Caso 4}
+  $$ x = u_{k-d-1+n} u_{k-d+n} \dots u_k \quad v_1 v_2 \dots v_k \quad w_1 w_2 \dots w_{d+1-n} $$
+  con $n \in \{1, 2, \dots , d\}$
+
+  Este caso representa cuando los $k + d + 1$ símbolos son tomados de tres palabras consecutivas $u$, $v$ y $w$ de longitud $k$ de los cuales $k$ símbolos son tomados de $v$ y los restantes de $u$ y $w$.
+  Ejemplo tomando $n = 1$, $k = 8$ y $d = 3$.
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{small}
+
+        $$0000000\; (0 \qquad 000 \; 0000 \; 1 \qquad 000) \: 00010$$
+        $$0000000\; (1 \qquad 000 \; 0001 \; 0 \qquad 000) \: 00011$$
+        $$\vdots$$
+        $$0011111\; (0 \qquad 001 \; 1111 \; 1 \qquad 001) \: 10000$$
+        $$0011111\; (1 \qquad 010 \; 0000 \; 0 \qquad 010) \: 00001$$
+        $$\vdots$$
+        $$1111110\; (1 \qquad 111 \; 1111 \; 0 \qquad 111) \: 11111$$
+      \end{small}
+    \end{column}
+    \begin{column}{0.5\textwidth}  %%<--- here
+    \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Análisis por caso - Caso 4}
+  $$ x = u_{k-d-1+n} u_{k-d+n} \dots u_k \quad v_1 v_2 \dots v_k \quad w_1 w_2 \dots w_{d+1-n} $$
+  con $n \in \{1, 2, \dots , d\}$
+
+  Este caso representa cuando los $k + d + 1$ símbolos son tomados de tres palabras consecutivas $u$, $v$ y $w$ de longitud $k$ de los cuales $k$ símbolos son tomados de $v$ y los restantes de $u$ y $w$.
+  Ejemplo tomando $\textbf{n = 2}$, $k = 8$ y $d = 3$.
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{small}
+
+        $$000000\; (00 \qquad 00 \; 0000 \; 01 \qquad 00) \: 000010$$
+$$000000\; (01 \qquad 00 \; 0000 \; 10 \qquad 00) \: 000011$$
+$$\vdots$$
+$$001111\; (01 \qquad 00 \; 1111 \; 10 \qquad 00) \: 111111$$
+$$001111\; (10 \qquad 00 \; 1111 \; 11 \qquad 01) \: 000000$$
+$$001111\; (11 \qquad 01 \; 0000 \; 00 \qquad 01) \: 000001$$
+$$\vdots$$
+$$111111\; (01 \qquad 11 \; 1111 \; 10 \qquad 11) \: 111111$$
+      \end{small}
+    \end{column}
+    \begin{column}{0.5\textwidth}  %%<--- here
+    \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Análisis por caso - Caso 4}
+  $$ x = u_{k-d-1+n} u_{k-d+n} \dots u_k \quad v_1 v_2 \dots v_k \quad w_1 w_2 \dots w_{d+1-n} $$
+  con $n \in \{1, 2, \dots , d\}$
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+
+        $$000000\; (\textcolor{red}{00} \quad \textcolor{blue}{00} \; 0000 \; \textcolor{red}{01} \quad \textcolor{blue}{00}) \: 000010$$
+        $$000000\; (\textcolor{red}{01} \quad \textcolor{blue}{00} \; 0000 \; \textcolor{red}{10} \quad \textcolor{blue}{00}) \: 000011$$
+        $$\vdots$$
+        $$001111\; (\textcolor{red}{01} \quad \textcolor{blue}{00} \; 1111 \; \textcolor{red}{10} \quad \textcolor{blue}{00}) \: 111111$$
+        $$001111\; (\textcolor{cyan}{10} \quad \textcolor{blue}{00} \; \textcolor{magenta}{1111} \; \textcolor{red}{11} \quad \textcolor{gray}{01}) \: 000000$$
+        $$001111\; (\textcolor{red}{11} \quad \textcolor{blue}{01} \; 0000 \; \textcolor{red}{00} \quad \textcolor{blue}{01}) \: 000001$$
+        $$\vdots$$
+        $$111111\; (\textcolor{red}{01} \quad \textcolor{blue}{11} \; 1111 \; \textcolor{red}{10} \quad \textcolor{blue}{11}) \: 111111$$
+    \end{column}
+    \begin{column}{0.5\textwidth}  %%<--- here
+      \pause
+      \begin{footnotesize}
+        $$\underbrace{\quad \textcolor{red}{A} \quad }_{n} \quad \underbrace{\quad \textcolor{blue}{B} \quad }_{d + 1 - n}  \quad \underbrace{\quad C \quad }_{k-d+1} \quad \textcolor{red}{next(A)} \quad \textcolor{blue}{B}$$
+
+        $$\underbrace{\quad \textcolor{cyan}{1\dots10} \quad }_{n} \; \underbrace{\quad \textcolor{blue}{B} \quad }_{d + 1 - n}  \; \underbrace{\; \textcolor{magenta}{1\dots1} \; }_{k-d+1} \quad \textcolor{red}{n(A)} \quad \textcolor{gray}{n(B)}$$
+        
+        Para el primer esquema tenemos $2^k \sum_{n=1}^{d} \frac{2^n - 1}{2^n}$
+
+        Para el segundo esquema $ 2 \cdot 2^d \sum_{n=1}^{d} 2^{- n}$
+
+        Juntos son menos que 
+        $$d2^k + 2 \cdot 2^d$$
+      \end{footnotesize}
+    \end{column}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Acotando palabras distintas en $champ$}
+  Si $champ$ fuera supernormal, la frecuencia experada de palabras que aparecen una o más veces en los primeros $2^n$ símbolos debería satisfacer:
+$$\lim_{n\to\infty} \frac{\#\{w: |w| = n  , |champ[1...2^n]|_w > 0\}}{2^n}  = 1 - e^{-1}$$
+\pause
+Sabemos que $X(k)$ ocupa la mitad de las palabras de los primeros $2^{d+k+1}$ símbolos de $champ$.
+Si analizamos lo que sucede en las palabras de longitud $d+k+1$ usando las cotas que calculamos en los diferentes casos, y asumimos que la mitad restante ($2^{d+k} + d + k - 1$) son todas diferentes, entonces:
+  $$&\lim_{d\to\infty} \frac{\#\{w : |w| = d+k+1, |champ[1 \dots 2^{d+k+1}]|_w > 0 \}}{2^{d+k+1}} <$$
+  $$&\lim_{d\to\infty} \frac{ \textrm{Case 1} + \textrm{Case 2}+ \textrm{Case 4} + \textrm{Case 5} + \textrm{other half}}{2^{d+k+1}} =$$
+
+  \pause 
+
+    $$&\lim_{d\to\infty} \frac{(2^k - 2\cdot 2^d) + (2 \cdot 2^k)+ (d2^k + 2 \cdot 2^d) + (2d+k+1) + (2^{d+k}) }{2^{d+k+1}} =$$
+    $$\lim_{d\to\infty} \frac{3}{2k} + \frac{d}{2k} + \frac{d}{k2^{k}} + \frac{1}{2\cdot2^{k}} + \frac{1}{2k2^{k}} + \frac{1}{2} = \frac{1}{2}$$
+    $$< 1 - e^{-1}$$
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Acotando palabras distintas en $champ$}
+  Finalmente, si en $champ$ consideramos que los $n$'s tales que $n = d + 2^d + 1$ son una subsecuencia de $n=1,2,\dots$, podemos afirmar que si:
+  $$\lim_{n\to\infty} \frac{\#\{w: |w| = n  , |champ[1...2^n]|_w > 0\}}{2^n}$$
+  existe, este no es $1 - e^{-1}$.
+
+\begin{corollary}
+Si $x$ es normal, no necesariamente $x$ es supernormal.
+\end{corollary}
+\end{frame}
+
 
 
 \end{document}
