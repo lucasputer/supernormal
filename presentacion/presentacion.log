@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  31 OCT 2019 11:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 NOV 2019 13:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -544,6 +544,10 @@ Package babel Info: Making > an active character on input line 707.
 )) (/Users/lucas/Repositories/supernorm/presentacion/presentacion.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
+
+
+LaTeX Warning: Label `fig:champ-22-freq' multiply defined.
+
 )
 \openout1 = `presentacion.aux'.
 
@@ -657,20 +661,21 @@ LaTeX Info: Redefining \% on input line 40.
 \c@conjecture=\count166
 \c@belief=\count167
 \c@question=\count168
+\c@recall=\count169
 
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
-(hyperref)                setting the option has no effect on input line 106.
+(hyperref)                setting the option has no effect on input line 108.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 124.
+LaTeX Font Info:    Try loading font information for U+msa on input line 126.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 124.
+LaTeX Font Info:    Try loading font information for U+msb on input line 126.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 124.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 126.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [1
@@ -679,35 +684,35 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 <imagenes/peso.jpg, id=22, 65.64525pt x 66.36795pt>
 File: imagenes/peso.jpg Graphic file (type jpg)
 <use imagenes/peso.jpg>
-Package pdftex.def Info: imagenes/peso.jpg  used on input line 148.
+Package pdftex.def Info: imagenes/peso.jpg  used on input line 150.
 (pdftex.def)             Requested size: 32.82253pt x 33.18388pt.
  [2
 
  </Users/lucas/Repositories/supernorm/presentacion/imagenes/peso.jpg>]
 File: imagenes/peso.jpg Graphic file (type jpg)
 <use imagenes/peso.jpg>
-Package pdftex.def Info: imagenes/peso.jpg  used on input line 148.
+Package pdftex.def Info: imagenes/peso.jpg  used on input line 150.
 (pdftex.def)             Requested size: 32.82253pt x 33.18388pt.
  [3
 
 ]
 File: imagenes/peso.jpg Graphic file (type jpg)
 <use imagenes/peso.jpg>
-Package pdftex.def Info: imagenes/peso.jpg  used on input line 148.
+Package pdftex.def Info: imagenes/peso.jpg  used on input line 150.
 (pdftex.def)             Requested size: 32.82253pt x 33.18388pt.
  [4
 
 ]
 File: imagenes/peso.jpg Graphic file (type jpg)
 <use imagenes/peso.jpg>
-Package pdftex.def Info: imagenes/peso.jpg  used on input line 148.
+Package pdftex.def Info: imagenes/peso.jpg  used on input line 150.
 (pdftex.def)             Requested size: 32.82253pt x 33.18388pt.
  [5
 
 ]
 File: imagenes/peso.jpg Graphic file (type jpg)
 <use imagenes/peso.jpg>
-Package pdftex.def Info: imagenes/peso.jpg  used on input line 148.
+Package pdftex.def Info: imagenes/peso.jpg  used on input line 150.
 (pdftex.def)             Requested size: 32.82253pt x 33.18388pt.
  [6
 
@@ -751,6 +756,87 @@ Package pdftex.def Info: imagenes/peso.jpg  used on input line 148.
 
 ] [26
 
+] [27
+
+] [28
+
+]
+<imagenes/champ-16-freq.png, id=175, 387.4475pt x 262.9825pt>
+File: imagenes/champ-16-freq.png Graphic file (type png)
+<use imagenes/champ-16-freq.png>
+Package pdftex.def Info: imagenes/champ-16-freq.png  used on input line 357.
+(pdftex.def)             Requested size: 230.46739pt x 156.43439pt.
+ [29
+
+ </Users/lucas/Repositories/supernorm/presentacion/imagenes/champ-16-freq.png>]
+<imagenes/champ-22-freq.png, id=187, 387.4475pt x 262.9825pt>
+File: imagenes/champ-22-freq.png Graphic file (type png)
+<use imagenes/champ-22-freq.png>
+Package pdftex.def Info: imagenes/champ-22-freq.png  used on input line 367.
+(pdftex.def)             Requested size: 230.46739pt x 156.43439pt.
+pdfTeX warning (ext4): destination with the same identifier (name{fig:champ-22-freq}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.367 \end{frame}
+                  [30
+
+ </Users/lucas/Repositories/supernorm/presentacion/imagenes/champ-22-freq.png>] [31
+
+] [32
+
+] [33
+
+] [34
+
+] [35
+
+] [36
+
+] [37
+
+] [38
+
+] [39
+
+] [40
+
+] [41
+
+] [42
+
+] [43
+
+] [44
+
+] [45
+
+] [46
+
+]
+Overfull \hbox (16.59967pt too wide) detected at line 631
+\OT1/cmr/m/n/10 11111011 11111100 11111101 11111[][] 0 [] 
+ []
+
+[47
+
+] [48
+
+] [49
+
+] [50
+
+] [51
+
+] [52
+
+] [53
+
+] [54
+
+] [55
+
+] [56
+
 ]
 \tf@nav=\write6
 \openout6 = `presentacion.nav'.
@@ -761,30 +847,34 @@ Package pdftex.def Info: imagenes/peso.jpg  used on input line 148.
 \tf@snm=\write8
 \openout8 = `presentacion.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 329.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 329.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 766.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 766.
  (/Users/lucas/Repositories/supernorm/presentacion/presentacion.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 329.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 329.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 766.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 766.
 Package rerunfilecheck Info: File `presentacion.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 17739 strings out of 492649
- 331703 string characters out of 6129622
- 429698 words of memory out of 5000000
- 21168 multiletter control sequences out of 15000+600000
- 13095 words of font info for 54 fonts, out of 8000000 for 9000
+ 17893 strings out of 492649
+ 333575 string characters out of 6129622
+ 429761 words of memory out of 5000000
+ 21252 multiletter control sequences out of 15000+600000
+ 15052 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,11n,51p,871b,508s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/lucas/Repositories/supernorm/presentacion/presentacion.pdf (26 pages, 354189 bytes).
+ 48i,13n,51p,871b,508s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on /Users/lucas/Repositories/supernorm/presentacion/presentacion.pdf (56 pages, 454589 bytes).
 PDF statistics:
- 226 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
- 53 named destinations out of 1000 (max. 500000)
- 48 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 423 PDF objects out of 1000 (max. 8388607)
+ 330 compressed objects within 4 object streams
+ 114 named destinations out of 1000 (max. 500000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

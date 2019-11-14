@@ -51,6 +51,8 @@
 \newtheorem{conjecture}{Conjecture}
 \newtheorem{belief}{Belief}
 \newtheorem{question}{Question}
+\newtheorem{recall}{Recordemos}
+
 
 
 
@@ -318,13 +320,448 @@ $$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\floor{\lambda 2^n}]|_w = 
 
     Es decir, los siguientes enunciados son ciertos:
     \begin{enumerate}
-      \item Sea $x$ una secuencia infinita. Si $x$ es supernormal, entonces $x$ es normal. (supernormal $\Rightarrow$ normal )
       \item Sea $x$ una secuencia infinita. Si $x$ es normal, no necesariamente  $x$ es supernormal. (normal $\nRightarrow$ supernormal )
+      \item Sea $x$ una secuencia infinita. Si $x$ es supernormal, entonces $x$ es normal. (supernormal $\Rightarrow$ normal )
     \end{enumerate}
   \end{theorem}
-
-
 \end{frame}
+
+\begin{frame}
+  \frametitle{¿Es $champ$ supernormal?}
+  
+  La forma más simple de ver que una secuencia normal no es supernormal es encontrar un ejemplo, y que mejor ejemplo que $champ$.
+
+  \begin{recall}
+    $X(n)$ es la concatenación de todas las palabras de longitud $n$ sobre el alfabeto $A=\{0,1\}$ en order lexicográfico.\\
+    
+    Llamamos $champ$ a la concatenación de  $X(n)$ para $n = 1,2,\dots$
+
+    $$champ = 0 \: 1 \: 00 \: 01 \: 10 \: 11 \: 000 \: 001 \: 010 \: 011 \: 100 \: 101 \: 110 \: 111 \: 0000 \: 0001 \: \dots$$
+
+  \end{recall}
+
+  \pause
+  ¿Qué sucede cuando contamos la cantidad de palabras de tamaño $n$ en los primeros $2^n$ símbolos de $champ$?
+  
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{¿Es $champ$ supernormal?}
+  \begin{figure}[h]
+    \includegraphics[width=0.75\textwidth]{imagenes/champ-16-freq.png}
+    \centering
+    \caption{Frecuencias observadas y esperadas en $champ$ for $n = 16$ y $\lambda = 1$.}
+    \label{fig:champ-22-freq}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{¿Es $champ$ supernormal?}
+  \begin{figure}[h]
+    \includegraphics[width=0.75\textwidth]{imagenes/champ-22-freq.png}
+    \centering
+    \caption{Frecuencias observadas y esperadas en $champ$ for $n = 22$ y $\lambda = 1$.}
+    \label{fig:champ-22-freq}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Normal $\nRightarrow$ Supernormal - Idea de la demostración}
+  \begin{itemize}
+    \item Sabemos que $champ = X(1)X(2)X(3)\dots$
+    \pause 
+    \item La idea va a ser encontrar un $k$ tal que $X(k)$ sea lo suficientemente grande y este completamente contenido en $champ[1\dots 2^n]$ y analizar cuales son las palabras distintas que aparecen.
+    \pause 
+    \item Si tomamos $n \geq d + k + 1$ con $k = 2^d$, sucede que $X(k)$ está completamente contenido en $champ[1\dots 2^n]$.
+    \pause 
+    \item Nos fijamos que pinta tienen las secuencias de longitud $d + k + 1$ que aparecen adentro de $X(k)$ y damos una cota para la cantidad de palabras distintas que pueden aparecer.
+    \pause
+    \item Por último resta ver que la cantidad de palabras que aparecen es mucho menor de lo necesario para que $champ$ sea supernormal.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Que hay adentro de $X(k)$}
+  Recordemos que definimos $k = 2^d$.
+  Veamos como son las palabras de tamaño $d + k + 1$ que suceden adentro de $X(k)$. Tomemos a modo de ejemplo $k = 8$ y $d = 3$.
+  \pause
+  $$00000000 \qquad 00000001 \qquad 00000010 \qquad 00000011 \qquad 00000100$$
+  \phantom{\parbox{\linewidth}{%
+    \begin{itemize}
+    \item \textcolor{red}{\underline{Caso 1:}}
+    $$x = u_1 u_2 \dots u_k \quad v_1 v_2 \dots v_{d} v_{d + 1}$$
+    \item \textcolor{blue}{\underline{Caso 2:}}
+    $$ x = u_{k-d-1} \dots u_k \quad v_1 v_2 \dots v_k$$
+    \item \textcolor{magenta}{\underline{Caso 3:}}
+    $$x = u_{n+1} u_{n+2} \dots u_k \quad  v_1 v_2 \dots v_{d+n+1} $$
+    con $n \in \{1,2,\dots ,k - d - 2\}$.
+    \item \textcolor{orange}{\underline{Caso 4:}}
+    $$ x = u_{k-d-1+n} u_{k-d+n} \dots u_k \quad v_1 v_2 \dots v_k \quad w_1 w_2 \dots w_{d+1-n}$$
+    con $n \in \{1, 2, \dots , d\}$
+  \end{itemize}}}\par
+\end{frame} 
+
+\begin{frame}
+  \frametitle{Que hay adentro de $X(k)$}
+  Recordemos que definimos $k = 2^d$.
+  Veamos como son las palabras de tamaño $d + k + 1$ que suceden adentro de $X(k)$. Tomemos a modo de ejemplo $k = 8$ y $d = 3$.
+
+  $$\textcolor{red}{(00000000 \qquad 0000)} 0001 \qquad 00000010 \qquad 00000011 \qquad 00000100$$
+
+    \begin{itemize}
+    \item \textcolor{red}{\underline{Caso 1:}}
+    $$x = u_1 u_2 \dots u_k \quad v_1 v_2 \dots v_{d} v_{d + 1}$$
+    \phantom{\parbox{\linewidth}{%
+    \item \textcolor{blue}{\underline{Caso 2:}}
+    $$ x = u_{k-d-1} \dots u_k \quad v_1 v_2 \dots v_k$$
+    \item \textcolor{magenta}{\underline{Caso 3:}}
+    $$x = u_{n+1} u_{n+2} \dots u_k \quad  v_1 v_2 \dots v_{d+n+1} $$
+    con $n \in \{1,2,\dots ,k - d - 2\}$.
+    \item \textcolor{cyan}{\underline{Caso 4:}}
+    $$ x = u_{k-d-1+n} u_{k-d+n} \dots u_k \quad v_1 v_2 \dots v_k \quad w_1 w_2 \dots w_{d+1-n}$$
+    con $n \in \{1, 2, \dots , d\}$
+    }}\par
+  \end{itemize}
+\end{frame} 
+
+\begin{frame}
+  \frametitle{Que hay adentro de $X(k)$}
+  Recordemos que definimos $k = 2^d$.
+  Veamos como son las palabras de tamaño $d + k + 1$ que suceden adentro de $X(k)$. Tomemos a modo de ejemplo $k = 8$ y $d = 3$.
+
+  $$0\textcolor{magenta}{(0000000 \qquad 00000)} 001 \qquad 00000010 \qquad 00000011 \qquad 00000100$$
+
+    \begin{itemize}
+    \item \textcolor{red}{\underline{Caso 1:}}
+    $$x = u_1 u_2 \dots u_k \quad v_1 v_2 \dots v_{d} v_{d + 1}$$  
+    \phantom{\parbox{\linewidth}{%
+    \item \textcolor{blue}{\underline{Caso 2:}}
+    $$ x = u_{k-d-1} \dots u_k \quad v_1 v_2 \dots v_k$$
+    }}\par
+    \item \textcolor{magenta}{\underline{Caso 3:}}
+    $$x = u_{n+1} u_{n+2} \dots u_k \quad  v_1 v_2 \dots v_{d+n+1} $$
+    con $n \in \{1,2,\dots ,k - d - 2\}$.
+    \phantom{\parbox{\linewidth}{%
+    \item \textcolor{cyan}{\underline{Caso 4:}}
+    $$ x = u_{k-d-1+n} u_{k-d+n} \dots u_k \quad v_1 v_2 \dots v_k \quad w_1 w_2 \dots w_{d+1-n}$$
+    con $n \in \{1, 2, \dots , d\}$
+    }}\par
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Que hay adentro de $X(k)$}
+  Recordemos que definimos $k = 2^d$.
+  Veamos como son las palabras de tamaño $d + k + 1$ que suceden adentro de $X(k)$. Tomemos a modo de ejemplo $k = 8$ y $d = 3$.
+
+  $$00\textcolor{magenta}{(000000 \qquad 000000)} 01 \qquad 00000010 \qquad 00000011 \qquad 00000100$$
+
+    \begin{itemize}
+    \item \textcolor{red}{\underline{Caso 1:}}
+    $$x = u_1 u_2 \dots u_k \quad v_1 v_2 \dots v_{d} v_{d + 1}$$  
+    \phantom{\parbox{\linewidth}{%
+    \item \textcolor{blue}{\underline{Caso 2:}}
+    $$ x = u_{k-d-1} \dots u_k \quad v_1 v_2 \dots v_k$$
+    }}\par
+    \item \textcolor{magenta}{\underline{Caso 3:}}
+    $$x = u_{n+1} u_{n+2} \dots u_k \quad  v_1 v_2 \dots v_{d+n+1} $$
+    con $n \in \{1,2,\dots ,k - d - 2\}$.
+    \phantom{\parbox{\linewidth}{%
+    \item \textcolor{cyan}{\underline{Caso 4:}}
+    $$ x = u_{k-d-1+n} u_{k-d+n} \dots u_k \quad v_1 v_2 \dots v_k \quad w_1 w_2 \dots w_{d+1-n}$$
+    con $n \in \{1, 2, \dots , d\}$
+    }}\par
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Que hay adentro de $X(k)$}
+  Recordemos que definimos $k = 2^d$.
+  Veamos como son las palabras de tamaño $d + k + 1$ que suceden adentro de $X(k)$. Tomemos a modo de ejemplo $k = 8$ y $d = 3$.
+
+  $$000\textcolor{magenta}{(00000 \qquad 0000000)} 1 \qquad 00000010 \qquad 00000011 \qquad 00000100$$
+
+    \begin{itemize}
+    \item \textcolor{red}{\underline{Caso 1:}}
+    $$x = u_1 u_2 \dots u_k \quad v_1 v_2 \dots v_{d} v_{d + 1}$$  
+    \phantom{\parbox{\linewidth}{%
+    \item \textcolor{blue}{\underline{Caso 2:}}
+    $$ x = u_{k-d-1} \dots u_k \quad v_1 v_2 \dots v_k$$
+    }}\par
+    \item \textcolor{magenta}{\underline{Caso 3:}}
+    $$x = u_{n+1} u_{n+2} \dots u_k \quad  v_1 v_2 \dots v_{d+n+1} $$
+    con $n \in \{1,2,\dots ,k - d - 2\}$.
+    \phantom{\parbox{\linewidth}{%
+    \item \textcolor{cyan}{\underline{Caso 4:}}
+    $$ x = u_{k-d-1+n} u_{k-d+n} \dots u_k \quad v_1 v_2 \dots v_k \quad w_1 w_2 \dots w_{d+1-n}$$
+    con $n \in \{1, 2, \dots , d\}$
+    }}\par
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Que hay adentro de $X(k)$}
+  Recordemos que definimos $k = 2^d$.
+  Veamos como son las palabras de tamaño $d + k + 1$ que suceden adentro de $X(k)$. Tomemos a modo de ejemplo $k = 8$ y $d = 3$.
+
+  $$0000\textcolor{blue}{(0000 \qquad 00000001)}  \qquad 00000010 \qquad 00000011 \qquad 00000100$$
+
+    \begin{itemize}
+    \item \textcolor{red}{\underline{Caso 1:}}
+    $$x = u_1 u_2 \dots u_k \quad v_1 v_2 \dots v_{d} v_{d + 1}$$  
+    \item \textcolor{blue}{\underline{Caso 2:}}
+    $$ x = u_{k-d-1} \dots u_k \quad v_1 v_2 \dots v_k$$
+    \item \textcolor{magenta}{\underline{Caso 3:}}
+    $$x = u_{n+1} u_{n+2} \dots u_k \quad  v_1 v_2 \dots v_{d+n+1} $$
+    con $n \in \{1,2,\dots ,k - d - 2\}$.
+    \phantom{\parbox{\linewidth}{%
+    \item \textcolor{cyan}{\underline{Caso 4:}}
+    $$ x = u_{k-d-1+n} u_{k-d+n} \dots u_k \quad v_1 v_2 \dots v_k \quad w_1 w_2 \dots w_{d+1-n}$$
+    con $n \in \{1, 2, \dots , d\}$
+    }}\par
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Que hay adentro de $X(k)$}
+  Recordemos que definimos $k = 2^d$.
+  Veamos como son las palabras de tamaño $d + k + 1$ que suceden adentro de $X(k)$. Tomemos a modo de ejemplo $k = 8$ y $d = 3$.
+
+  $$00000\textcolor{cyan}{(000 \qquad 00000001 \qquad 0)}  0000010 \qquad 00000011 \qquad 00000100$$
+
+    \begin{itemize}
+    \item \textcolor{red}{\underline{Caso 1:}}
+    $$x = u_1 u_2 \dots u_k \quad v_1 v_2 \dots v_{d} v_{d + 1}$$  
+    \item \textcolor{blue}{\underline{Caso 2:}}
+    $$ x = u_{k-d-1} \dots u_k \quad v_1 v_2 \dots v_k$$
+    \item \textcolor{magenta}{\underline{Caso 3:}}
+    $$x = u_{n+1} u_{n+2} \dots u_k \quad  v_1 v_2 \dots v_{d+n+1} $$
+    con $n \in \{1,2,\dots ,k - d - 2\}$.
+    \item \textcolor{cyan}{\underline{Caso 4:}}
+    $$ x = u_{k-d-1+n} u_{k-d+n} \dots u_k \quad v_1 v_2 \dots v_k \quad w_1 w_2 \dots w_{d+1-n}$$
+    con $n \in \{1, 2, \dots , d\}$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Que hay adentro de $X(k)$}
+  Recordemos que definimos $k = 2^d$.
+  Veamos como son las palabras de tamaño $d + k + 1$ que suceden adentro de $X(k)$. Tomemos a modo de ejemplo $k = 8$ y $d = 3$.
+
+  $$000000\textcolor{cyan}{(00 \qquad 00000001 \qquad 00)}  000010 \qquad 00000011 \qquad 00000100$$
+
+    \begin{itemize}
+    \item \textcolor{red}{\underline{Caso 1:}}
+    $$x = u_1 u_2 \dots u_k \quad v_1 v_2 \dots v_{d} v_{d + 1}$$  
+    \item \textcolor{blue}{\underline{Caso 2:}}
+    $$ x = u_{k-d-1} \dots u_k \quad v_1 v_2 \dots v_k$$
+    \item \textcolor{magenta}{\underline{Caso 3:}}
+    $$x = u_{n+1} u_{n+2} \dots u_k \quad  v_1 v_2 \dots v_{d+n+1} $$
+    con $n \in \{1,2,\dots ,k - d - 2\}$.
+    \item \textcolor{cyan}{\underline{Caso 4:}}
+    $$ x = u_{k-d-1+n} u_{k-d+n} \dots u_k \quad v_1 v_2 \dots v_k \quad w_1 w_2 \dots w_{d+1-n}$$
+    con $n \in \{1, 2, \dots , d\}$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Que hay adentro de $X(k)$}
+  Recordemos que definimos $k = 2^d$.
+  Veamos como son las palabras de tamaño $d + k + 1$ que suceden adentro de $X(k)$. Tomemos a modo de ejemplo $k = 8$ y $d = 3$.
+
+  $$0000000\textcolor{cyan}{(0 \qquad 00000001 \qquad 000)}  00010 \qquad 00000011 \qquad 00000100$$
+
+    \begin{itemize}
+    \item \textcolor{red}{\underline{Caso 1:}}
+    $$x = u_1 u_2 \dots u_k \quad v_1 v_2 \dots v_{d} v_{d + 1}$$  
+    \item \textcolor{blue}{\underline{Caso 2:}}
+    $$ x = u_{k-d-1} \dots u_k \quad v_1 v_2 \dots v_k$$
+    \item \textcolor{magenta}{\underline{Caso 3:}}
+    $$x = u_{n+1} u_{n+2} \dots u_k \quad  v_1 v_2 \dots v_{d+n+1} $$
+    con $n \in \{1,2,\dots ,k - d - 2\}$.
+    \item \textcolor{cyan}{\underline{Caso 4:}}
+    $$ x = u_{k-d-1+n} u_{k-d+n} \dots u_k \quad v_1 v_2 \dots v_k \quad w_1 w_2 \dots w_{d+1-n}$$
+    con $n \in \{1, 2, \dots , d\}$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Que hay adentro de $X(k)$}
+  Recordemos que definimos $k = 2^d$.
+  Veamos como son las palabras de tamaño $d + k + 1$ que suceden adentro de $X(k)$. Tomemos a modo de ejemplo $k = 8$ y $d = 3$.
+
+  $$00000000 \qquad \textcolor{red}{(00000001 \qquad 0000)} 0010 \qquad 00000011 \qquad 00000100 $$
+
+    \begin{itemize}
+    \item \textcolor{red}{\underline{Caso 1:}}
+    $$x = u_1 u_2 \dots u_k \quad v_1 v_2 \dots v_{d} v_{d + 1}$$
+    \item \textcolor{blue}{\underline{Caso 2:}}
+    $$ x = u_{k-d-1} \dots u_k \quad v_1 v_2 \dots v_k$$
+    \item \textcolor{magenta}{\underline{Caso 3:}}
+    $$x = u_{n+1} u_{n+2} \dots u_k \quad  v_1 v_2 \dots v_{d+n+1} $$
+    con $n \in \{1,2,\dots ,k - d - 2\}$.
+    \item \textcolor{cyan}{\underline{Caso 4:}}
+    $$ x = u_{k-d-1+n} u_{k-d+n} \dots u_k \quad v_1 v_2 \dots v_k \quad w_1 w_2 \dots w_{d+1-n}$$
+    con $n \in \{1, 2, \dots , d\}$
+  \end{itemize}
+\end{frame} 
+
+\begin{frame}
+  \frametitle{Que hay adentro de $X(k)$}
+  Recordemos que definimos $k = 2^d$.
+  Veamos como son las palabras de tamaño $d + k + 1$ que suceden adentro de $X(k)$. Tomemos a modo de ejemplo $k = 8$ y $d = 3$.
+
+  $$11111011 \qquad 11111100 \qquad 11111101 \qquad 11111\textcolor{green}{(110 \qquad 11111111} \qquad 0\dots $$
+
+    \begin{itemize}
+    \item \textcolor{red}{\underline{Caso 1:}}
+    $$x = u_1 u_2 \dots u_k \quad v_1 v_2 \dots v_{d} v_{d + 1}$$
+    \item \textcolor{blue}{\underline{Caso 2:}}
+    $$ x = u_{k-d-1} \dots u_k \quad v_1 v_2 \dots v_k$$
+    \item \textcolor{magenta}{\underline{Caso 3:}}
+    $$x = u_{n+1} u_{n+2} \dots u_k \quad  v_1 v_2 \dots v_{d+n+1} $$
+    con $n \in \{1,2,\dots ,k - d - 2\}$.
+    \item \textcolor{cyan}{\underline{Caso 4:}}
+    $$ x = u_{k-d-1+n} u_{k-d+n} \dots u_k \quad v_1 v_2 \dots v_k \quad w_1 w_2 \dots w_{d+1-n}$$
+    con $n \in \{1, 2, \dots , d\}$
+    \item \textcolor{green}{\underline{Caso 5:}}
+    Si $x$ comienza al final de $X(k)$ o cerca, se pueden llegar a necesitar palabras fuera de $X(k)$ para completar $d+k+1$.
+  \end{itemize}
+\end{frame} 
+
+\begin{frame}
+  \frametitle{La función $next(w)$}
+
+  Definimos la siguiente función que nos va a ser útil.
+
+  \begin{definition}
+    La función $next(w) : A^n \rightarrow A^n$ se define de la siguiente manera. Si $w$ es la palabra de $n$  1s, $next(w)$ es la palabra de $n$ 0s. Si no, $next(w)$ es la palabra siguiente en orden lexicográfico.
+  \end{definition}
+  
+  Por ejemplo,
+  $$next(0000) = 0001$$
+  $$next(0001) = 0010$$
+  $$\vdots$$
+  $$next(1110) = 1111$$
+  $$next(1111) = 0000$$
+
+\end{frame} 
+
+\begin{frame}
+  \frametitle{Análisis por caso - Caso 1}
+    $$x = u_1 u_2 \dots u_k \quad v_1 v_2 \dots v_{d} v_{d + 1}$$
+
+  Este caso representa a la ocurrencia alineada de $u$ de tamaño $k$ seguido por los primeros $d+1$ símbolos de $v$
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      $$( 00000000 \qquad 0000 ) \; 0001$$
+      $$( 00000001 \qquad 0000 ) \; 0010$$
+      $$( 00000010 \qquad 0000 ) \; 0011$$
+      $$\vdots$$
+      $$( 00001110 \qquad 0000 ) \; 1111$$
+      $$( 00001111 \qquad 0001 ) \; 0000$$
+      $$( 00010000 \qquad 0001 ) \; 0001$$
+      $$\vdots$$
+      $$( 11111110 \qquad 1111 ) \; 1111$$
+    \end{column}
+    \begin{column}{0.5\textwidth}  %%<--- here
+        \begin{center}
+        %  \includegraphics[width=0.5\textwidth]{image1.jpg}
+         \end{center}
+    \end{column}
+    \end{columns}
+
+
+
+\end{frame} 
+
+\begin{frame}
+  \frametitle{Análisis por caso - Caso 1}
+    $$x = u_1 u_2 \dots u_k \quad v_1 v_2 \dots v_{d} v_{d + 1}$$
+
+  Este caso representa a la ocurrencia alineada de $u$ de tamaño $k$ seguido por los primeros $d+1$ símbolos de $v$
+  
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      $$( \textcolor{red}{0000}0000 \qquad \textcolor{red}{0000} ) \; 0001$$
+      $$( \textcolor{red}{0000}0001 \qquad \textcolor{red}{0000} ) \; 0010$$
+      $$( \textcolor{red}{0000}0010 \qquad \textcolor{red}{0000} ) \; 0011$$
+      $$\vdots$$
+      $$( \textcolor{red}{0000}1110 \qquad \textcolor{red}{0000} ) \; 1111$$
+      $$( \textcolor{blue}{0000}\textcolor{magenta}{1111} \qquad \textcolor{cyan}{0001} ) \; 0000$$
+      $$( 00010000 \qquad 0001 ) \; 0001$$
+      $$\vdots$$
+      $$( 11111110 \qquad 1111 ) \; 1111$$
+    \end{column}
+    \begin{column}{0.5\textwidth}  %%<--- here
+          \pause
+          $$\underbrace{\quad \textcolor{red}{A} \quad }_{d +1} \qquad \underbrace{\quad B \quad }_{k - d - 1}  \qquad \textcolor{red}{A}$$
+          $$\underbrace{\quad \textcolor{blue}{A} \quad }_{d +1} \qquad \underbrace{ \textcolor{magenta}{11 \dots 1  }}_{k - d - 1}  \qquad \textcolor{cyan}{next(A)} $$
+          \pause
+          Del primer esquema tenemos:
+          $$2^{d + 1}  (2^{k - d - 1} - 1) =  2^k - \frac{1}{2\cdot2^{d} }$$
+        
+          Mientras que del segundo:
+          $$2^{d + 1}   - 1$$
+
+          Juntos son menos que $2^k -  2\cdot 2^d$
+    \end{column}
+    \end{columns}
+\end{frame} 
+
+\begin{frame}
+  \frametitle{Análisis por caso - Caso 2}
+  $$ x = u_{k-d-1} \dots u_k \quad v_1 v_2 \dots v_k$$
+
+  Este caso representa a la ocurrencia alineada de $v$ de tamaño $k$ precedida por los últimos $d+1$ símbolos de $u$
+  
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      $$0000 \; (0000 \qquad 00000001)$$
+      $$0000 \; (\; 0001 \qquad 00000010)$$
+      $$\vdots$$
+      $$0000 \; (1111 \qquad 10000000)$$
+      $$1000 \; (0000 \qquad 10000001)$$
+      $$\vdots$$
+      $$1111 \; (1110 \qquad 11111111)$$
+    \end{column}
+    \begin{column}{0.5\textwidth}  %%<--- here
+          
+    \end{column}
+    \end{columns}
+\end{frame} 
+
+\begin{frame}
+  \frametitle{Análisis por caso - Caso 2}
+  $$ x = u_{k-d-1} \dots u_k \quad v_1 v_2 \dots v_k$$
+
+  Este caso representa a la ocurrencia alineada de $v$ de tamaño $k$ precedida por los últimos $d+1$ símbolos de $u$
+  
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      $$0000 \; (\textcolor{red}{0000} \qquad 0000\textcolor{blue}{0001})$$
+      $$0000 \; (\; \textcolor{red}{0001} \qquad 0000\textcolor{blue}{0010})$$
+      $$\vdots$$
+      $$0000 \; (\textcolor{red}{1111} \qquad 1000\textcolor{blue}{0000})$$
+      $$1000 \; (\textcolor{red}{0000} \qquad 1000\textcolor{blue}{0001})$$
+      $$\vdots$$
+      $$1111 \; (\textcolor{red}{1110} \qquad 1111\textcolor{blue}{1111})$$
+    \end{column}
+    \begin{column}{0.5\textwidth}  %%<--- here
+          \pause
+          $$\underbrace{\quad \textcolor{red}{A} \quad }_{d +1} \qquad \underbrace{\quad B \quad }_{k - d - 1}  \qquad \textcolor{blue}{next(A)}$$
+          \pause
+          Este esquema nos da:
+          $$(2^{d + 1} 2^{k-d})-1=  2 \cdot 2^k - 1$$
+          palabras distintas.
+
+          Que es menos que  $2 \cdot 2^k$ palabras distintas.
+    \end{column}
+    \end{columns}
+\end{frame} 
+
 
 \end{document}
 
