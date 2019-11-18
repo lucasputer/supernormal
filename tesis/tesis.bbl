@@ -1,0 +1,83 @@
+\begin{thebibliography}{10}
+
+\bibitem{hotspot}
+{\sc Bailey, D.~H., and Misiurewicz, M.}
+\newblock A strong hot spot theorem.
+\newblock {\em Proceedings of the American Mathematical Society 134}, 9 (2006),
+  2495--2501.
+
+\bibitem{BC2018}
+{\sc Becher, V., and Carton, O.}
+\newblock Normal numbers and computer science.
+\newblock In {\em Sequences, Groups, and Number Theory}, V.~Berthé and
+  M.~Rigo, Eds. Springer International Publishing, Cham, 2018, pp.~233--269.
+
+\bibitem{BCC2019}
+{\sc Becher, V., Carton, O., and Cunningham, I.}
+\newblock Low discrepancy sequences failing poissonian pair correlations.
+\newblock {\em Archiv der Mathematik 113\/} (04 2019).
+
+\bibitem{BHS}
+{\sc Becher, V., Heiber, P., and Slaman, T.}
+\newblock A polynomial-time algorithm for computing absolutely normal numbers.
+\newblock {\em Information and Computation 232\/} (2013), 1--9.
+
+\bibitem{Borel}
+{\sc Borel, {\'E}.}
+\newblock Les probabilit{\'e}s d{\'e}nombrables et leurs applications
+  arithm{\'e}tiques.
+\newblock {\em Rendiconti del Circolo Matematico di Palermo (1884-1940) 27}, 1
+  (Dec 1909), 247--271.
+
+\bibitem{bugeaud}
+{\sc Bugeaud, Y.}
+\newblock {\em Distribution Modulo One and {D}iophantine Approximation}.
+\newblock No.~193 in Cambridge Tracts in Mathematics. Cambridge University
+  Press, Cambridge, UK, 2012.
+
+\bibitem{champern}
+{\sc Champernowne, D.~G.}
+\newblock {The Construction of Decimals Normal in the Scale of Ten}.
+\newblock {\em Journal of the London Mathematical Society s1-8}, 4 (10 1933),
+  254--260.
+
+\bibitem{FN}
+{\sc Figuiera, S., and Nies, A.}
+\newblock Feasible analysis and randomness.
+\newblock {\em Theory Comput Syst (2015) 56\/} (2015), 439.
+
+\bibitem{kuipers}
+{\sc Kuipers, L., and Niederreiter, H.}
+\newblock {\em Uniform distribution of sequences}.
+\newblock Dover Publications, Inc., New York, 2006.
+
+\bibitem{PS2019}
+{\sc Pirsic, I., and Stockinger, W.}
+\newblock The champernowne constant is not poissonian.
+\newblock {\em Funct. Approx. Comment. Math. 60}, 2 (03 2019), 253--262.
+
+\bibitem{Puterman}
+{\sc Puterman, L.}
+\newblock Supernormal experiments - https://github.com/lucasputer/supernormal,
+  2019.
+
+\bibitem{Sierpinski}
+{\sc Sierpinski, W.}
+\newblock D\'emonstration \'el\'ementaire du th\'eor\`eme de m. borel sur les
+  nombres absolument normaux et d\'etermination effective d'une tel nombre.
+\newblock {\em Bulletin de la Soci\'et\'e Math\'ematique de France 45\/}
+  (1917), 125--132.
+
+\bibitem{turing}
+{\sc Turing, A.}
+\newblock A note on normal numbers.
+\newblock In {\em Collected Works of A.M.\ Turing: {Pure Mathematics}},
+  J.L.Britton, Ed. North Holland, Amsterdam, 1992, pp.~117--119.
+\newblock with notes of the editor in 263--265.
+
+\bibitem{Weiss}
+{\sc Weiss, B.}
+\newblock Random-like behavior in deterministic systems -
+  https://youtu.be/8ab7591de68?t=1280, 2010.
+
+\end{thebibliography}

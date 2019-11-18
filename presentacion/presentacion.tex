@@ -3,6 +3,8 @@
 \usepackage{xcolor}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
+\usepackage{subfig}
+
 %\usepackage{beamerthemesplit}
 
 
@@ -113,10 +115,11 @@
 \hspace*{-6cm}
 \begin{tabular}{l}
 Directora: Ver\'onica Becher \\
+Codirector: Olivier Carton\\
 Departamento de Computaci\'on\\
 Facultad de Ciencias Exactas y Naturales\\
  Universidad de Buenos Aires\\
-20 de Noviembre, 2019
+19 de Noviembre, 2019
 \end{tabular}
 }}
 
@@ -142,8 +145,6 @@ Supongamos que tiramos una moneda infinitas veces y anotamos un $1$ cada vez que
 \begin{itemize}
 \item $11111111111111111111111111111111111\ldots$
 \pause
-\item $01001000100001000001000000100000001\ldots$
-\pause
 \item $01010101010101010101010101010101010\ldots$
 \pause
 \item $10000110001010001110010010110011010\ldots$
@@ -155,56 +156,25 @@ Supongamos que tiramos una moneda infinitas veces y anotamos un $1$ cada vez que
 \frametitle{Secuencias normales}
 Podemos pensar que en una secuencia aleatoria no hay ningún patrón de~$\ell$ símbolos que sea más frecuente que otro.\\
 \pause
-\begin{definition}
-Notamos $\occ{u}{v}$ a la \textit{cantidad de ocurrencias} de la palabra $v$ dentro de la palabra $u$.\\
-\pause
-\medskip
-Además, notamos $u[i,j]$ a la subsecuencia de $u$ formada tomando todos los símbolos entre el $i$ y el $j$ inclusive.
-\end{definition}
-\pause
-\medskip
 Nos gustaría que para un prefijo de una secuencia aleatoria suficientemente grande, 
 la cantidad de ocurrencias de cada palabra de cierta longitud sea casi la misma.
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Secuencias normales}
 
 \begin{definition}[{{\scriptsize  Borel, 1909}}]
-Dado un alfabeto $A$ y alguna secuencia infinita $u \in A^{\omega}$, 
-decimos que $u$ es \textit{simplemente normal para la longitud $\ell$} 
-si cada secuencia $v$ de longitud 
-%$l$
-\color{magenta}
-$\ell$
-\color{black} verifica que 
-$$
-\lim_{n \rightarrow \infty} \frac{\occ{u[1,\ell n]}{v}}{n} = \frac{1}{|A|^{\ell}}.
-$$
-\medskip
-\pause
-
-\medskip
-Decimos que $u$ es \textit{normal} 
-si es simplemente normal para toda longitud~$\ell \in \NN$.
- \end{definition}
-\pause
-
-\begin{problem}[{{\scriptsize  Borel, 1909}}]
-Encontrar ejemplos naturales de secuencias normales. \\
-Decidir si la representación en base $b$ de $\pi$, $e$ ó $\sqrt{2}$ es normal.
-\end{problem}
+  Dado un alfabeto $A$ y alguna secuencia infinita $u \in A^{\omega}$, 
+  decimos que $u$ es \textit{normal} si para todos los tamaños de bloque ~$\ell$,
+  sucede que todos los bloques posibles de tamaño ~$\ell$ ocurren con la misma frecuencia.
+   \end{definition}
+   \pause
+   \begin{problem}[{{\scriptsize  Borel, 1909}}]
+    Encontrar ejemplos naturales de secuencias normales. \\
+    Decidir si la representación en base $b$ de $\pi$, $e$ ó $\sqrt{2}$ es normal.
+    \end{problem}
 \end{frame}
+
 
 
 \begin{frame}
 \frametitle{La secuencia de Champernowne}
-
-  \begin{problem}
-  Encontrar algún ejemplo explícito de una secuencia normal.
-  \end{problem}
-  \pause
   \begin{theorem}[{{\scriptsize  Champernowne, 1933}}]
   La secuencia
   $$1234567891011121314151617181920\ldots$$
@@ -218,8 +188,8 @@ Decidir si la representación en base $b$ de $\pi$, $e$ ó $\sqrt{2}$ es normal.
 \frametitle{$champ$, La secuencia que usaremos}
   
 
-  \begin{theorem}[{{\scriptsize  Bugeaud, 2012}}]
-    Sea $A$ un alfabeto. Llamamos  $X(n)$ a la concatenación de todas las palabras de lomgitud $n$ formadas por símbolos de $A$ en orden lexicográfico.
+  \begin{theorem}[{{\scriptsize  Champernowne, 1933}}]
+    Sea $A$ un alfabeto. Llamamos  $X(n)$ a la concatenación de todas las palabras de longitud $n$ formadas por símbolos de $A$ en orden lexicográfico.
     
     La palabra infinita $X(1)X(2)\dots$ es normal en el alfabeto $A$
   \end{theorem}
@@ -237,30 +207,38 @@ Decidir si la representación en base $b$ de $\pi$, $e$ ó $\sqrt{2}$ es normal.
 \end{frame}
 
 \begin{frame}
-\frametitle{Supernormalidad}
-Sea $x$ una secuencia binaria. Sea $A^\lambda_{k,n}(x)$  la frecuencia de ocurrencia de las palabras de longitud $n$ que ocurren exactamente $k$ veces comenzando en las primeras $\floor{\lambda 2^n}$ posiciones de $x$. Es decir:
-$$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\floor{\lambda 2^n}]|_w = k\}}{2^n}$$
-\pause
-\begin{definition}
-  Sea $\lambda$ un real mayor a cero. Decimos que la secuencia binaria $x$ es $\lambda$-supernormal si para todo entero no negativo $k$ sucede que
-  $$\lim_{n\to\infty} A^\lambda_{k,n}(x) = \frac{e^{-\lambda}\lambda^k}{k!}$$
+  \frametitle{Supernormalidad}
+  Zeev Rudnick de la Universidad de Tel Aviv definió hace unos años la noción de supernomalidad con la que trabajamos en esta tesis.
 
-  Decimos que $x$ es supernormal si es $\lambda$-supernormal para todo $\lambda.$
-\end{definition}
+  Benjamin Weiss de la Universidad Hebrea de Jerusalem dio el 16 de Junio de 2010 una conferencia en el Instituto de Altos Estudios de Princeton titulada “Random-like behavior in deterministic systems” donde describe la noción de supernormalidad, a la que llama “Poisson generic”.
+
+  Lo poco que se conoce sobre esta noción no está publicado.
+
+    \begin{figure}%
+      \centering
+      \subfloat{{\includegraphics[width=2cm]{imagenes/weiss.jpg} }}%
+      \qquad
+      \subfloat{{\includegraphics[width=2cm]{imagenes/rudnick.jpeg} }}%
+      \caption{Benjamin Weiss y Zeev Rudnick}%
+      % \label{fig:example}%
+    \end{figure}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Un ejemplo para entender mejor}
-  Veamos como ejemplo de juguete si la secuencia finita $x = 10011110$ es supernormal tomando $n=3$ y $\lambda = 1$.
+  \frametitle{Que tal si contamos}
+  $$x = 10011110\dots$$
+  \\
+  Contemos cuales son las palabras de tamaño 3 que aparecen en los primeros 8 símbolos de $x$.
   \pause
-  Las palabras de tamaño 3 que ocurren en $x$ son:
-  $$100, \; 001, \; 011,\; 111,\; 111,\; 110$$
+  $$100\pause, \; 001\pause, \ \; 011\pause,\; 111\pause,\; 111\pause,\; 110$$
   \pause
   Si contamos las cantidad de ocurrencias de cada palabra de tamaño 3 tenemos: 
-  \begin{center}
-    \begin{tabular}{|c | c|} 
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+      \begin{tabular}{|c | c|} 
     \hline
-    Word & Count \\ [0.5ex] 
+    Palabra & Cantidad \\ [0.5ex] 
     \hline
     000 & 0 \\ 
     \hline
@@ -279,43 +257,92 @@ $$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\floor{\lambda 2^n}]|_w = 
     111 & 2 \\ 
     \hline
    \end{tabular}
-\end{center}
+  \end{center}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \pause
+      \begin{center}
+      \begin{tabular}{|c | c |  c|} 
+        \hline
+        $k$ & Cant &  Frec \\ [0.5ex] 
+        \hline
+        0 & 3 & $3/8$ \\ 
+        \hline
+        1 & 4 &$1/2$\\ 
+        \hline
+        2 & 1 &$1/8$  \\  
+        \hline
+        3 & 0 & 0 \\ 
+        \hline
+        4 & 0 & 0 \\
+        \hline
+        5 & 0 & 0  \\  
+        \hline
+        6 & 0 & 0  \\ 
+        \hline
+        7 & 0 & 0 \\
+        \hline
+        8 & 0 & 0 \\  
+        \hline
+       \end{tabular}
+      \end{center}
+    \end{column}
+    \end{columns}
 \end{frame}
 
+% \begin{frame}
+%   \frametitle{Un ejemplo para entender mejor}
+%   Ahora, veamos las cantidad, las frecuencias y el valor esperado para cada $k$ posible si $x$ fuera 1-supernormal.
+%   \pause
+%   \begin{center}
+%     \begin{tabular}{|c | c |  c| c |} 
+%     \hline
+%     $k$ & Count &  Frequency & Expected Frequency \\ [0.1ex] 
+%     \hline
+%     0 & 3 & $\frac{3}{8}$ & $e^{-1} $ \\ [0.5ex] 
+%     \hline
+%     1 & 4 &$\frac{1}{2}$ & $e^{-1} $ \\  [0.5ex] 
+%     \hline
+%     2 & 1 &$\frac{1}{8}$ & $\frac{e^{-1}}{2} $ \\  [0.5ex] 
+%     \hline
+%     3 & 0 & 0 & $\frac{e^{-1}}{3!} $ \\  [0.5ex] 
+%     \hline
+%     4 & 0 & 0 & $\frac{e^{-1}}{4!} $ \\ [0.5ex] 
+%     \hline
+%     5 & 0 & 0 & $\frac{e^{-1}}{5!} $ \\ [0.5ex] 
+%     \hline
+%     6 & 0 & 0  & $\frac{e^{-1}}{6!} $ \\ [0.5ex] 
+%     \hline
+%     7 & 0 & 0 & $\frac{e^{-1}}{7!} $ \\ [0.5ex] 
+%     \hline
+%     8 & 0 & 0 & $\frac{e^{-1}}{8!} $ \\  [0.5ex] 
+%     \hline
+%    \end{tabular}
+% \end{center}
+% \end{frame}
+
 \begin{frame}
-  \frametitle{Un ejemplo para entender mejor}
-  Ahora, veamos las cantidad, las frecuencias y el valor esperado para cada $k$ posible si $x$ fuera 1-supernormal.
-  \pause
-  \begin{center}
-    \begin{tabular}{|c | c |  c| c |} 
-    \hline
-    $k$ & Count &  Frequency & Expected Frequency \\ [0.1ex] 
-    \hline
-    0 & 3 & $\frac{3}{8}$ & $e^{-1} $ \\ [0.5ex] 
-    \hline
-    1 & 4 &$\frac{1}{2}$ & $e^{-1} $ \\  [0.5ex] 
-    \hline
-    2 & 1 &$\frac{1}{8}$ & $\frac{e^{-1}}{2} $ \\  [0.5ex] 
-    \hline
-    3 & 0 & 0 & $\frac{e^{-1}}{3!} $ \\  [0.5ex] 
-    \hline
-    4 & 0 & 0 & $\frac{e^{-1}}{4!} $ \\ [0.5ex] 
-    \hline
-    5 & 0 & 0 & $\frac{e^{-1}}{5!} $ \\ [0.5ex] 
-    \hline
-    6 & 0 & 0  & $\frac{e^{-1}}{6!} $ \\ [0.5ex] 
-    \hline
-    7 & 0 & 0 & $\frac{e^{-1}}{7!} $ \\ [0.5ex] 
-    \hline
-    8 & 0 & 0 & $\frac{e^{-1}}{8!} $ \\  [0.5ex] 
-    \hline
-   \end{tabular}
-\end{center}
+\frametitle{Supernormalidad}
+Sea $x$ una secuencia binaria. Sea $A^\lambda_{k,n}(x)$  la frecuencia de ocurrencia de las palabras de longitud $n$ que ocurren exactamente $k$ veces comenzando en las primeras $\floor{\lambda 2^n}$ posiciones de $x$. Es decir:
+
+% $$A^\lambda_{k,n}(x) = \frac{\#\{\text{palabras de tamaño $n$ que aparencen $k$ veces en los primeros $\floor{\lambda 2^n}$ símbolos de x\}}}{\#\{\text{palabras de tamaño $n$}\}}$$
+
+$$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\floor{\lambda 2^n}]|_w = k\}}{2^n}$$
+\pause
+\begin{definition}
+  Sea $\lambda$ un real mayor a cero. Decimos que la secuencia binaria $x$ es $\lambda$-supernormal si para todo entero no negativo $k$ sucede que
+  
+  $$\lim_{n\to\infty} A^\lambda_{k,n}(x) = \frac{e^{-\lambda}\lambda^k}{k!}$$
+
+  Decimos que $x$ es supernormal si es $\lambda$-supernormal para todo $\lambda.$
+\end{definition}
 \end{frame}
+
+
 
 \begin{frame}
   \frametitle{El resultado de esta tesis}
-  
+  \pause
   \begin{theorem}
     La noción de supernormalidad es más fuerte que la noción de normalidad.
 
@@ -325,6 +352,12 @@ $$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\floor{\lambda 2^n}]|_w = 
       \item Sea $x$ una secuencia infinita. Si $x$ es supernormal, entonces $x$ es normal. (supernormal $\Rightarrow$ normal )
     \end{enumerate}
   \end{theorem}
+  \pause
+  \begin{figure}[h]
+    \includegraphics[width=0.4\textwidth]{imagenes/meme.png}
+    \centering
+    \label{fig:meme}
+\end{figure}
 \end{frame}
 
 \begin{frame}
@@ -353,7 +386,7 @@ $$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\floor{\lambda 2^n}]|_w = 
     \includegraphics[width=0.75\textwidth]{imagenes/champ-16-freq.png}
     \centering
     \caption{Frecuencias observadas y esperadas en $champ$ for $n = 16$ y $\lambda = 1$.}
-    \label{fig:champ-22-freq}
+    \label{fig-16-freq}
 \end{figure}
 \end{frame}
 
@@ -372,13 +405,15 @@ $$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\floor{\lambda 2^n}]|_w = 
   \begin{itemize}
     \item Sabemos que $champ = X(1)X(2)X(3)\dots$
     \pause 
-    \item La idea va a ser encontrar un $k$ tal que $X(k)$ sea lo suficientemente grande y este completamente contenido en $champ[1\dots 2^n]$ y analizar cuales son las palabras distintas que aparecen.
+    \item Vamos a buscar el $k$ más grande tal que $X(k)$ este completamente contenido en $champ[1\dots 2^n]$ y contar cuales son las palabras que aparecen adentro.
     \pause 
-    \item Si tomamos $n = d + k + 1$ con $k = 2^d$, sucede que $X(k)$ está completamente contenido en $champ[1\dots 2^n]$ y además ocupa la mitad del espacio.
-    \pause 
-    \item Nos fijamos que pinta tienen las secuencias de longitud $d + k + 1$ que aparecen adentro de $X(k)$ y damos una cota para la cantidad de palabras distintas que pueden aparecer.
+    \item Para esto buscamos una forma de elegir algunos $n$s que tengan una pinta que nos sirva.
     \pause
-    \item Por último resta ver que la cantidad de palabras que aparecen es mucho menor de lo necesario para que $champ$ sea supernormal.
+    \item Encontramos que si tomamos $n = d + k + 1$ con $k = 2^d$, sucede que $X(k)$ está completamente contenido en $champ[1\dots 2^n]$ y además ocupa la mitad del espacio.
+    \pause 
+    \item Nos fijamos cuales son las palabras de longitud $d + k + 1$ que aparecen adentro de $X(k)$.
+    \pause
+    \item Conociendo las palabras que aparecen, vemos que las son más de lo necesario para que $champ$ sea supernormal.
   \end{itemize}
 \end{frame}
 
@@ -631,23 +666,23 @@ $$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\floor{\lambda 2^n}]|_w = 
   \end{itemize}
 \end{frame} 
 
-\begin{frame}
-  \frametitle{La función $next(w)$}
+% \begin{frame}
+%   \frametitle{La función $next(w)$}
 
-  Definimos la siguiente función que nos va a ser útil.
+%   Definimos la siguiente función que nos va a ser útil.
 
-  \begin{definition}
-    La función $next(w) : A^n \rightarrow A^n$ se define de la siguiente manera. Si $w$ es la palabra de $n$  1s, $next(w)$ es la palabra de $n$ 0s. Si no, $next(w)$ es la palabra siguiente en orden lexicográfico.
-  \end{definition}
+%   \begin{definition}
+%     La función $next(w) : A^n \rightarrow A^n$ se define de la siguiente manera. Si $w$ es la palabra de $n$  1s, $next(w)$ es la palabra de $n$ 0s. Si no, $next(w)$ es la palabra siguiente en orden lexicográfico.
+%   \end{definition}
   
-  Por ejemplo,
-  $$next(0000) = 0001$$
-  $$next(0001) = 0010$$
-  $$\vdots$$
-  $$next(1110) = 1111$$
-  $$next(1111) = 0000$$
+%   Por ejemplo,
+%   $$next(0000) = 0001$$
+%   $$next(0001) = 0010$$
+%   $$\vdots$$
+%   $$next(1110) = 1111$$
+%   $$next(1111) = 0000$$
 
-\end{frame} 
+% \end{frame} 
 
 \begin{frame}
   \frametitle{Análisis por caso - Caso 1}
@@ -834,7 +869,7 @@ $$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\floor{\lambda 2^n}]|_w = 
       \pause
       $$\underbrace{\quad \textcolor{red}{A} \quad }_{d +1} \qquad \underbrace{\quad B \quad }_{k - d - 1}  \qquad \textcolor{red}{A}$$
       $$\underbrace{\quad \textcolor{red}{A} \quad }_{d +1} \qquad \underbrace{\; \textcolor{blue}{11\dots1}C \; }_{k - d - 1}  \qquad \textcolor{cyan}{next(A)}$$
-
+      \pause
       Pero el primer esquema ya lo contamos en el caso 1 y el segundo esquema es un caso particular de uno de los esquemas del caso 2.
       
       Por lo que el caso 3 no nos arroja nuevas palabras.
@@ -929,20 +964,19 @@ $$111111\; (01 \qquad 11 \; 1111 \; 10 \qquad 11) \: 111111$$
 
 
 \begin{frame}
-  \frametitle{Acotando palabras distintas en $champ$}
+  \frametitle{Hay demasiadas palabras que no aparecen en $champ$}
   Si $champ$ fuera supernormal, la frecuencia experada de palabras que aparecen una o más veces en los primeros $2^n$ símbolos debería satisfacer:
 $$\lim_{n\to\infty} \frac{\#\{w: |w| = n  , |champ[1...2^n]|_w > 0\}}{2^n}  = 1 - e^{-1}$$
 \pause
 Sabemos que $X(k)$ ocupa la mitad de las palabras de los primeros $2^{d+k+1}$ símbolos de $champ$.
 Si analizamos lo que sucede en las palabras de longitud $d+k+1$ usando las cotas que calculamos en los diferentes casos, y asumimos que la mitad restante ($2^{d+k} + d + k - 1$) son todas diferentes, entonces:
-  $$&\lim_{d\to\infty} \frac{\#\{w : |w| = d+k+1, |champ[1 \dots 2^{d+k+1}]|_w > 0 \}}{2^{d+k+1}} <$$
-  $$&\lim_{d\to\infty} \frac{ \textrm{Case 1} + \textrm{Case 2}+ \textrm{Case 4} + \textrm{Case 5} + \textrm{other half}}{2^{d+k+1}} =$$
+  $$\lim_{d\to\infty} \frac{\#\{w : |w| = d+k+1, |champ[1 \dots 2^{d+k+1}]|_w > 0 \}}{2^{d+k+1}} <$$
+  $$\lim_{d\to\infty} \frac{ \textrm{Caso 1} + \textrm{Caso 2}+ \textrm{Caso 4} + \textrm{Caso 5} + \textrm{otra mitad}}{2^{d+k+1}} =$$
 
   \pause 
 
-    $$&\lim_{d\to\infty} \frac{(2^k - 2\cdot 2^d) + (2 \cdot 2^k)+ (d2^k + 2 \cdot 2^d) + (2d+k+1) + (2^{d+k}) }{2^{d+k+1}} =$$
-    $$\lim_{d\to\infty} \frac{3}{2k} + \frac{d}{2k} + \frac{d}{k2^{k}} + \frac{1}{2\cdot2^{k}} + \frac{1}{2k2^{k}} + \frac{1}{2} = \frac{1}{2}$$
-    $$< 1 - e^{-1}$$
+    $$\lim_{d\to\infty} \frac{(2^k - 2\cdot 2^d) + (2 \cdot 2^k)+ (d2^k + 2 \cdot 2^d) + (2d+k+1) + (2^{d+k}) }{2^{d+k+1}} =$$
+    $$\frac{1}{2} < 1 - e^{-1}$$
 
 \end{frame}
 
@@ -956,6 +990,119 @@ Si analizamos lo que sucede en las palabras de longitud $d+k+1$ usando las cotas
 Si $x$ es normal, no necesariamente $x$ es supernormal.
 \end{corollary}
 \end{frame}
+
+% \begin{frame}
+
+%   \frametitle{Supermormal $\Rightarrow$ Normal - Idea de la demostración}
+%   \begin{itemize}
+%     \item Fijamos $\lambda = 1$ y veremos que si $x$ es 1-supernormal entonces es normal. 
+%     \item Para cada $\epsilon$, definimos un  $k_0$ tal que desde la cantidad $k_0$ haya $\frac{\epsilon}{2}$ palabras.
+%     \item Consideramos que una posición en $x[1\dots2^n ]$ es \textit{culpable} si la palabra que comienza en esa posición ocurre más de $k_0$ veces en $x[1\dots2^n ]$.
+%     \item Acotamos la cantidad de posiciones culpables en $x[1\dots2^n ]$ por $2^n\epsilon$
+%     \item Con esto, podemos fijar un $n$, un $\epsilon$ y una palabra $w$ y dar una cota superior de la cantidad de apariciones de $w$ en $x[1\dots2^n ]$.
+%     \item En el límite, esta cota es la esperada ($2^{-|w|}$)
+%     \item Por último utilizamos el Hot-spot Lemma para ver que $x$ es normal.
+%   \end{itemize}
+ 
+% \end{frame}
+
+\begin{frame}
+  \frametitle{Agradecimiento y Trabajo futuro}
+  Esta tesis fue realizada con la dirección conjunta de Ver\'onica Becher y Olivier Carton en el marco del Laboratoire International Associé SINFIN, Université Paris Diderot-CNRS/Universidad de Buenos Aires-CONICET)\\
+  \bigskip
+  \begin{itemize}
+    \item Demostrar que casi todas las palabras son supernormales
+    \item Encontrar una palabra supernormal (Dar un algoritmo)
+    \item Caracterizar la supernormalidad en términos de compresión
+    % \item Relación entre discrepancia y supernormalidad
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{¡Fin!}
+  \begin{center}
+  {\Huge ¿Preguntas?}
+  \end{center}
+\end{frame}
+  
+  
+  \begin{frame}  
+    \frametitle{Bibliografía}
+
+  \begin{thebibliography}{1}
+  
+  \setlength{\parskip}{-0.5mm}
+  {\tiny
+  \bibitem{hotspot}
+    {\sc Bailey, D.~H., and Misiurewicz, M.}
+    \newblock A strong hot spot theorem.
+    \newblock {\em Proceedings of the American Mathematical Society 134}, 9 (2006),
+      2495--2501.
+    
+    \bibitem{BC2018}
+    {\sc Becher, V., and Carton, O.}
+    \newblock Normal numbers and computer science.
+    \newblock In {\em Sequences, Groups, and Number Theory}, V.~Berthé and
+      M.~Rigo, Eds. Springer International Publishing, Cham, 2018, pp.~233--269.
+    
+    \bibitem{BCC2019}
+    {\sc Becher, V., Carton, O., and Cunningham, I.}
+    \newblock Low discrepancy sequences failing poissonian pair correlations.
+    \newblock {\em Archiv der Mathematik 113\/} (04 2019).
+    
+    \bibitem{Borel}
+    {\sc Borel, {\'E}.}
+    \newblock Les probabilit{\'e}s d{\'e}nombrables et leurs applications
+      arithm{\'e}tiques.
+    \newblock {\em Rendiconti del Circolo Matematico di Palermo (1884-1940) 27}, 1
+      (Dec 1909), 247--271.
+    
+    \bibitem{bugeaud}
+    {\sc Bugeaud, Y.}
+    \newblock {\em Distribution Modulo One and {D}iophantine Approximation}.
+    \newblock No.~193 in Cambridge Tracts in Mathematics. Cambridge University
+      Press, Cambridge, UK, 2012.
+    
+    \bibitem{champern}
+    {\sc Champernowne, D.~G.}
+    \newblock {The Construction of Decimals Normal in the Scale of Ten}.
+    \newblock {\em Journal of the London Mathematical Society s1-8}, 4 (10 1933),
+      254--260.
+    
+    \bibitem{FN}
+    {\sc Figuiera, S., and Nies, A.}
+    \newblock Feasible analysis and randomness.
+    \newblock {\em Theory Comput Syst (2015) 56\/} (2015), 439.
+    
+    \bibitem{kuipers}
+    {\sc Kuipers, L., and Niederreiter, H.}
+    \newblock {\em Uniform distribution of sequences}.
+    \newblock Dover Publications, Inc., New York, 2006.
+    
+    \bibitem{PS2019}
+    {\sc Pirsic, I., and Stockinger, W.}
+    \newblock The champernowne constant is not poissonian.
+    \newblock {\em Funct. Approx. Comment. Math. 60}, 2 (03 2019), 253--262.
+
+    
+    \bibitem{Sierpinski}
+    {\sc Sierpinski, W.}
+    \newblock D\'emonstration \'el\'ementaire du th\'eor\`eme de m. borel sur les
+      nombres absolument normaux et d\'etermination effective d'une tel nombre.
+    \newblock {\em Bulletin de la Soci\'et\'e Math\'ematique de France 45\/}
+      (1917), 125--132.
+    
+    \bibitem{Weiss}
+    {\sc Weiss, B.}
+    \newblock Random-like behavior in deterministic systems -
+      https://youtu.be/8ab7591de68?t=1280, 2010.
+  }
+  
+    
+    \end{thebibliography}
+  \end{thebibliography}
+  
+  \end{frame}
 
 
 
