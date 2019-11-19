@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1574113332 "/Users/lucas/Repositories/supernorm/presentacion/presentacion.tex" "/Users/lucas/Repositories/supernorm/presentacion/presentacion.pdf" "presentacion" 1574113332
-  "/Users/lucas/Repositories/supernorm/presentacion/presentacion.aux" 1574113332 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/Users/lucas/Repositories/supernorm/presentacion/presentacion.tex" 1574113330 41998 81fdcf0c4a431a5d74516a2ad639331c ""
+["pdflatex"] 1574146344 "/Users/lucas/Repositories/supernorm/presentacion/presentacion.tex" "/Users/lucas/Repositories/supernorm/presentacion/presentacion.pdf" "presentacion" 1574146344
+  "/Users/lucas/Repositories/supernorm/presentacion/presentacion.aux" 1574146344 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/Users/lucas/Repositories/supernorm/presentacion/presentacion.tex" 1574146342 45559 74ebfcff6b953ff009403e33f8093e0a ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1480098698 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -232,14 +232,14 @@
   "presentacion.aux" 0 -1 0 ""
   "presentacion.nav" 0 -1 0 ""
   "presentacion.out" 0 -1 0 ""
-  "presentacion.tex" 1574113330 41998 81fdcf0c4a431a5d74516a2ad639331c ""
+  "presentacion.tex" 1574146342 45559 74ebfcff6b953ff009403e33f8093e0a ""
   (generated)
-  "/Users/lucas/Repositories/supernorm/presentacion/presentacion.log"
-  "presentacion.out"
-  "presentacion.pdf"
-  "presentacion.nav"
-  "presentacion.log"
-  "presentacion.aux"
-  "/Users/lucas/Repositories/supernorm/presentacion/presentacion.pdf"
   "presentacion.toc"
+  "presentacion.nav"
+  "presentacion.pdf"
+  "/Users/lucas/Repositories/supernorm/presentacion/presentacion.log"
   "presentacion.snm"
+  "/Users/lucas/Repositories/supernorm/presentacion/presentacion.pdf"
+  "presentacion.out"
+  "presentacion.aux"
+  "presentacion.log"

@@ -291,42 +291,49 @@ la cantidad de ocurrencias de cada palabra de cierta longitud sea casi la misma.
 \end{frame}
 
 % \begin{frame}
-%   \frametitle{Un ejemplo para entender mejor}
-%   Ahora, veamos las cantidad, las frecuencias y el valor esperado para cada $k$ posible si $x$ fuera 1-supernormal.
-%   \pause
-%   \begin{center}
-%     \begin{tabular}{|c | c |  c| c |} 
-%     \hline
-%     $k$ & Count &  Frequency & Expected Frequency \\ [0.1ex] 
-%     \hline
-%     0 & 3 & $\frac{3}{8}$ & $e^{-1} $ \\ [0.5ex] 
-%     \hline
-%     1 & 4 &$\frac{1}{2}$ & $e^{-1} $ \\  [0.5ex] 
-%     \hline
-%     2 & 1 &$\frac{1}{8}$ & $\frac{e^{-1}}{2} $ \\  [0.5ex] 
-%     \hline
-%     3 & 0 & 0 & $\frac{e^{-1}}{3!} $ \\  [0.5ex] 
-%     \hline
-%     4 & 0 & 0 & $\frac{e^{-1}}{4!} $ \\ [0.5ex] 
-%     \hline
-%     5 & 0 & 0 & $\frac{e^{-1}}{5!} $ \\ [0.5ex] 
-%     \hline
-%     6 & 0 & 0  & $\frac{e^{-1}}{6!} $ \\ [0.5ex] 
-%     \hline
-%     7 & 0 & 0 & $\frac{e^{-1}}{7!} $ \\ [0.5ex] 
-%     \hline
-%     8 & 0 & 0 & $\frac{e^{-1}}{8!} $ \\  [0.5ex] 
-%     \hline
-%    \end{tabular}
-% \end{center}
+%   \frametitle{Que tal si contamos}
+% %   Lo que le vamos a pedir a estas frecuencias es que los valores no sean cualquiera.Queremos que sigan una distribución de Poisson, en este caso de parámetero 1.
+  
+% %   Es decir, buscamos que la cantidad de palabras que aparecen $k$ veces sobre la cantidad de palabras totales sea:
+
+% %   $$\frac{1^k e^{-1}}{k!}$$
+% %   \pause
+% %   La distribución Poisson es una ditribución de probabilidad discreta que expresa la probabilidad de que una cantidad de eventos ocurran en un intervalo fijo de tiempo si estos ocurren con una frecuencia media conocida e independientemente.
+% %   En este caso la frecuencia media es 1. Intuitivamente, le estamos dando a cada una de las palabras una oportunidad de aparecer.
+
+% %   Si en vez de considerar los primeros 8 símbolos de $x$ consideramos los primeros 16, entonces esta frecuencia media sería 2.
+% %   Llamamos $\lambda$ a este valor que regula la cantidad de símbolos de $x$ que vamos a leer.
+
+%   Lo que le vamos a pedir a estas frecuencias es que los valores no sean cualquiera.
+
+% Buscamos que la proporcio de palabras que aparecen k veces, respecto de la cantidad total sea:
+
+% $$e^{-1} / k!$$
+
+% Esto es un caso especial de la distribucion de Poisson, que expresa la probabilidad de que una cantidad de eventos ocurran en un intervalo de tiempo si conocemos la frecuencia media de ocurrencia (que en este caso particular sería 1). Intuitivamente, le estamos dando a cada una de las palabras una oportunidad de aparecer .
+
+% Si quisieramos considerar otra frecuencia de aparición, deberíamos cambiar la cantidad de símbolos que leemos: si fuera 2 en vez de 1, 
+% considerariamos los primeros 16 símbolos (el doble de 8). Llamamos $\lambda$ a este valor, que va regular la cantidad de símbolos que vamos a leer.
+  
+  
 % \end{frame}
 
 \begin{frame}
 \frametitle{Supernormalidad}
 Sea $x$ una secuencia binaria. Sea $A^\lambda_{k,n}(x)$  la frecuencia de ocurrencia de las palabras de longitud $n$ que ocurren exactamente $k$ veces comenzando en las primeras $\floor{\lambda 2^n}$ posiciones de $x$. Es decir:
+% \begin{align*}
 
-% $$A^\lambda_{k,n}(x) = \frac{\#\{\text{palabras de tamaño $n$ que aparencen $k$ veces en los primeros $\floor{\lambda 2^n}$ símbolos de x\}}}{\#\{\text{palabras de tamaño $n$}\}}$$
+% A^\lambda_{k,n}(x) =& \frac{\#\{w: |w| = n  , \text{cant. de ocurrencias de $w$ en $x[1\dots\floor{\lambda 2^n}]$ } = k\}}{2^n}\\
+% \pause
+% \bigskip
+% A^\lambda_{k,n}(x) =& \frac{\#\{w: |w| = n  , |x[1...\floor{\lambda 2^n}]|_w = k\}}{2^n}\\
+% \pause
 
+% \end{align*}
+
+$$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , \text{cant. de ocurrencias de $w$ en $x[1\dots\floor{\lambda 2^n}]$ } = k\}}{2^n}$$
+\pause
+\bigskip
 $$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\floor{\lambda 2^n}]|_w = k\}}{2^n}$$
 \pause
 \begin{definition}
@@ -1006,10 +1013,71 @@ Si $x$ es normal, no necesariamente $x$ es supernormal.
  
 % \end{frame}
 
+% \begin{frame}
+%   \frametitle{El conjunto $Bad$}
+%   \begin{definition}
+%     Sea $Bad(n, w, \epsilon)$el conjunto de palabras binarias de longitud $n$ donde $w$ difiere de la frecuencia esperada por más que
+%     $n \epsilon$. Entonces,
+%     $$Bad(n, w, \epsilon)=\Big{\{}v\in \{0,1\}^n: \Big{|} |v|_w - n 2^{-|w|} \Big{|} \geq \epsilon n \Big{\} }$$
+%   \end{definition}
+  
+% \end{frame}
+
+% \begin{frame}
+%   \frametitle{Teniendo en cuenta}
+%   Una vez acotadas las posiciones culpables, fijamos $ n, \epsilon$ y $w$ y damos una cota superior de la cantidad
+%   de ocurrencias de $w$ en $x[1 .. 2^n]$. Para eso, consideramos que:
+
+% \begin{enumerate}
+% \item Cada posición culpable tiene a lo sumo una ocurrencia de $w$
+% \item Cada bloque en $Bad(n, w, \epsilon)$ ocurre en $x[1.. 2^n]$ a lo sumo $k_0$ veces
+% \item Cada bloque en $Bad(n, w, \epsilon)$ tiene a lo sumo $n-|w|+1$ ocurrencias de $w$.
+% \item La secuencia $x[1..  2^n]$ puede ser dividida en a lo sumo $ 2^n/n$ bloques consecutivos de longitud $n$.  
+% \item Cada bloque de longitud $n$ que comienza en una posición no culpable,  y no está en $bad$ contiene a lo sumo $n 2^{-|w|} + \epsilon n $ ocurrencias de $w$.
+% \item Entre dos bloques consecutivos de longitud $n$ hay a lo sumo $|w|-1$ ocurrencias de $w$.
+% \end{enumerate}
+% \end{frame}
+
+% \begin{frame}
+%   \frametitle{Cota para ocurrencias de $w$}
+%   \begin{align*}
+%     |x[1.. 2^n]|_w \leq &
+%      \#\text{posiciones culpables} +
+%     \\& k_0 \#(\text{bloques malos}) (n-|w|+1)+
+%     \\& \#(\text{bloques no malos empezando}
+%     \\& \text{en posiciones no culpables}) (n 2^{-|w|} + \epsilon n)+
+%     \\&  \#(\text{interbloques})  (|w|-1)
+%     \\
+%     \leq& 2^n \epsilon + 
+%     \\& 2^{n+1} e^{-\epsilon^2 n/(6|w|)} (n-|w|+1)+
+%     \\&  ( 2^n /n) (n 2^{-|w|} + \epsilon n)+
+%     \\&  ( 2^n/n) (|w|-1)
+%     \end{align*}
+
+%     \pause
+%     Tomando el límite nos queda que\begin{align*}
+%       \lim_{n\to \infty}\frac{|x[1.. 2^n]|_w }{ 2^n}= {2^{-|w|}}
+%       \end{align*}
+      
+% \end{frame}
+
+% \begin{frame}
+%   \frametitle{Hot Spot Lemma}
+
+%   \begin{definition}
+%     Una secuencia es normal si y solo si existe una constante $C$ tal que para infinitas longitudes $\ell$ y para todo $w$ en 
+%     $\{0,1\}^\ell$,
+%     $$\limsup_{N\to \infty}  \frac{|x[1.. N]|_w }{N} \leq C \frac{1}{2^{|w|}}$$
+%   \end{definition}
+  
+%   Podemos usar el Hot Spot Lemma para concluir que la secuencia es normal.
+      
+% \end{frame}
+
 \begin{frame}
   \frametitle{Agradecimiento y Trabajo futuro}
-  Esta tesis fue realizada con la dirección conjunta de Ver\'onica Becher y Olivier Carton en el marco del Laboratoire International Associé SINFIN, Université Paris Diderot-CNRS/Universidad de Buenos Aires-CONICET)\\
-  \bigskip
+  % Esta tesis fue realizada con la dirección conjunta de Ver\'onica Becher y Olivier Carton en el marco del Laboratoire International Associé SINFIN, Université Paris Diderot-CNRS/Universidad de Buenos Aires-CONICET)\\
+  % \bigskip
   \begin{itemize}
     \item Demostrar que casi todas las palabras son supernormales
     \item Encontrar una palabra supernormal (Dar un algoritmo)
@@ -1096,16 +1164,12 @@ Si $x$ es normal, no necesariamente $x$ es supernormal.
     {\sc Weiss, B.}
     \newblock Random-like behavior in deterministic systems -
       https://youtu.be/8ab7591de68?t=1280, 2010.
-  }
-  
-    
-    \end{thebibliography}
-  \end{thebibliography}
-  
+  } 
+    \end{thebibliography}  
   \end{frame}
 
 
-
+ 
 \end{document}
 
 
