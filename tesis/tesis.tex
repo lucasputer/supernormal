@@ -93,7 +93,7 @@ For the work done on normal numbers from a computer science perspective see \cit
 
 Let $b$ be an integer greater or equal to 2 that we call the \textit{base}. If we represent a real number in a given base, we have the integer part followed by a fractionary expansion, which is a possibly infinite sequence of digits in base $b$.
 
-Fixed a base $b$, the \textit{expansion} of a real number $\alpha$ en base $b$ is a sequence of digits $d_1d_2d_3\dots$ with every $d_i$ between 0 and $b-1$, such that
+Fixed a base $b$, the \textit{expansion} of a real number $\alpha$ in base $b$ is a sequence of digits $d_1d_2d_3\dots$ with every $d_i$ between 0 and $b-1$, such that
 $$\alpha = \floor{\alpha} + 0,d_1d_2d_3\dots$$
 
 where $\floor{\alpha}$ is the integer part of $\alpha$.
@@ -181,15 +181,15 @@ Let's start by giving a formal definition of what a supernormal sequence is.
 
 %\begin{definition}
 Let $x$ be a sequence over a binary alphabet.
-Let $A^\lambda_{k,n}(x)$ be the frequency of occurrence of words of length $n$ that occur exactly $k$ times in the first $\floor{\lambda 2^n}$ symbols of $x$, or what is to say:
-$$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\lfloor\lambda 2^n)\rfloor]|_w = k\}}{2^n}$$
+Let $A^\lambda_{k,n}(x)$ be the frequency of occurrence of words of length $n$ that occur exactly $k$ times in the first $\floor{\lambda 2^n}$ symbols of $x$:
+$$A^\lambda_{k,n}(x) = \frac{\#\{w: |w| = n  , |x[1...\lfloor\lambda 2^n\rfloor]|_w = k\}}{2^n}$$
 %\end{definition}
 %\medskip
 
 \begin{definition}[Supernormality]
     Let $\lambda > 0$ be a real number. 
    A binary sequence $x$ is $\lambda-$supernormal if  for every non-negative integer $k$,
- $$\lim_{n\to\infty} A^\lambda_{k,n}(x) = \frac{e^{-\lambda}\lambda^k}{k!}$$
+ $$\lim_{n\to\infty} A^\lambda_{k,n}(x) = \frac{e^{-\lambda}\lambda^k}{k!} \sim {\operatorname {Pois} } (\lambda) $$
 % \end{definition}
 %
 %\begin{definition}[Supernormality]
@@ -244,23 +244,23 @@ And now we can see the frequency and the count of every possible $k$ with their
     \hline
     $k$ & Count &  Frequency & Expected Frequency \\ [0.1ex] 
     \hline
-    0 & 3 & $\frac{3}{8}$ & $e^{-1} $ \\ [0.5ex] 
+    0 & 3 & $\frac{3}{8}$ & $e^{-1} \approx	0.368 $ \\ [0.5ex] 
     \hline
-    1 & 4 &$\frac{1}{2}$ & $e^{-1} $ \\  [0.5ex] 
+    1 & 4 &$\frac{1}{2}$ & $e^{-1} \approx	0.368 $ \\  [0.5ex] 
     \hline
-    2 & 1 &$\frac{1}{8}$ & $\frac{e^{-1}}{2} $ \\  [0.5ex] 
+    2 & 1 &$\frac{1}{8}$ & $\frac{e^{-1}}{2} \approx	0.183$ \\  [0.5ex] 
     \hline
-    3 & 0 & 0 & $\frac{e^{-1}}{3!} $ \\  [0.5ex] 
+    3 & 0 & 0 & $\frac{e^{-1}}{3!}\approx	0.061 $ \\  [0.5ex] 
     \hline
-    4 & 0 & 0 & $\frac{e^{-1}}{4!} $ \\ [0.5ex] 
+    4 & 0 & 0 & $\frac{e^{-1}}{4!} \approx	0.015$ \\ [0.5ex] 
     \hline
-    5 & 0 & 0 & $\frac{e^{-1}}{5!} $ \\ [0.5ex] 
+    5 & 0 & 0 & $\frac{e^{-1}}{5!} \approx	0.003$ \\ [0.5ex] 
     \hline
-    6 & 0 & 0  & $\frac{e^{-1}}{6!} $ \\ [0.5ex] 
+    6 & 0 & 0  & $\frac{e^{-1}}{6!} \approx	0.0005$\\ [0.5ex] 
     \hline
-    7 & 0 & 0 & $\frac{e^{-1}}{7!} $ \\ [0.5ex] 
+    7 & 0 & 0 & $\frac{e^{-1}}{7!} \approx	0.00007$ \\ [0.5ex] 
     \hline
-    8 & 0 & 0 & $\frac{e^{-1}}{8!} $ \\  [0.5ex] 
+    8 & 0 & 0 & $\frac{e^{-1}}{8!} \approx	0.000009$ \\  [0.5ex] 
     \hline
    \end{tabular}
 \end{center}
@@ -279,14 +279,14 @@ The following figure shows for every $k$, taking $\lambda = 1$ and $n = 22$, the
 % \end{figure}
 
 \begin{figure}[h]
-    \includegraphics[width=0.75\textwidth]{images/champ-22-freq.png}
+    \includegraphics[width=0.75\textwidth]{images/champ-22-freq-2.png}
     \centering
     \caption{Observed and expected frequencies in $champ$ for $n = 22$ and $\lambda = 1$.}
     \label{fig:champ-22-freq}
 \end{figure}
 
 As it can be observed in Figure\ref{fig:champ-22-freq}, the amount of words of length $n$ that do not appear in the first $2^n$ symbols of $champ$ is much higher than the expected one for the sequence to be 1-supernormal. As we will observe later in the proof this is due to the fact that by the way that $champ$ is constructed.
-This experiment as well a supernormality check for other famous normal sequences and a few PRNGs are available at ~\cite{Puterman}.
+This experiment as well a supernormality check for other famous normal sequences and a few pseudorandom number generators are available at ~\cite{Puterman}.
 
 % One more interesting thing to do experimentaly is to check wether some pseudorandom number generators generate sequences that empiricaly appear to be supernormal. We analyzed what happened with sequences genereated with the Mersenne Twister PRNG which is the PRNG used by Python and with the cellular autmata Rule 30 which was used as the PRNG in Mathematica.
 
@@ -344,7 +344,7 @@ $ i,n$ such that $  0 \leq i \leq k_0 $, $n > n_0$ and
   $$|A^\lambda_{i,n}(x) - a_i(\lambda)| \leq \frac{\epsilon\lambda}{2k_0^2}$$
 
 
- $$\sum_{i=0}^{k_0} ka_k(\lambda) = \lambda - \sum_{k> k_0} ka_k(\lambda) \geq \lambda\Big(1 - \frac{\epsilon}{2}\Big)$$
+ $$\sum_{k=0}^{k_0} ka_k(\lambda) = \lambda - \sum_{k> k_0} ka_k(\lambda) \geq \lambda\Big(1 - \frac{\epsilon}{2}\Big)$$
 
 
 We fix $\lambda$ equal to 1 for the simplicity of the proof, nonetheless the result is analogous with any value.
@@ -357,10 +357,10 @@ occurs more than $k_0$ times in
  between  $1$ and $2^n$ is:
 
 \begin{align*}
-   2^n -  \sum_{i=0}^{k_0} iA^{1}_{i,n}(x) 2^n 
-     &\leq 2^n - \Big(2^n\sum_{i=0}^{k_0} i a_i(1) - \frac{\epsilon}{2k^2_0}\Big) \\
-    &\leq 2^n -  \Big(2^n \sum_{i=0}^{k_0} ia_{i}(1) - \frac{2^n\epsilon}{2} \Big)\\
-    &\leq 2^n - \Big(2^n \big(1-\frac{\epsilon}{2}\big) - \frac{2^n\epsilon }{2}\Big) \\
+   2^n -  \sum_{k=0}^{k_0} kA^{1}_{k,n}(x) 2^n 
+     &\leq 2^n - 2^n\Big(\sum_{k=0}^{k_0} k a_k(1) - \frac{\epsilon}{2k^2_0}\Big) \\
+    &\leq 2^n -  \Big(2^n \sum_{k=0}^{k_0} ka_{k}(1)\Big) + \frac{2^n\epsilon}{2}\\
+    &\leq 2^n - \Big(2^n \big(1-\frac{\epsilon}{2}\big)\Big) + \frac{2^n\epsilon }{2} \\
     &\leq 2^n\epsilon.
 \end{align*}
 
@@ -414,15 +414,21 @@ Thus,
 \\&  ( 2^n/n) (|w|-1)
 \end{align*}
 Hence, 
+% \begin{align*}
+% \frac{|x[1..  2^n]|_w }{ 2^n}&\leq 
+%  \frac{n}{ 2^{n}} \epsilon+   \epsilon+
+% 2 e^{-\epsilon^2 n/(6|w|)}  (n-|w|+1)+\frac{ \epsilon}{2^{n}}+
+% +  \frac{1}{2^{|w|}} + (|w|-1)/n
+% \end{align*}
+
 \begin{align*}
-\frac{|x[1..  2^n]|_w }{ 2^n}&\leq 
- \frac{n}{ 2^{n}} \epsilon+   \epsilon+
-2 e^{-\epsilon^2 n/(6|w|)}  (n-|w|+1)+\frac{ \epsilon}{2^{n}}+
-+  \frac{1}{2^{|w|}} + (|w|-1)/n
-\end{align*}
-This  inequality above holds for every  for every $\epsilon$. By taking limit when $n$ goes to infinity we obtain 
+  \frac{|x[1..  2^n]|_w }{ 2^n}&\leq \epsilon + 2 e^{-\epsilon^2 n/(6|w|)}  (n-|w|+1) + \frac{1}{2^{|w|}} + \epsilon + (|w|-1)/n
+  \end{align*}
+
+
+This  inequality above holds for every  for every $\epsilon$. By taking limit superior when $n$ goes to infinity we obtain 
 \begin{align*}
-\lim_{n\to \infty}\frac{|x[1.. 2^n]|_w }{ 2^n}= {2^{-|w|}}
+\limsup_{n\to \infty}\frac{|x[1.. 2^n]|_w }{ 2^n} \leq {2^{-|w|}}
 \end{align*}
 
 
@@ -437,8 +443,8 @@ later by Borwein and Bailey \cite{hotspot}  who gave it this name. For  the hist
 The Hot Spot lemma says that a binary sequence $x$ is normal if and only if there is a constant $C$ 
 such that for infinitely many lengths $\ell$ and for every w in~$\{0,1\}^\ell$,
     $$\limsup_{N\to \infty}  \frac{|x[1.. N]|_w }{N} \leq C \frac{1}{2^{|w|}}$$
- We now determine that the constant $C$ exists and it is equal to $2$
-Fx $N$ and let $n$ be such that $2^{n-1}\leq N<2^{n}$. 
+ We now determine that the constant $C$ exists and it is equal to $2$.
+Fix $N$ and let $n$ be such that $2^{n-1}\leq N<2^{n}$. 
 Then,
 \begin{align*}
 \frac{{|x[1.. N]|_w }}{N}\leq \frac{{|x[1.. 2^{n}]|_w }}{2^{n-1}}.
@@ -771,13 +777,12 @@ If we analyze what happens with words of length $d+k+1$ using the bounds we have
 
 
 \begin{align*}
-&\lim_{d\to\infty} \frac{\#\{w : |w| = d+k+1, |champ[1 \dots 2^{d+k+1}]|_w > 0 \}}{2^{d+k+1}} =\\
-&\lim_{d\to\infty} \frac{\#\{w : |w| = d+k+1, |champ[1 \dots 2^{d+k+1}]|_w > 0 \}}{2^{d+k+1}} <\\
-&\lim_{d\to\infty} \frac{ \textrm{Case 1} + \textrm{Case 2}+ \textrm{Case 4} + \textrm{Case 5} + \textrm{other half}}{2^{d+k+1}} =\\
-&\lim_{d\to\infty} \frac{(2^k - 2\cdot 2^d) + (2 \cdot 2^k)+ (d2^k + 2 \cdot 2^d) + (2d+k+1) + (2^{d+k}) }{2^{d+k+1}} =\\
-&\lim_{d\to\infty} \frac{(2^k - 2k) + (2 \cdot 2^k)+ (d2^k + k) + (2d+2k+1) + (k2^{k})}{2k2^{k}} =\\
-&\lim_{d\to\infty} \frac{3\cdot2^k + d2^k  + 2d+k+1}{2k2^{k}} + \frac{1}{2} =\\
-&\lim_{d\to\infty} \frac{3}{2k} + \frac{d}{2k} + \frac{d}{k2^{k}} + \frac{1}{2\cdot2^{k}} + \frac{1}{2k2^{k}} + \frac{1}{2} = \frac{1}{2} \\
+&\limsup_{d\to\infty} \frac{\#\{w : |w| = d+k+1, |champ[1 \dots 2^{d+k+1}]|_w > 0 \}}{2^{d+k+1}} <\\
+&\limsup_{d\to\infty} \frac{ \textrm{Case 1} + \textrm{Case 2}+ \textrm{Case 4} + \textrm{Case 5} + \textrm{other half}}{2^{d+k+1}} =\\
+&\limsup_{d\to\infty} \frac{(2^k - 2\cdot 2^d) + (2 \cdot 2^k)+ (d2^k + 2 \cdot 2^d) + (2d+k+1) + (2^{d+k}) }{2^{d+k+1}} =\\
+&\limsup_{d\to\infty} \frac{(2^k - 2k) + (2 \cdot 2^k)+ (d2^k + k) + (2d+2k+1) + (k2^{k})}{2k2^{k}} =\\
+&\limsup_{d\to\infty} \frac{3\cdot2^k + d2^k  + 2d+k+1}{2k2^{k}} + \frac{1}{2} =\\
+&\limsup_{d\to\infty} \frac{3}{2k} + \frac{d}{2k} + \frac{d}{k2^{k}} + \frac{1}{2\cdot2^{k}} + \frac{1}{2k2^{k}} + \frac{1}{2} = \frac{1}{2} \\
 &< 1 - e^{-1}
 \end{align*}
 

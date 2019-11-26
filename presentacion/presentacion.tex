@@ -998,81 +998,81 @@ Si $x$ es normal, no necesariamente $x$ es supernormal.
 \end{corollary}
 \end{frame}
 
-% \begin{frame}
+\begin{frame}
 
-%   \frametitle{Supermormal $\Rightarrow$ Normal - Idea de la demostración}
-%   \begin{itemize}
-%     \item Fijamos $\lambda = 1$ y veremos que si $x$ es 1-supernormal entonces es normal. 
-%     \item Para cada $\epsilon$, definimos un  $k_0$ tal que desde la cantidad $k_0$ haya $\frac{\epsilon}{2}$ palabras.
-%     \item Consideramos que una posición en $x[1\dots2^n ]$ es \textit{culpable} si la palabra que comienza en esa posición ocurre más de $k_0$ veces en $x[1\dots2^n ]$.
-%     \item Acotamos la cantidad de posiciones culpables en $x[1\dots2^n ]$ por $2^n\epsilon$
-%     \item Con esto, podemos fijar un $n$, un $\epsilon$ y una palabra $w$ y dar una cota superior de la cantidad de apariciones de $w$ en $x[1\dots2^n ]$.
-%     \item En el límite, esta cota es la esperada ($2^{-|w|}$)
-%     \item Por último utilizamos el Hot-spot Lemma para ver que $x$ es normal.
-%   \end{itemize}
+  \frametitle{Supermormal $\Rightarrow$ Normal - Idea de la demostración}
+  \begin{itemize}
+    \item Fijamos $\lambda = 1$ y veremos que si $x$ es 1-supernormal entonces es normal. 
+    \item Para cada $\epsilon$, definimos un  $k_0$ tal que desde la cantidad $k_0$ haya $\frac{\epsilon}{2}$ palabras.
+    \item Consideramos que una posición en $x[1\dots2^n ]$ es \textit{culpable} si la palabra que comienza en esa posición ocurre más de $k_0$ veces en $x[1\dots2^n ]$.
+    \item Acotamos la cantidad de posiciones culpables en $x[1\dots2^n ]$ por $2^n\epsilon$
+    \item Con esto, podemos fijar un $n$, un $\epsilon$ y una palabra $w$ y dar una cota superior de la cantidad de apariciones de $w$ en $x[1\dots2^n ]$.
+    \item En el límite, esta cota es la esperada ($2^{-|w|}$)
+    \item Por último utilizamos el Hot-spot Lemma para ver que $x$ es normal.
+  \end{itemize}
  
-% \end{frame}
+\end{frame}
 
-% \begin{frame}
-%   \frametitle{El conjunto $Bad$}
-%   \begin{definition}
-%     Sea $Bad(n, w, \epsilon)$el conjunto de palabras binarias de longitud $n$ donde $w$ difiere de la frecuencia esperada por más que
-%     $n \epsilon$. Entonces,
-%     $$Bad(n, w, \epsilon)=\Big{\{}v\in \{0,1\}^n: \Big{|} |v|_w - n 2^{-|w|} \Big{|} \geq \epsilon n \Big{\} }$$
-%   \end{definition}
+\begin{frame}
+  \frametitle{El conjunto $Bad$}
+  \begin{definition}
+    Sea $Bad(n, w, \epsilon)$el conjunto de palabras binarias de longitud $n$ donde $w$ difiere de la frecuencia esperada por más que
+    $n \epsilon$. Entonces,
+    $$Bad(n, w, \epsilon)=\Big{\{}v\in \{0,1\}^n: \Big{|} |v|_w - n 2^{-|w|} \Big{|} \geq \epsilon n \Big{\} }$$
+  \end{definition}
   
-% \end{frame}
+\end{frame}
 
-% \begin{frame}
-%   \frametitle{Teniendo en cuenta}
-%   Una vez acotadas las posiciones culpables, fijamos $ n, \epsilon$ y $w$ y damos una cota superior de la cantidad
-%   de ocurrencias de $w$ en $x[1 .. 2^n]$. Para eso, consideramos que:
+\begin{frame}
+  \frametitle{Teniendo en cuenta}
+  Una vez acotadas las posiciones culpables, fijamos $ n, \epsilon$ y $w$ y damos una cota superior de la cantidad
+  de ocurrencias de $w$ en $x[1 .. 2^n]$. Para eso, consideramos que:
 
-% \begin{enumerate}
-% \item Cada posición culpable tiene a lo sumo una ocurrencia de $w$
-% \item Cada bloque en $Bad(n, w, \epsilon)$ ocurre en $x[1.. 2^n]$ a lo sumo $k_0$ veces
-% \item Cada bloque en $Bad(n, w, \epsilon)$ tiene a lo sumo $n-|w|+1$ ocurrencias de $w$.
-% \item La secuencia $x[1..  2^n]$ puede ser dividida en a lo sumo $ 2^n/n$ bloques consecutivos de longitud $n$.  
-% \item Cada bloque de longitud $n$ que comienza en una posición no culpable,  y no está en $bad$ contiene a lo sumo $n 2^{-|w|} + \epsilon n $ ocurrencias de $w$.
-% \item Entre dos bloques consecutivos de longitud $n$ hay a lo sumo $|w|-1$ ocurrencias de $w$.
-% \end{enumerate}
-% \end{frame}
+\begin{enumerate}
+\item Cada posición culpable tiene a lo sumo una ocurrencia de $w$
+\item Cada bloque en $Bad(n, w, \epsilon)$ ocurre en $x[1.. 2^n]$ a lo sumo $k_0$ veces
+\item Cada bloque en $Bad(n, w, \epsilon)$ tiene a lo sumo $n-|w|+1$ ocurrencias de $w$.
+\item La secuencia $x[1..  2^n]$ puede ser dividida en a lo sumo $ 2^n/n$ bloques consecutivos de longitud $n$.  
+\item Cada bloque de longitud $n$ que comienza en una posición no culpable,  y no está en $bad$ contiene a lo sumo $n 2^{-|w|} + \epsilon n $ ocurrencias de $w$.
+\item Entre dos bloques consecutivos de longitud $n$ hay a lo sumo $|w|-1$ ocurrencias de $w$.
+\end{enumerate}
+\end{frame}
 
-% \begin{frame}
-%   \frametitle{Cota para ocurrencias de $w$}
-%   \begin{align*}
-%     |x[1.. 2^n]|_w \leq &
-%      \#\text{posiciones culpables} +
-%     \\& k_0 \#(\text{bloques malos}) (n-|w|+1)+
-%     \\& \#(\text{bloques no malos empezando}
-%     \\& \text{en posiciones no culpables}) (n 2^{-|w|} + \epsilon n)+
-%     \\&  \#(\text{interbloques})  (|w|-1)
-%     \\
-%     \leq& 2^n \epsilon + 
-%     \\& 2^{n+1} e^{-\epsilon^2 n/(6|w|)} (n-|w|+1)+
-%     \\&  ( 2^n /n) (n 2^{-|w|} + \epsilon n)+
-%     \\&  ( 2^n/n) (|w|-1)
-%     \end{align*}
+\begin{frame}
+  \frametitle{Cota para ocurrencias de $w$}
+  \begin{align*}
+    |x[1.. 2^n]|_w \leq &
+     \#\text{posiciones culpables} +
+    \\& k_0 \#(\text{bloques malos}) (n-|w|+1)+
+    \\& \#(\text{bloques no malos empezando}
+    \\& \text{en posiciones no culpables}) (n 2^{-|w|} + \epsilon n)+
+    \\&  \#(\text{interbloques})  (|w|-1)
+    \\
+    \leq& 2^n \epsilon + 
+    \\& 2^{n+1} e^{-\epsilon^2 n/(6|w|)} (n-|w|+1)+
+    \\&  ( 2^n /n) (n 2^{-|w|} + \epsilon n)+
+    \\&  ( 2^n/n) (|w|-1)
+    \end{align*}
 
-%     \pause
-%     Tomando el límite nos queda que\begin{align*}
-%       \lim_{n\to \infty}\frac{|x[1.. 2^n]|_w }{ 2^n}= {2^{-|w|}}
-%       \end{align*}
+    \pause
+    Tomando el límite nos queda que\begin{align*}
+      \lim_{n\to \infty}\frac{|x[1.. 2^n]|_w }{ 2^n}= {2^{-|w|}}
+      \end{align*}
       
-% \end{frame}
+\end{frame}
 
-% \begin{frame}
-%   \frametitle{Hot Spot Lemma}
+\begin{frame}
+  \frametitle{Hot Spot Lemma}
 
-%   \begin{definition}
-%     Una secuencia es normal si y solo si existe una constante $C$ tal que para infinitas longitudes $\ell$ y para todo $w$ en 
-%     $\{0,1\}^\ell$,
-%     $$\limsup_{N\to \infty}  \frac{|x[1.. N]|_w }{N} \leq C \frac{1}{2^{|w|}}$$
-%   \end{definition}
+  \begin{definition}
+    Una secuencia es normal si y solo si existe una constante $C$ tal que para infinitas longitudes $\ell$ y para todo $w$ en 
+    $\{0,1\}^\ell$,
+    $$\limsup_{N\to \infty}  \frac{|x[1.. N]|_w }{N} \leq C \frac{1}{2^{|w|}}$$
+  \end{definition}
   
-%   Podemos usar el Hot Spot Lemma para concluir que la secuencia es normal.
+  Podemos usar el Hot Spot Lemma para concluir que la secuencia es normal.
       
-% \end{frame}
+\end{frame}
 
 \begin{frame}
   \frametitle{Agradecimiento y Trabajo futuro}
