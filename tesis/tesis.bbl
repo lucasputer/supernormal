@@ -44,7 +44,7 @@
 \bibitem{FN}
 {\sc Figuiera, S., and Nies, A.}
 \newblock Feasible analysis and randomness.
-\newblock {\em Theory Comput Syst (2015) 56\/} (2015), 439.
+\newblock {\em Theory of Computing Systems 56\/} (2015), 439.
 
 \bibitem{kuipers}
 {\sc Kuipers, L., and Niederreiter, H.}
@@ -54,12 +54,13 @@
 \bibitem{PS2019}
 {\sc Pirsic, I., and Stockinger, W.}
 \newblock The champernowne constant is not poissonian.
-\newblock {\em Funct. Approx. Comment. Math. 60}, 2 (03 2019), 253--262.
+\newblock {\em Functiones et Approximatio Commentarii Mathematici 60}, 2 (03
+  2019), 253--262.
 
 \bibitem{Puterman}
 {\sc Puterman, L.}
-\newblock Supernormal experiments - https://github.com/lucasputer/supernormal,
-  2019.
+\newblock Supernormal experiments - supernormality tests for champ, levin's
+  sequence, stoneham number, rule 30 and mersenne twister, 2019.
 
 \bibitem{Sierpinski}
 {\sc Sierpinski, W.}
@@ -75,9 +76,16 @@
   J.L.Britton, Ed. North Holland, Amsterdam, 1992, pp.~117--119.
 \newblock with notes of the editor in 263--265.
 
+\bibitem{VW}
+{\sc {van der Vaart}, A., and {Wellner}, J.~A.}
+\newblock {\em {Weak convergence and empirical processes. With applications to
+  statistics.}}
+\newblock New York, NY: Springer, 1996.
+
 \bibitem{Weiss}
 {\sc Weiss, B.}
 \newblock Random-like behavior in deterministic systems -
-  https://youtu.be/8ab7591de68?t=1280, 2010.
+  https://www.youtube.com/watch?v=8ab7591de68&t=1567s.
+\newblock Institute for Advanced Study, Princeton University, USA, 2010.
 
 \end{thebibliography}
